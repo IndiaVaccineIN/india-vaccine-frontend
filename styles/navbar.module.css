@@ -1,7 +1,7 @@
 .navbar_wrapper {
   /* position: fixed; */
 
-  height: 100px;
+  height: 80px;
   /* height: 4rem; */
   width: 100%;
   display: flex;
@@ -13,8 +13,8 @@
 
   z-index: 3;
 
-  border-bottom: 2px solid;
-  border-color: var(--blue-strong);
+  border-bottom: 1px solid;
+  border-color: var(--grey);
 
   /* div {
       width: 100%;
@@ -25,6 +25,7 @@
         // Very bad idea to uae margin here
         // Use `gap` instead
         // margin: 0 8px;
+        // gap didn't seem to be compatible with Safari, only works on 70% of browsers apparently
       }
     } */
 }
@@ -46,9 +47,10 @@
   /* gap: 20px; */
   /* font-size: 25px; */
 
-  font-weight: 700;
+  /* font-weight: 700; */
 
-  color: var(--blue-pure);
+  /* color: var(--blue-pure); */
+  color: var(--black);
 }
 
 .routes a {
