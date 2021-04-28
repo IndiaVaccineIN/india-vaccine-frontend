@@ -1,0 +1,93 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Gilroy, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 18px;
+
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+p {
+  max-width: 100vw;
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  html,
+  body {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  html,
+  body {
+    font-size: 14px;
+  }
+}
+
+/* h1 {
+  font-size: 2.5em;
+} */
+
+/**
+Common weight mappings
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#common_weight_name_mapping
+**/
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Gilroy/Gilroy-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Gilroy/Gilroy-Bold.ttf") format("truetype");
+}
+
+/*
+This is the color system of the entire application
+*/
+:root {
+  --red-strong: #fd3c3b;
+  --red-light: #fd3c3b40;
+  --black: #313132;
+  --white-pure: #fff;
+  --white-strong: #fefefe;
+  --white-mild: #1b1b1b50;
+  --white-light: #1d1d1d;
+
+  --black-strong: #050101;
+
+  --blue-strong: #060683;
+  --blue-pure: #000080;
+
+  --purple-light: #C4CBF4;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
