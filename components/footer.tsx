@@ -30,7 +30,7 @@ export default function Footer() {
                         {/* &nbsp;Follow us on Instagram */}
                     </div>
                     <div className={styles.social_element}>
-                        &nbsp;&nbsp;<a href="https://twitter.com/India__Vaccine" target="_blank"><Image layout={"fixed"}
+                        &nbsp;&nbsp;<a href="https://twitter.com/GetIndiaVaccine" target="_blank"><Image layout={"fixed"}
                             src="/assets/twitter.svg"
                             width={30}
                             height={30}
