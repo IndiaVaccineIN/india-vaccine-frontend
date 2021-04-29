@@ -43,7 +43,7 @@ We're building out a verified list of Vaccination Centers across the country so 
                             How are we doing this? </span>
                     </h1>
                     <p>
-                       As vaccination opens up for all individuals 18+, there will be greater pressure on public health facilities across the nation to vaccinate everyone. Anticipating that, we want to help people get real-time information about which vaccination centers have stock, have less crowding we are which is only shown after one registers. 
+                       As vaccination opens up for all individuals 18+, there will be greater pressure on public health facilities across the nation to vaccinate everyone. Anticipating that, we want to help people get real-time information about which vaccination centers have stock, have less crowding.
   </p>
                     <p>
                         We are using our volunteer base of over 100+ volunteers to get up-to-date information about these centres as well as the power of crowd-sourcing to provide updates as required. We would love for you to join the effort so that individuals don't have to call these centers but can instead rely on this information to find the safest, closest vaccination center.
