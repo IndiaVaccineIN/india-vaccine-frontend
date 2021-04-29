@@ -19,13 +19,13 @@ function MyApp({ Component, pageProps }) {
       <meta property="og:url" content="http://www.indiavaccine.in" />
       <meta property="og:title" content="IndiaVaccine — We’re Making it Easier to Find Vaccination Centers" />
       <meta property="og:description" content="We're building out a verified list of Vaccination Centers across the country so that people can find those centers in a quick & easy manner and thus enabling as many people to get vaccinated as possible" />
-      <meta property="og:image" content="assets/ogImage.jpg" />
+      <meta property="og:image" content="assets/ogImage.jpeg" />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="http://www.indiavaccine.in" />
       <meta property="twitter:title" content="IndiaVaccine — We’re Making it Easier to Find Vaccination Centers" />
       <meta property="twitter:description" content="We're building out a verified list of Vaccination Centers across the country so that people can find those centers in a quick & easy manner and thus enabling as many people to get vaccinated as possible" />
-      <meta property="twitter:image" content="assets/ogImage.jpg" />
+      <meta property="twitter:image" content="assets/ogImage.jpeg" />
 
 
       <link
