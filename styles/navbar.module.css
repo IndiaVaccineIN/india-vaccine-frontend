@@ -89,14 +89,12 @@
 }
 
 
-
-
-@media only screen and (max-device-width: 800px) {
+@media only screen and (max-device-width: 550px) {
     .hamburger_line {
-        width: 24px;
-        height: 2px;
         background-color: var(--blue-strong);
+        height: 2px;
         margin: 3px 0;
+        width: 24px;
     }
 
     .hamburger {
@@ -105,32 +103,33 @@
         display: block;
     }
 
-    /* .navbar_content_mobile {
+    .navbar_content_mobile {
         background: var(--white-pure);
+        box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.25);
         flex-direction: column;
+        height: 233px;
         position: fixed;
         right: 0;
 		top: 0;
-        width: 375px;
-        height: 233px;
-        box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.25);
-    } */
+        width: 100%;
+    }
 
     .routes_mobile {
         display: none;
     }
 
-    .logo_wrapper {
+    .navbar_content_mobile .logo_wrapper {
         margin-top: 28px;
     }
 
     .logo_wrapper img {
-        width: 176px;
         height: 30px;
+        width: 176px;
     }
 
     .routes {
         flex-direction: column;
+        font-size: 18px;
         margin-bottom: 41px;
     }
 
@@ -141,21 +140,22 @@
     .cross {
         background: none;
         border: none;
+        display: block;
         position: absolute;
-        top: 39px;
         right: 37px;
+        top: 39px;
     }
     
     .cross_line {
-        width: 24px;
-        height: 2px;   
         background: var(--blue-strong);
+        height: 2px;   
         position: relative;
+        width: 24px;
     }
 
     .cross_1 {
-        transform: rotate(45deg);
         top: 2px;
+        transform: rotate(45deg);
     }
     .cross_2 {
         transform: rotate(-45deg);
