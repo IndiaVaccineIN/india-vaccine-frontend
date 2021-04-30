@@ -20,7 +20,7 @@ export default function Navbar() {
     <>
     <nav className={styles.navbar_wrapper}>
       <div className={`${styles.navbar_content} ${isMenuOpen ? styles.navbar_content_mobile : styles.navbar_content}`}>
-        <div className={`${styles.logo_wrapper} ${styles.logo_wrapper_mobile} `}>
+        <div className={styles.logo_wrapper}>
           <Image src={'/assets/logo.svg'} height={200} width={200}></Image>
           {isMenuOpen && 
             <button className={styles.cross} onClick={()=> setMenu(false)}>
