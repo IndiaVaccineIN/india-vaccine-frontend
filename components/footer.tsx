@@ -10,13 +10,13 @@ export default function Footer() {
                     
                     <img src={"/assets/logo.svg"} height={50} width={200}></img>
                    
-                        <a className={styles.center} href="https://discord.gg/ZcStNzyFrj" target="_blank"> 
+                        {/* <a className={styles.center} href="https://discord.gg/ZcStNzyFrj" target="_blank"> 
                      <Image
                             src="/assets/join_discord.svg"
                             width={180}
                             height={100}
                             alt={"discord icon"} />
-                        {/* &nbsp;Join our Discord*/}</a> 
+                        </a>  */}
                 </div>
                 
                
