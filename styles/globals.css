@@ -3,9 +3,9 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Gilroy, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: "Poppins", "Gilroy", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-size: 18px;
+  font-size: 17px;
 
   scroll-behavior: smooth;
 }
@@ -47,7 +47,7 @@ Common weight mappings
 https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#common_weight_name_mapping
 **/
 
-@font-face {
+/* @font-face {
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 400;
@@ -61,7 +61,23 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#common_weight_name_
   font-weight: 700;
   font-display: swap;
   src: url("/fonts/Gilroy/Gilroy-Bold.ttf") format("truetype");
+} */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+}
+
 
 /*
 This is the color system of the entire application
@@ -69,7 +85,7 @@ This is the color system of the entire application
 :root {
   --red-strong: #fd3c3b;
   --red-light: #fd3c3b40;
-  --black: #313132;
+  --black: #1A1A1D;
   --grey: #B1B1B1;
   --white-pure: #fff;
   --white-strong: #fefefe;

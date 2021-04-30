@@ -43,7 +43,7 @@
 .routes {
   display: flex;
   justify-content: space-evenly;
-  padding: 0 10px;
+  padding: 0px 10px;
   /* gap: 20px; */
   /* font-size: 25px; */
 
@@ -55,6 +55,16 @@
 
 .routes a {
   margin: 10px;
+  padding: 6px 12px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+
+
+}
+
+.routes a:hover {
+  border: 1px solid #D2D5DA;
+
 }
 
 .logo_wrapper {
@@ -69,5 +79,7 @@
 }
 
 .active_route {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  /* background: #F3F5FC; */
+  background: #F3F4F6;
 }

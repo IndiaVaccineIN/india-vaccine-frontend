@@ -13,7 +13,7 @@ export default function Footer() {
                         <a className={styles.center} href="https://discord.gg/ZcStNzyFrj" target="_blank"> 
                      <Image
                             src="/assets/join_discord.svg"
-                            width={150}
+                            width={180}
                             height={100}
                             alt={"discord icon"} />
                         {/* &nbsp;Join our Discord*/}</a> 

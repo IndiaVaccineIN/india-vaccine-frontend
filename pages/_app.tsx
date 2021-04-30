@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
       <meta property="twitter:description" content="We're building out a verified list of Vaccination Centers across the country so that people can find those centers in a quick & easy manner and thus enabling as many people to get vaccinated as possible" />
       <meta property="twitter:image" content="https://i.imgur.com/b1MurNy.jpeg" />
 
-
+{/* 
       <link
         rel="preload"
         href="fonts/Gilroy/Gilroy-Regular.otf"
@@ -39,6 +39,20 @@ function MyApp({ Component, pageProps }) {
       <link
         rel="preload"
         href="fonts/Gilroy/Gilroy-Bold.ttf"
+        as="font"
+        crossOrigin=""
+      /> */}
+       <link
+        rel="preload"
+        href="fonts/Poppins/Poppins-Regular.ttf"
+        as="font"
+        type="font"
+        crossOrigin=""
+      />
+
+      <link
+        rel="preload"
+        href="fonts/Poppins/Poppins-SemiBold.ttf"
         as="font"
         crossOrigin=""
       />

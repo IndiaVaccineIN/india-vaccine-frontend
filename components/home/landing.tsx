@@ -9,10 +9,9 @@ export default function Landing() {
             <div className={styles.landing_wrapper}>
                 <div className={styles.landingText}>
                     <h1>
-                        We’re <span className={styles.greenUnderline}> Making it Easier </span>to Find Vaccination Centers
+                        We’re <span className={styles.greenUnderline}> Making it Easier </span>to Locate Vaccination Centers
                 </h1>
-                    <p>
-We're building out a verified list of Vaccination Centers across the country so that people can find those centers in a quick & easy manner and thus enabling as many people to get vaccinated as possible                </p>
+                    <p>We're building out a verified list of Vaccination Centers across the country so that you can get reliable information for getting a vaccine for you or your loved ones in a quick & easy manner. </p>
                     <div className={styles.button_wrapper}>
                         <a
                             href={"https://forms.gle/HeH3xrvjP1VfFUzM7"}
@@ -43,11 +42,10 @@ We're building out a verified list of Vaccination Centers across the country so 
                             How are we doing this? </span>
                     </h1>
                     <p>
-                       As vaccination opens up for all individuals 18+, there will be greater pressure on public health facilities across the nation to vaccinate everyone. Anticipating that, we want to help people get real-time information about which vaccination centers have stock, have less crowding.
+                       With COVID-19 vaccination opening up for all individuals over 18 years there will be additional rush at public health facilities all over the country. We want to help you get near real-time information on stocks at vaccination centers and crowding. 
   </p>
                     <p>
-                        We are using our volunteer base of over 100+ volunteers to get up-to-date information about these centres as well as the power of crowd-sourcing to provide updates as required. We would love for you to join the effort so that individuals don't have to call these centers but can instead rely on this information to find the safest, closest vaccination center.
-              </p>
+Our 100+ volunteers are contributing information to keep this list up to date. We would love for you to join the effort so that individuals don't have to call these centers but can instead rely on this information to find the safest, closest vaccination center.              </p>
                     <div className={styles.button_wrapper}>
                         <a
                             href={"https://forms.gle/HeH3xrvjP1VfFUzM7"}
