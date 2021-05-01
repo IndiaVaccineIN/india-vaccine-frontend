@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import styles from "../styles/language_switcher.module.css"
 
 const localesMap = {
@@ -6,12 +7,14 @@ const localesMap = {
 }
 
 export default function LanguageSwitcher() {
+    const { locales, push } = useRouter();
+
     return (
         <div className={styles.language_wrapper}>
-            {Object.values(localesMap).map((e, i, a) => {
+            {locales.map((e, i, a) => {
                 return (
                     <>
-                        <span key={`${e}_lang`} className={styles.language}>{e}</span>
+                        <span  onClick={() => push(`/${e}`)} key={`${e}_lang`} className={styles.language}>{localesMap[e]}</span>
                         {i === (a.length - 1) ? null : <div className={styles.dot} />}
                     </>
                 )
