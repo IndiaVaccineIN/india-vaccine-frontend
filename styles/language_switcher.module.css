@@ -1,9 +1,10 @@
 .language_wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  padding: 1rem 8rem 0rem 0rem;
 
-  padding: 10px 0 0 0;
+  /* padding: 10px 0 0 0; */
 }
 
 .language {
@@ -21,4 +22,15 @@
   border-radius: 100%;
 
   margin: 0 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .language_wrapper {
+    /* padding: 1rem 8rem 0rem 0rem; */
+    padding: 10px 0 0 0;
+
+    justify-content: center;
+
+  }
+
 }

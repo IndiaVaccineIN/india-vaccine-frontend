@@ -23,6 +23,10 @@
   /* margin-top: 20px; */
 }
 
+.landing_wrapper h1 {
+  margin-top: 0rem;
+}
+
 .greenUnderline {
   border-bottom: 6px solid #46B983 !important;
   border-bottom: 1px solid #494949;
