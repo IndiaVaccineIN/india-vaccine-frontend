@@ -4,11 +4,13 @@ import useSWR from 'swr'
 
 import styles from "../../styles/home/landing.module.css"
 import Button from "../button"
+import { appSWRFetcher } from "../../helpers"
 
 export default function Landing() {
     const router = useRouter();
     const locale = router.locale;
-    const { data, error } = useSWR(`/locales/${locale}.json`, fetcher)
+    const { data, error } = useSWR(`/locales/${locale}.json`, appSWRFetcher)
+    
     return (
         <>
             <div className={styles.landing_wrapper}>
@@ -92,4 +94,3 @@ export default function Landing() {
 
     )
 }
-const fetcher = (...args) => fetch(...args).then(res => res.json());
