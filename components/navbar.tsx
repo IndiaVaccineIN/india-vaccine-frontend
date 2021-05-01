@@ -3,35 +3,39 @@ import Link from "next/link"
 import { useRouter } from "next/router";
 
 import styles from "../styles/navbar.module.css"
+import LanguageSwitcher from "./language_switcher";
 
 export default function Navbar() {
     /**
      * @reference https://gist.github.com/remy/0dde38897d6d660f0b63867c2344fb59#gistcomment-3714984
      */
     const router = useRouter();
-    const activeLink = (path,locale, content, activeClass = styles.active_route, normalClass = '') => {
+    const activeLink = (path, locale, content, activeClass = styles.active_route, normalClass = '') => {
         let className = router.pathname === path ? activeClass : normalClass;
-        return <Link href={path} locale={locale}><a className={className}>{content}</a></Link>        
+        return <Link href={path} locale={locale}><a className={className}>{content}</a></Link>
     }
 
     return (
-        <nav className={styles.navbar_wrapper}>
-            <div className={styles.navbar_content}>
-                <div className={styles.logo_wrapper}>
-                    <Image src={"/assets/logo.svg"} height={200} width={200}></Image>
-                </div>
-                <div className={styles.routes}>
-                    {activeLink('/',router.locale, 'About')}
-                    <a
-                        href={"https://forms.gle/HeH3xrvjP1VfFUzM7"}
-                        rel="noreferrer noopener" target="_blank">
-                        Volunteer
+        <>
+            <nav className={styles.navbar_wrapper}>
+                <div className={styles.navbar_content}>
+                    <div className={styles.logo_wrapper}>
+                        <Image src={"/assets/logo.svg"} height={200} width={200}></Image>
+                    </div>
+                    <div className={styles.routes}>
+                        {activeLink('/', router.locale, 'About')}
+                        <a
+                            href={"https://forms.gle/HeH3xrvjP1VfFUzM7"}
+                            rel="noreferrer noopener" target="_blank">
+                            Volunteer
                     </a>
-                     {router.locale=="en-us"?activeLink('/','hi-in', 'Hindi'):activeLink('/', 'en-us','English')}
-                    {/* {activeLink('/volunteer', 'Volunteer')} */}
+                        {router.locale == "en-us" ? activeLink('/', 'hi-in', 'Hindi') : activeLink('/', 'en-us', 'English')}
+                        {/* {activeLink('/volunteer', 'Volunteer')} */}
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+            <LanguageSwitcher />
+        </>
     )
 }
 // import Link from "next/link"
