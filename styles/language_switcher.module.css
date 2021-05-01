@@ -1,0 +1,36 @@
+.language_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 8rem 0rem 0rem;
+
+  /* padding: 10px 0 0 0; */
+}
+
+.language {
+  text-decoration: underline;
+  /* font-size: 20px; */
+
+  color: #000080;
+  cursor: pointer;
+}
+
+.dot {
+  height: 5px;
+  width: 5px;
+  background: #000000;
+  border-radius: 100%;
+
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .language_wrapper {
+    /* padding: 1rem 8rem 0rem 0rem; */
+    padding: 10px 0 0 0;
+
+    justify-content: center;
+
+  }
+
+}

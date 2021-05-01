@@ -3,6 +3,7 @@ import Link from "next/link"
 import { useRouter } from "next/router";
 
 import styles from "../styles/navbar.module.css"
+import LanguageSwitcher from "./language_switcher";
 
 export default function Navbar() {
     /**
@@ -15,22 +16,24 @@ export default function Navbar() {
     }
 
     return (
-        <nav className={styles.navbar_wrapper}>
-            <div className={styles.navbar_content}>
-                <div className={styles.logo_wrapper}>
-                    <Image src={"/assets/logo.svg"} height={200} width={200}></Image>
-                </div>
-                <div className={styles.routes}>
-                    {activeLink('/', 'About')}
-                    <a
-                        href={"https://forms.gle/HeH3xrvjP1VfFUzM7"}
-                        rel="noreferrer noopener" target="_blank">
-                        Volunteer
+        <>
+            <nav className={styles.navbar_wrapper}>
+                <div className={styles.navbar_content}>
+                    <div className={styles.logo_wrapper}>
+                        <Image src={"/assets/logo.svg"} height={200} width={200}></Image>
+                    </div>
+                    <div className={styles.routes}>
+                        {activeLink('/', 'About')}
+                        <a
+                            href={"https://forms.gle/HeH3xrvjP1VfFUzM7"}
+                            rel="noreferrer noopener" target="_blank">
+                            Volunteer
                     </a>
-                    {/* {activeLink('/volunteer', 'Volunteer')} */}
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+            <LanguageSwitcher />
+        </>
     )
 }
 // import Link from "next/link"
