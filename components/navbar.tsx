@@ -9,9 +9,9 @@ export default function Navbar() {
      * @reference https://gist.github.com/remy/0dde38897d6d660f0b63867c2344fb59#gistcomment-3714984
      */
     const router = useRouter();
-    const activeLink = (path, content, activeClass = styles.active_route, normalClass = '') => {
+    const activeLink = (path,locale, content, activeClass = styles.active_route, normalClass = '') => {
         let className = router.pathname === path ? activeClass : normalClass;
-        return <Link href={path}><a className={className}>{content}</a></Link>
+        return <Link href={path} locale={locale}><a className={className}>{content}</a></Link>        
     }
 
     return (
@@ -21,12 +21,13 @@ export default function Navbar() {
                     <Image src={"/assets/logo.svg"} height={200} width={200}></Image>
                 </div>
                 <div className={styles.routes}>
-                    {activeLink('/', 'About')}
+                    {activeLink('/',router.locale, 'About')}
                     <a
                         href={"https://forms.gle/HeH3xrvjP1VfFUzM7"}
                         rel="noreferrer noopener" target="_blank">
                         Volunteer
                     </a>
+                     {router.locale=="en-us"?activeLink('/','hi-in', 'Hindi'):activeLink('/', 'en-us','English')}
                     {/* {activeLink('/volunteer', 'Volunteer')} */}
                 </div>
             </div>

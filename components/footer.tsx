@@ -1,8 +1,13 @@
 import Image from "next/image"
+import { useRouter } from 'next/router'
+import useSWR from 'swr'
 
 import styles from "../styles/footer.module.css"
 
 export default function Footer() {
+    const router = useRouter();
+    const locale = router.locale;
+    const { data, error } = useSWR(`/locales/${locale}.json`, fetcher)
     return (
         <footer className={styles.footer_wrapper}>
             <div className={styles.footer_content}>
@@ -47,9 +52,11 @@ export default function Footer() {
                     </div> */}
                 </div>
             <p>
-                    We are a volunteer driven organisation that tries to present information accurately but does not make any legal guarantees as to the accuracy of the information. We do not provide medical advice.
+            {data?.disclaimer} 
                 </p>
             </div>
         </footer>
     )
 }
+
+const fetcher = (...args) => fetch(...args).then(res => res.json());
