@@ -144,8 +144,8 @@
         border: none;
         display: block;
         position: absolute;
-        right: 37px;
-        top: 39px;
+        right: 25px;
+        top: 35px;
     }
     
     .cross_line {
@@ -161,6 +161,28 @@
     }
     .cross_2 {
         transform: rotate(-45deg);
+    }
+
+}
+
+@media only screen and (max-device-width: 400px) {
+
+    .cross {
+        right: 20px;
+    }
+}
+
+
+@media only screen and (max-device-width: 300px) {
+
+    .logo_wrapper img {
+        height: 20px;
+        width: 120px;
+    }
+
+    .cross {
+        right: 15px;
+        top: 37px;
     }
 
 }
