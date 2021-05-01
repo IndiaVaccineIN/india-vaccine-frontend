@@ -14,7 +14,9 @@ export default function LanguageSwitcher() {
             {locales.map((e, i, a) => {
                 return (
                     <>
-                        <span  onClick={() => push(`/${e}`)} key={`${e}_lang`} className={styles.language}>{localesMap[e]}</span>
+                        <span  onClick={() => push("", {}, {
+                            locale: e
+                        })} key={`${e}_lang`} className={styles.language}>{localesMap[e]}</span>
                         {i === (a.length - 1) ? null : <div className={styles.dot} />}
                     </>
                 )
