@@ -110,6 +110,7 @@
         height: 233px;
         position: fixed;
         right: 0;
+        transition: .2s;
 		top: 0;
         width: 100%;
     }

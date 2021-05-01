@@ -37,7 +37,7 @@ export default function Navbar() {
               <div className={styles.hamburger_line}></div>
             </button>
         }
-        <div className={`${styles.routes} ${isMenuOpen ? '' : styles.routes_mobile}`}>
+        <div className={`${styles.routes} ${isMenuOpen ? null : styles.routes_mobile}`}>
           {activeLink('/', 'About')}
           <a
             href={'https://forms.gle/HeH3xrvjP1VfFUzM7'}
