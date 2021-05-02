@@ -2,6 +2,7 @@ import { GetServerSideProps, NextPageContext } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
+import useRequest from '../api'
 // import { useVaccineAvailability } from '../api'
 import { components } from '../api/interfaces'
 import CvcCard from '../components/cvc_card'
@@ -11,133 +12,16 @@ import { isEmpty } from '../helpers'
 import styles from '../styles/availability_results.module.css'
 
 
-const temp: components["schemas"]["PaginatedCVCData"] = {
-    page_number: 0,
-    page_size: 5,
-    total: 200,
-    results: [
-        {
-            address: {
-                block: "Andheri",
-                district: "23",
-                pincode: "400095",
-                state: "Maharashtra",
-                city: "Mumbai"
-            },
-            cowin_center_id: 67,
-            google_maps_url: "https://google.com",
-            id: "56",
-            last_verified_at: "2021-05-02T09:16:22.698Z",
-            name: "BKC Jumbo CVC",
-            operation_timings: {
-                end_time: Date.now().toString(),
-                start_time: Date.now().toString(),
-            },
-            slots: [{
-                end_time: "2021-05-02T09:16:22.698Z",
-                start_time: "2021-05-02T09:16:22.698Z"
-            }],
-            status: "ACTIVE",
-            type: "CENTRAL",
-            vaccine_count: 100,
-            vaccines: [
-                {
-                    cost: 200,
-                    count: 100,
-                    name: "COVAXIN",
-                    type: "COVAXIN"
-                }
-            ],
-            next_stock_refresh_on: "2021-05-02T09:16:22.698Z",
-            geo: {
-                latitude: "19.1364",
-                longitude: "72.8296"
-            }
-        },{
-            address: {
-                block: "Andheri",
-                district: "23",
-                pincode: "400095",
-                state: "Maharashtra",
-                city: "Mumbai"
-            },
-            cowin_center_id: 67,
-            google_maps_url: "https://google.com",
-            id: "56",
-            last_verified_at: "2021-05-02T09:16:22.698Z",
-            name: "BKC Jumbo CVC 2",
-            operation_timings: {
-                end_time: Date.now().toString(),
-                start_time: Date.now().toString(),
-            },
-            slots: [{
-                end_time: "2021-05-02T09:16:22.698Z",
-                start_time: "2021-05-02T09:16:22.698Z"
-            }],
-            status: "ACTIVE",
-            type: "CENTRAL",
-            vaccine_count: 100,
-            vaccines: [
-                {
-                    cost: 200,
-                    count: 100,
-                    name: "COVAXIN",
-                    type: "COVAXIN"
-                }
-            ],
-            next_stock_refresh_on: "2021-05-02T09:16:22.698Z",
-            geo: {
-                latitude: "19.1364",
-                longitude: "72.8296"
-            }
-        },
-        {
-            address: {
-                block: "Andheri",
-                district: "23",
-                pincode: "400095",
-                state: "Maharashtra",
-                city: "Mumbai"
-            },
-            cowin_center_id: 67,
-            google_maps_url: "https://google.com",
-            id: "56",
-            last_verified_at: "2021-05-02T09:16:22.698Z",
-            name: "BKC Jumbo CVC 3",
-            operation_timings: {
-                end_time: Date.now().toString(),
-                start_time: Date.now().toString(),
-            },
-            slots: [{
-                end_time: "2021-05-02T09:16:22.698Z",
-                start_time: "2021-05-02T09:16:22.698Z"
-            }],
-            status: "ACTIVE",
-            type: "CENTRAL",
-            vaccine_count: 100,
-            vaccines: [
-                {
-                    cost: 200,
-                    count: 100,
-                    name: "COVAXIN",
-                    type: "COVAXIN"
-                }
-            ],
-            next_stock_refresh_on: "2021-05-02T09:16:22.698Z",
-            geo: {
-                latitude: "19.1364",
-                longitude: "72.8296"
-            }
-        }
-    ]
-}
-
 export default function AvailabilityResults(context: NextPageContext) {
     const { query } = useRouter();
 
-    const { data, error } = useSWR([`v1/cvc`, { method: "post" }], {
-        dedupingInterval: 500000,
-        shouldRetryOnError: false
+    const {data, error} = useRequest({
+        url: "v1/cvc",
+        baseURL: process.env.NEXT_PUBLIC_API_ROOT,
+        method: "post",
+        // data: {
+        //     pincode: 400095
+        // }
     })
 
     console.log(data, "SWR Result")
@@ -169,6 +53,7 @@ export default function AvailabilityResults(context: NextPageContext) {
                 </main>
                 <div className={styles.results}>
                     {
+                        //@ts-expect-error Fix this
                         data.results.map((e) => <CvcCard data={e} />)
                     }
                 </div>
