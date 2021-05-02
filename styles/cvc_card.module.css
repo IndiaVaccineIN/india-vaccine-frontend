@@ -1,0 +1,7 @@
+.cvc_card {
+    height: 300px;
+    width: 100%;
+    max-width: 400px;
+
+    background-color: wheat;
+}
