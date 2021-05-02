@@ -2,7 +2,7 @@ import { GetServerSideProps, NextPageContext } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
-import { useVaccineAvailability } from '../api'
+// import { useVaccineAvailability } from '../api'
 import { components } from '../api/interfaces'
 import CvcCard from '../components/cvc_card'
 import Footer from '../components/footer'
@@ -17,22 +17,25 @@ const temp: components["schemas"]["PaginatedCVCData"] = {
     results: [
         {
             address: {
-                block: "test",
-                district: "test",
-                pincode: "test",
-                state: "test",
-                city: "test"
+                block: "Andheri",
+                district: "23",
+                pincode: "400095",
+                state: "Maharashtra",
+                city: "Mumbai"
             },
             cowin_center_id: 67,
             google_maps_url: "https://google.com",
-            id: "hpvuyhbhil",
-            last_verified_at: Date.now().toString(),
-            name: "test",
+            id: "56",
+            last_verified_at: "2021-05-02T09:16:22.698Z",
+            name: "BKC Jumbo CVC",
             operation_timings: {
                 end_time: Date.now().toString(),
                 start_time: Date.now().toString(),
             },
-            slots: [],
+            slots: [{
+                end_time: "2021-05-02T09:16:22.698Z",
+                start_time: "2021-05-02T09:16:22.698Z"
+            }],
             status: "ACTIVE",
             type: "CENTRAL",
             vaccine_count: 100,
@@ -40,10 +43,15 @@ const temp: components["schemas"]["PaginatedCVCData"] = {
                 {
                     cost: 200,
                     count: 100,
-                    name: "tst",
+                    name: "COVAXIN",
                     type: "COVAXIN"
                 }
             ],
+            next_stock_refresh_on: "2021-05-02T09:16:22.698Z",
+            geo: {
+                latitude: "19.1364",
+                longitude: "72.8296"
+            }
         }
     ]
 }
@@ -79,7 +87,7 @@ export default function AvailabilityResults(context: NextPageContext) {
                 </main>
                 <div className={styles.results}>
                     {
-                        data.results.map((e) => <CvcCard />)
+                        data.results.map((e) => <CvcCard data={e}/>)
                     }
                 </div>
             </div>

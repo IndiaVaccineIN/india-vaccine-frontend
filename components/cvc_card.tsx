@@ -1,7 +1,11 @@
 import { components } from "../api/interfaces"
 import styles from "../styles/cvc_card.module.css"
 
-export default function CvcCard(props: components["schemas"]["CVCResponseData"]) {
+interface Props {
+    data: components["schemas"]["CVCResponseData"]
+}
+
+export default function CvcCard(props:Props) {
     return (
         // <>
             <div className={styles.cvc_card}>
