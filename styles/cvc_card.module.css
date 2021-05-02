@@ -1,7 +1,11 @@
 .cvc_card {
     height: 300px;
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
 
     background-color: wheat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

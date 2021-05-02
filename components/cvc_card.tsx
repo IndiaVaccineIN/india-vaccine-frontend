@@ -5,11 +5,11 @@ interface Props {
     data: components["schemas"]["CVCResponseData"]
 }
 
-export default function CvcCard(props:Props) {
+export default function CvcCard({ data }:Props) {
     return (
         // <>
             <div className={styles.cvc_card}>
-                Hello
+                {data.name}
             </div>
         // </>
     )
