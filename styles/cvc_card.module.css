@@ -7,11 +7,19 @@
     padding: 1rem;
     background-color: white;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.address {
+    color: var(--grey);
 }
 
 .directions {
     color: var(--grey);
     font-size: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
 }
 
 .searchButton {

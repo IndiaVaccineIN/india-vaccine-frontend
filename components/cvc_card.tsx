@@ -12,10 +12,13 @@ export default function CvcCard(props: Props) {
     return (
         // <>
             <div className={styles.cvc_card}>
-            {data.name} <br/>
+            <b>{data.name}</b> <br />
+            <div className={styles.address}>{data.address.block}, {data.address.district} </div>
+
             <a className={styles.directions} target="_blank" href={'https://www.google.com/maps/search/?api=1&query='+data.name}>Directions</a>
             <br/>
             <button className={styles.searchButton}>Register on Cowin</button>
+            <div>Operation Timings: {data.operation_timings.start_time}-{data.operation_timings.end_time}</div>
             </div>
         // </>
     )
