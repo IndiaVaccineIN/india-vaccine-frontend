@@ -59,13 +59,19 @@ const temp: components["schemas"]["PaginatedCVCData"] = {
 export default function AvailabilityResults(context: NextPageContext) {
     const { query } = useRouter();
 
-    const { data, error } = useSWR(`v1/cvc`, {
-        initialData: temp
+    const { data, error } = useSWR([`v1/cvc`, { method: "post" }], {
+        dedupingInterval: 500000,
+        shouldRetryOnError: false
     })
 
     console.log(data, "SWR Result")
 
+    console.log(error)
+
     console.log(query)
+
+    if (error) return <div>failed to load</div>
+    if (!data) return <div>loading...</div>
 
     return (
         <div>
@@ -87,7 +93,7 @@ export default function AvailabilityResults(context: NextPageContext) {
                 </main>
                 <div className={styles.results}>
                     {
-                        data.results.map((e) => <CvcCard data={e}/>)
+                        data.results.map((e) => <CvcCard data={e} />)
                     }
                 </div>
             </div>
