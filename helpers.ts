@@ -18,7 +18,17 @@ export const swrConfig: SWRConfiguration = {
  *
  * @reference https://swr.vercel.app/docs/data-fetching
  */
+//@ts-expect-error Ignore this error
+export const appSWRFetcher = (...args) => fetch(...args).then(res => res.json());
 
-export const appSWRFetcher = (...args) =>
-  //@ts-expect-error Ignore this error
-  fetch(...args).then((res) => res.json());
+
+/**
+ * Check if a object is empty
+ * 
+ * @param obj The object
+ * 
+ * @returns Boolean
+ */
+export const isEmpty = (obj: Object) => {
+    return Object.keys(obj).length === 0;
+}

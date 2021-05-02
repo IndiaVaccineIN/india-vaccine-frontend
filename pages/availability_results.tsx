@@ -1,7 +1,9 @@
+import { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
+import { isEmpty } from '../helpers'
 import styles from '../styles/availability_results.module.css'
 
 export default function AvailabilityResults() {
@@ -29,4 +31,31 @@ export default function AvailabilityResults() {
             <Footer />
         </div>
     )
+}
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    console.log(context)
+    console.log(context.params)
+    // console.log(context)
+
+    const { query } = context
+
+    console.log(query)
+
+    /**
+     * If no query params are present go
+     * to the search page
+     */
+    if(isEmpty(query)) {
+        return {
+            redirect: {
+                destination: '/check_availability',
+                permanent: true
+            }
+        }
+    }
+
+    return {
+        props: {}, // will be passed to the page component as props
+    }
 }

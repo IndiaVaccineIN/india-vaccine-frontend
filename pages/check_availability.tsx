@@ -5,13 +5,29 @@ import Image from "next/image"
 
 import styles from '../styles/check_availability.module.css'
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 
 export default function CheckAvailability() {
     const { push } = useRouter()
 
+    const [state, setState] = useState<string>()
+
     const showResults = () => {
-        push("/availability_results")
+        if (!state) {
+            return "Input is null"
+        }
+
+        if(state.length === 0) {
+            return "Input is empty"
+        }
+
+        push({
+            pathname: "/availability_results",
+            query: {
+                pincode: state
+            }
+        })
     }
 
     return (
@@ -29,7 +45,7 @@ export default function CheckAvailability() {
                 <h1 className="textCenter">Find a COVID-19 vaccine for yourself or a loved one</h1>
                 <div className="flex mobileCol center">
                     <label className={styles.label}>
-                        <input type="text" className={styles.searchBar} placeholder="Enter your Pincode or Area" /></label>
+                        <input onChange={(e) => setState(e.target.value)} type="text" className={styles.searchBar} placeholder="Enter your Pincode or Area" /></label>
                     <button onClick={showResults} type="submit" className={styles.searchButton}>Find Vaccine</button></div>
                 <div className="flex mobileCol center max-w-4xl">
                     <img src={'/assets/avatar_landing.svg'} className={styles.heroImage} height={300.08} width={303} alt="Illustration" ></img>
