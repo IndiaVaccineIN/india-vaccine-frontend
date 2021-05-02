@@ -11,8 +11,27 @@ body {
   scroll-behavior: smooth;
 }
 
+
+
 .flex {
   display: flex;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.pad-20 {
+  padding: 20px;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
 }
 
 h1 {
@@ -31,6 +50,10 @@ p {
   html,
   body {
     font-size: 16px;
+  }
+
+  .mobileCol {
+    flex-direction: column;
   }
 }
 

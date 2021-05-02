@@ -74,9 +74,12 @@ function MyApp({ Component, pageProps }) {
         as="font"
         crossOrigin=""
       />
+    
     </Head>
     <Component {...pageProps} />
+    
   </SWRConfig>
+  
 }
 
 export default MyApp;
