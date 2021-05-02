@@ -10,6 +10,8 @@ Join our group on Discord to engage with the developers and contributors working
 
 <img height="50px" src="https://raw.githubusercontent.com/IndiaVaccineIN/india-vaccine-frontend/master/public/assets/join_discord.svg"/>
 
+> After you join the group make sure to introduce yourself in the #intros channel
+
 ### Getting the application running
 
 The frontend application is built with [NextJS](https://nextjs.org) and can be locally spun up using the following command
