@@ -1,38 +1,35 @@
 import { GetServerSideProps, NextPageContext } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import useSWR from 'swr'
-import useRequest from '../api'
-// import { useVaccineAvailability } from '../api'
+
+import { useAPIRequest } from '../api'
 import { components } from '../api/interfaces'
+import { cleanObj, isEmpty } from '../helpers'
+
 import CvcCard from '../components/cvc_card'
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
-import { isEmpty } from '../helpers'
-import styles from '../styles/availability_results.module.css'
 
+import styles from '../styles/availability_results.module.css'
 
 export default function AvailabilityResults(context: NextPageContext) {
     const { query } = useRouter();
 
-    const {data, error} = useRequest({
+    const searchBarContent = query?.pincode ?? query.district;
+
+    let APIQuery = {
+        pincode: Number(query?.pincode),
+        district: query?.district
+    }
+
+    // console.log(APIQuery)
+
+    const { data, error } = useAPIRequest<components["schemas"]["PaginatedCVCData"]>({
         url: "v1/cvc",
-        baseURL: process.env.NEXT_PUBLIC_API_ROOT,
         method: "post",
-        // data: {
-        //     pincode: 400095
-        // }
+        data: APIQuery
     })
-
-    console.log(data, "SWR Result")
-
-    console.log(error)
-
-    console.log(query)
-
-    if (error) return <div>failed to load</div>
-    if (!data) return <div>loading...</div>
-
+    console.log(data)
     return (
         <div>
             <Head>
@@ -43,20 +40,35 @@ export default function AvailabilityResults(context: NextPageContext) {
             <Navbar />
             <div className={styles.container}>
                 <main className={styles.main}>
-                    <h1 className="textCenter">Results</h1>
+                    <h3 className="textCenter">  Showing {
+                    error && <span>0</span>
+                }
+                {
+                    !data && <span>Unknown</span>
+                }
+                        {
+                            data && data.results.length} Vaccination Centers</h3>
                     <div className="flex mobileCol center">
                         <label className={styles.label}>
-                            <input type="text" className={styles.searchBar} placeholder="Enter your Pincode or Area" value={query.pincode}/></label>
+                            <input disabled type="text" className={styles.searchBar} placeholder="Enter your Pincode or Area" value={searchBarContent} /></label>
                         <button type="submit" className={styles.searchButton}>Find Vaccine</button>
                     </div>
 
                 </main>
-                <div className={styles.results}>
-                    {
-                        //@ts-expect-error Fix this
-                        data.results.map((e) => <CvcCard data={e} />)
-                    }
-                </div>
+                {
+                    error && <div>Failed to Load</div>
+                }
+                {
+                    !data && <div>Loading Data...</div>
+                }
+                {
+                    data &&
+                    <div className={styles.results}>
+                        {
+                            data.results.map((e) => <CvcCard key={e.cowin_center_id} data={e} />)
+                        }
+                    </div>
+                }
             </div>
             <Footer />
         </div>
@@ -64,13 +76,7 @@ export default function AvailabilityResults(context: NextPageContext) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-    // console.log(context)
-    // console.log(context.params)
-    // console.log(context)
-
     const { query } = context
-
-    // console.log(query)
 
     /**
      * If no query params are present go
@@ -86,6 +92,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     }
 
     return {
-        props: {}, // will be passed to the page component as props
+        props: {}
     }
 }

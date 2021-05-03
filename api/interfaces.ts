@@ -3,6 +3,12 @@
  * Do not make direct changes to the file.
  */
 
+ export interface District {
+  state_id: number;
+  district_id: number;
+  district_name: string;
+}
+
  export interface paths {
     "/api/v1/cvc": {
       post: operations["Search"];
