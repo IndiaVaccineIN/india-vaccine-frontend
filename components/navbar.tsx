@@ -2,10 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import useSWR from 'swr'
+
 import LanguageSwitcher from "./language_switcher";
 import styles from '../styles/navbar.module.css'
-import { appSWRFetcher } from "../helpers"
 
 export default function Navbar() {
   /**
@@ -13,8 +12,6 @@ export default function Navbar() {
    */
   const [isMenuOpen, setMenu] = useState(false)
   const router = useRouter()
-  const locale = router.locale;
-  const { data, error } = useSWR(`/locales/${locale}.json`, appSWRFetcher)
   const activeLink = (path, content, activeClass = styles.active_route, normalClass = '') => {
     const className = router.pathname === path ? activeClass : normalClass
     return <Link href={path}><a className={className}>{content}</a></Link>
@@ -41,11 +38,11 @@ export default function Navbar() {
             </button>
         }
         <div className={`${styles.routes} ${isMenuOpen ? null : styles.routes_mobile}`}>
-          {activeLink('/', data?.about)}
+          {activeLink('/', 'About')}
           <a
             href={'https://forms.gle/HeH3xrvjP1VfFUzM7'}
             rel="noreferrer noopener" target="_blank">
-              {data?.volunteer}
+              Volunteer
           </a>
           {/* {activeLink('/volunteer', 'Volunteer')} */}
         </div>
