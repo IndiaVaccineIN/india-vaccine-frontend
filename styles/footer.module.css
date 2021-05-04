@@ -9,7 +9,7 @@
   justify-content: space-evenly;
   align-items: center;
 
-  background-color: #BAC1E720;
+  background-color: #bac1e720;
 
   /* border-top: 1px solid #eaeaea; */
 }
@@ -55,7 +55,6 @@
 
   /* gap: 20px; */
 }
-
 
 .social_element {
   display: flex;

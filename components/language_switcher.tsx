@@ -1,26 +1,38 @@
-import { useRouter } from "next/router"
-import styles from "../styles/language_switcher.module.css"
+import { useRouter } from "next/router";
+import styles from "../styles/language_switcher.module.css";
 
 const localesMap = {
-    'en-us': "English",
-    'hi-in': "हिंदी"
-}
+  "en-us": "English",
+  "hi-in": "हिंदी",
+};
 
 export default function LanguageSwitcher() {
-    const { locales, push } = useRouter();
+  const { locales, push } = useRouter();
 
-    return (
-        <div className={styles.language_wrapper}>
-            {locales.map((e, i, a) => {
-                return (
-                    <>
-                        <span  onClick={() => push("", {}, {
-                            locale: e
-                        })} key={`${e}_lang`} className={styles.language}>{localesMap[e]}</span>
-                        {i === (a.length - 1) ? null : <div className={styles.dot} />}
-                    </>
+  return (
+    <div className={styles.language_wrapper}>
+      {locales.map((e, i, a) => {
+        return (
+          <>
+            <span
+              onClick={() =>
+                push(
+                  "",
+                  {},
+                  {
+                    locale: e,
+                  }
                 )
-            })}
-        </div>
-    )
+              }
+              key={`${e}_lang`}
+              className={styles.language}
+            >
+              {localesMap[e]}
+            </span>
+            {i === a.length - 1 ? null : <div className={styles.dot} />}
+          </>
+        );
+      })}
+    </div>
+  );
 }
