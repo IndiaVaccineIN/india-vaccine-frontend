@@ -28,9 +28,8 @@
 }
 
 .greenUnderline {
-  border-bottom: 6px solid #46B983 !important;
+  border-bottom: 6px solid #46b983 !important;
   border-bottom: 1px solid #494949;
-
 }
 
 .landing_wrapper_dark {
@@ -46,7 +45,7 @@
   /* width: 80vw; */
 
   /* margin-top: 20px; */
-  background: #F3F5FC;
+  background: #f3f5fc;
 }
 
 .landingText {
@@ -67,7 +66,6 @@
 }
 
 @media screen and (max-width: 1000px) {
-
   .landing_wrapper {
     /* padding: 0 !important; */
     display: flex !important;
@@ -85,7 +83,6 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-
   }
 
   .landingText {
@@ -112,15 +109,11 @@
   .button_wrapper {
     display: flex;
     flex-direction: column;
-
   }
-
-
 }
 
 @media screen and (max-width: 500px) {
   .avatar img {
     width: 60vw;
   }
-
 }

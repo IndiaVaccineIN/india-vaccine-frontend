@@ -3,8 +3,9 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", "Gilroy", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Poppins", "Gilroy", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
   /* font-size: 17px; */
 
   scroll-behavior: smooth;
@@ -30,7 +31,6 @@ p {
 }
 
 @media screen and (max-width: 500px) {
-
   html,
   body {
     font-size: 14px;
@@ -78,15 +78,14 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#common_weight_name_
   src: url("/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
 }
 
-
 /*
 This is the color system of the entire application
 */
 :root {
   --red-strong: #fd3c3b;
   --red-light: #fd3c3b40;
-  --black: #1A1A1D;
-  --grey: #B1B1B1;
+  --black: #1a1a1d;
+  --grey: #b1b1b1;
   --white-pure: #fff;
   --white-strong: #fefefe;
   --white-mild: #1b1b1b50;
@@ -97,7 +96,7 @@ This is the color system of the entire application
   --blue-strong: #060683;
   --blue-pure: #000080;
 
-  --purple-light: #C4CBF4;
+  --purple-light: #c4cbf4;
 }
 
 a {
