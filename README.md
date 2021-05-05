@@ -6,6 +6,8 @@
 
 Developers looking to contribute to the project can start by filtering for [good-first-issues](https://github.com/IndiaVaccineIN/india-vaccine-frontend/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 
+We have a `dev` branch with the latest features and fixes. We request you to create a new branch for the Issue you are working on and after a review we will merge it with the `dev` branch. The `master` branch contains the production-ready code that is ready to be deployed.
+
 Join our group on Discord to engage with the developers and contributors working on this project
 
 <img height="50px" src="https://raw.githubusercontent.com/IndiaVaccineIN/india-vaccine-frontend/master/public/assets/join_discord.svg"/>
