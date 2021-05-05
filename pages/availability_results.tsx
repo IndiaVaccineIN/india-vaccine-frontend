@@ -19,7 +19,9 @@ export default function AvailabilityResults(context: NextPageContext) {
   const { query, push } = useRouter();
 
   //for searching/editing new state/pincode *STARTS*
-  const [searchBarContent, setSearchBarContent] = useState<string>(query?.pincode?.toString() ?? query.district?.toString())
+  const [searchBarContent, setSearchBarContent] = useState<string>(
+    query?.pincode?.toString() ?? query.district?.toString()
+  );
   const showNewResults = () => {
     if (!searchBarContent) {
       return "Input is null";
@@ -78,33 +80,37 @@ export default function AvailabilityResults(context: NextPageContext) {
           </h3>
           <div className="flex mobileCol center">
             <label className={styles.label}>
-            <input
-              list="districts"
-              onChange={(e) => setSearchBarContent(e.target.value)}
-              type="text"
-              className={styles.searchBar}
-              placeholder="Enter your Pincode or District name"
-              value={searchBarContent}
-            />
-            <datalist id="districts">
-              {Districts.map((district) => {
-                return <option value={district.district_name} />;
-              })}
-            </datalist>
+              <input
+                list="districts"
+                onChange={(e) => setSearchBarContent(e.target.value)}
+                type="text"
+                className={styles.searchBar}
+                placeholder="Enter your Pincode or District name"
+                value={searchBarContent}
+              />
+              <datalist id="districts">
+                {Districts.map((district) => {
+                  return <option value={district.district_name} />;
+                })}
+              </datalist>
             </label>
 
             <button
-            onClick={showNewResults}
-            type="submit"
-            className={styles.searchButton}
-          >
-            Find Centers
-          </button>
+              onClick={showNewResults}
+              type="submit"
+              className={styles.searchButton}
+            >
+              Find Centers
+            </button>
           </div>
         </main>
-        {error && <div>Failed to Load</div>}
-        {!data && <div>Loading Data...</div>}
-        {data && (
+        {error ? (
+          <div>Failed to Load</div>
+        ) : !data ? (
+          <div>Loading Data...</div>
+        ) : data.results.length == 0 ? (
+          <span style={{ marginTop: "1.5rem" }}>No results available</span>
+        ) : (
           <div className={styles.results}>
             {data.results.map((e) => (
               <CvcCard key={e.cowin_center_id} data={e} />
