@@ -57,7 +57,7 @@ export default function AvailabilityResults(context: NextPageContext) {
               />
             </label>
             <button type="submit" className={styles.searchButton}>
-              Find Vaccine
+            Find Centers
             </button>
           </div>
         </main>
