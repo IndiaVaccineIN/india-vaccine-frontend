@@ -92,12 +92,13 @@ export default function AvailabilityResults(context: NextPageContext) {
               })}
             </datalist>
             </label>
+
             <button
             onClick={showNewResults}
             type="submit"
             className={styles.searchButton}
           >
-            Find Vaccine
+            Find Centers
           </button>
           </div>
         </main>

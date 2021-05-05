@@ -50,7 +50,7 @@ export default function CheckAvailability() {
       <div className={styles.container}>
         <main className={styles.main}></main>
         <h1 className="textCenter">
-          Find a COVID-19 vaccine for yourself or a loved one
+          Find a COVID-19 vaccination center for yourself or a loved one
         </h1>
         <div className="flex mobileCol center">
           <label className={styles.label}>
@@ -72,7 +72,7 @@ export default function CheckAvailability() {
             type="submit"
             className={styles.searchButton}
           >
-            Find Vaccine
+            Find Centers
           </button>
         </div>
         <div className="flex mobileCol center max-w-4xl">
@@ -85,11 +85,7 @@ export default function CheckAvailability() {
           ></img>
 
           <p className={"pad-20"}>
-            Everyone over 18 is now eligible for free, safe, and reliable
-            COVID-19 vaccines in India. But it can be difficult to find out
-            where and how to get a shot. Enter your zip code or area to find
-            confirmed vaccination locations near you, and learn how to make an
-            appointment.
+          All Indians over 18 are now eligible for safe, and reliable COVID-19 vaccines in India. Enter your PIN-code or district name and find verified vaccination centre locations near you to make an appointment on CoWIN.
           </p>
         </div>
       </div>
