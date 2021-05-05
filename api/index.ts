@@ -1,31 +1,31 @@
-import useSWR, { SWRConfiguration, SWRResponse } from 'swr'
-import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios'
+import useSWR, { SWRConfiguration, SWRResponse } from "swr";
+import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from "axios";
 
-export type GetRequest = AxiosRequestConfig | null
+export type GetRequest = AxiosRequestConfig | null;
 
 interface Return<Data, Error>
   extends Pick<
-  SWRResponse<AxiosResponse<Data>, AxiosError<Error>>,
-  'isValidating' | 'revalidate' | 'error' | 'mutate'
+    SWRResponse<AxiosResponse<Data>, AxiosError<Error>>,
+    "isValidating" | "revalidate" | "error" | "mutate"
   > {
-  data: Data | undefined
-  response: AxiosResponse<Data> | undefined
+  data: Data | undefined;
+  response: AxiosResponse<Data> | undefined;
 }
 
 export interface Config<Data = unknown, Error = unknown>
   extends Omit<
-  SWRConfiguration<AxiosResponse<Data>, AxiosError<Error>>,
-  'initialData'
+    SWRConfiguration<AxiosResponse<Data>, AxiosError<Error>>,
+    "initialData"
   > {
-  initialData?: Data
+  initialData?: Data;
 }
 
 /**
  * The axios API client
  */
 const APIClient = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_ROOT
-})
+  baseURL: process.env.NEXT_PUBLIC_API_ROOT,
+});
 
 /**
  * The hook used to make requests to the API
@@ -49,14 +49,14 @@ export function useAPIRequest<Data = unknown, Error = unknown>(
       ...config,
       initialData: initialData && {
         status: 200,
-        statusText: 'InitialData',
+        statusText: "InitialData",
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         config: request!,
         headers: {},
-        data: initialData
-      }
+        data: initialData,
+      },
     }
-  )
+  );
 
   return {
     data: response && response.data,
@@ -64,6 +64,6 @@ export function useAPIRequest<Data = unknown, Error = unknown>(
     error,
     isValidating,
     revalidate,
-    mutate
-  }
+    mutate,
+  };
 }

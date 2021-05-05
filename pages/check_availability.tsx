@@ -6,9 +6,8 @@ import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import { isNum } from "../helpers";
 
-import styles from '../styles/check_availability.module.css'
+import styles from "../styles/check_availability.module.css";
 import { Districts } from "../api/district";
-
 
 export default function CheckAvailability() {
     const { push } = useRouter()
@@ -113,5 +112,5 @@ export default function CheckAvailability() {
             </div>
             <Footer />
         </div>
-    )
+    );
 }

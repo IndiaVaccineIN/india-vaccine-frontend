@@ -31,7 +31,6 @@
   min-width: 400px;
 }
 
-
 .searchBar:hover {
   border: 1px solid #7e828b;
 }
@@ -47,7 +46,6 @@
   padding: 6px 12px;
   cursor: pointer;
   margin-left: 1rem;
-
 }
 
 .searchButton:hover {
@@ -123,7 +121,6 @@
   .searchBar {
     width: 80vw;
     min-width: unset;
-
   }
 
   .container {
@@ -136,6 +133,5 @@
     width: 200px;
     margin-top: 1rem;
     margin-left: 0;
-
   }
 }
