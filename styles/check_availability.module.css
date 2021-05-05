@@ -31,7 +31,6 @@
   min-width: 400px;
 }
 
-
 .searchBar:hover {
   border: 1px solid #7e828b;
 }
@@ -47,7 +46,6 @@
   padding: 6px 12px;
   cursor: pointer;
   margin-left: 1rem;
-
 }
 
 .searchButton:hover {
@@ -68,7 +66,8 @@
   width: 20px;
   background-repeat: no-repeat;
 
-  background: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.5'%3E%3Cpath d='M9.38382 16.2084C13.1529 16.2084 16.2084 13.1529 16.2084 9.38382C16.2084 5.61471 13.1529 2.55923 9.38382 2.55923C5.61471 2.55923 2.55923 5.61471 2.55923 9.38382C2.55923 13.1529 5.61471 16.2084 9.38382 16.2084Z' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.9145 17.9145L14.2037 14.2037' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E%0A") center / contain no-repeat;
+  background: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.5'%3E%3Cpath d='M9.38382 16.2084C13.1529 16.2084 16.2084 13.1529 16.2084 9.38382C16.2084 5.61471 13.1529 2.55923 9.38382 2.55923C5.61471 2.55923 2.55923 5.61471 2.55923 9.38382C2.55923 13.1529 5.61471 16.2084 9.38382 16.2084Z' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.9145 17.9145L14.2037 14.2037' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E%0A")
+    center / contain no-repeat;
   /* background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25' fill-rule='evenodd'%3E%3Cpath d='M16.036 18.455l2.404-2.405 5.586 5.587-2.404 2.404zM8.5 2C12.1 2 15 4.9 15 8.5S12.1 15 8.5 15 2 12.1 2 8.5 4.9 2 8.5 2zm0-2C3.8 0 0 3.8 0 8.5S3.8 17 8.5 17 17 13.2 17 8.5 13.2 0 8.5 0zM15 16a1 1 0 1 1 2 0 1 1 0 1 1-2 0'%3E%3C/path%3E%3C/svg%3E") center / contain no-repeat; */
 }
 
@@ -81,7 +80,6 @@
   .searchBar {
     width: 80vw;
     min-width: unset;
-
   }
 
   .container {
@@ -94,6 +92,5 @@
     width: 200px;
     margin-top: 1rem;
     margin-left: 0;
-
   }
 }

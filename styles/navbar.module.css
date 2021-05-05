@@ -1,22 +1,22 @@
 .navbar_wrapper {
-    /* position: fixed; */
+  /* position: fixed; */
 
-    height: 80px;
-    /* height: 4rem; */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 80px;
+  /* height: 4rem; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    background-color: var(--white-pure);
-    /* backdrop-filter: blur(50px); */
+  background-color: var(--white-pure);
+  /* backdrop-filter: blur(50px); */
 
-    z-index: 3;
+  z-index: 3;
 
-    border-bottom: 1px solid;
-    border-color: var(--grey);
+  border-bottom: 1px solid;
+  border-color: var(--grey);
 
-    /* div {
+  /* div {
       width: 100%;
       display: flex;
   
@@ -31,134 +31,130 @@
 }
 
 .navbar_content {
-    width: 90%;
+  width: 90%;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .routes {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0px 10px;
-    /* gap: 20px; */
-    /* font-size: 25px; */
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px 10px;
+  /* gap: 20px; */
+  /* font-size: 25px; */
 
-    /* font-weight: 700; */
+  /* font-weight: 700; */
 
-    /* color: var(--blue-pure); */
-    color: var(--black);
+  /* color: var(--blue-pure); */
+  color: var(--black);
 }
 
 .routes a {
-    margin: 5px;
-    padding: 6px 12px;
-    border: 1px solid #fff;
-    border-radius: 10px;
-
-
+  margin: 5px;
+  padding: 6px 12px;
+  border: 1px solid #fff;
+  border-radius: 10px;
 }
 
 .routes a:hover {
-    border: 1px solid #D2D5DA;
-
+  border: 1px solid #d2d5da;
 }
 
 .logo_wrapper {
-    display: flex;
-    align-items: center;
-    font-weight: 700;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
 }
 
 .active_route {
-    /* text-decoration: underline; */
-    /* background: #F3F5FC; */
-    background: #F3F4F6;
+  /* text-decoration: underline; */
+  /* background: #F3F5FC; */
+  background: #f3f4f6;
 }
 
 .cross,
 .hamburger {
-    display: none;
+  display: none;
 }
 
 @media only screen and (max-device-width: 550px) {
-    .hamburger_line {
-        background-color: var(--blue-strong);
-        height: 2px;
-        margin: 3px 0;
-        width: 24px;
-    }
+  .hamburger_line {
+    background-color: var(--blue-strong);
+    height: 2px;
+    margin: 3px 0;
+    width: 24px;
+  }
 
-    .hamburger {
-        background: none;
-        border: none;
-        display: block;
-    }
+  .hamburger {
+    background: none;
+    border: none;
+    display: block;
+  }
 
-    .navbar_content_mobile {
-        background: var(--white-pure);
-        box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.25);
-        flex-direction: column;
-        height: 233px;
-        position: fixed;
-        right: 0;
-        transition: .2s;
-        top: 0;
-        width: 100%;
-        z-index: 100;
-    }
+  .navbar_content_mobile {
+    background: var(--white-pure);
+    box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+    height: 233px;
+    position: fixed;
+    right: 0;
+    transition: 0.2s;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
 
-    .routes_mobile {
-        display: none;
-    }
+  .routes_mobile {
+    display: none;
+  }
 
-    .navbar_content_mobile .logo_wrapper {
-        margin-top: 28px;
-    }
+  .navbar_content_mobile .logo_wrapper {
+    margin-top: 28px;
+  }
 
-    .logo_wrapper img {
-        height: 30px;
-        width: 176px;
-    }
+  .logo_wrapper img {
+    height: 30px;
+    width: 176px;
+  }
 
-    .routes {
-        flex-direction: column;
-        font-size: 18px;
-        margin-bottom: 41px;
-    }
+  .routes {
+    flex-direction: column;
+    font-size: 18px;
+    margin-bottom: 41px;
+  }
 
-    .routes a {
-        text-align: center;
-    }
+  .routes a {
+    text-align: center;
+  }
 
-    .cross {
-        background: none;
-        border: none;
-        display: block;
-        position: absolute;
-        right: 25px;
-        top: 35px;
-    }
+  .cross {
+    background: none;
+    border: none;
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 35px;
+  }
 
-    .cross_line {
-        background: var(--blue-strong);
-        height: 2px;
-        position: relative;
-        width: 24px;
-    }
+  .cross_line {
+    background: var(--blue-strong);
+    height: 2px;
+    position: relative;
+    width: 24px;
+  }
 
-    .cross_1 {
-        top: 2px;
-        transform: rotate(45deg);
-    }
+  .cross_1 {
+    top: 2px;
+    transform: rotate(45deg);
+  }
 
-    .cross_2 {
-        transform: rotate(-45deg);
-    }
-
+  .cross_2 {
+    transform: rotate(-45deg);
+  }
 }
 
 @media only screen and (max-device-width: 400px) {
