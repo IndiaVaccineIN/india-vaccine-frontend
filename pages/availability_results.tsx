@@ -104,16 +104,18 @@ export default function AvailabilityResults(context: NextPageContext) {
             </button>
           </div>
         </main>
-        {error && <div>Failed to Load</div>}
-        {!data && <div>Loading Data...</div>}
-        {data && data.results.length > 0 ? (
+        {error ? (
+          <div>Failed to Load</div>
+        ) : !data ? (
+          <div>Loading Data...</div>
+        ) : data.results.length == 0 ? (
+          <span style={{ marginTop: "1.5rem" }}>No results available</span>
+        ) : (
           <div className={styles.results}>
             {data.results.map((e) => (
               <CvcCard key={e.cowin_center_id} data={e} />
             ))}
           </div>
-        ) : (
-          <span style={{ marginTop: "1.5rem" }}>No results available</span>
         )}
       </div>
       <Footer />
