@@ -9,9 +9,11 @@
   justify-content: space-evenly;
   align-items: center;
 
-  background-color: #bac1e720;
+  background-color: #F3F5FD;
 
   /* border-top: 1px solid #eaeaea; */
+  position: relative;
+  bottom: 0;
 }
 
 .center {

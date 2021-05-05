@@ -1,27 +1,22 @@
-import Head from "next/head";
+import Head from 'next/head'
+import { SWRConfig } from "swr"
+
+import { swrConfig } from '../helpers'
 
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Head>
-        <title>India Vaccine</title>
-        <link rel="icon" href="/favicon.ico" />
-        {/* <meta property="og:title" content="India Vaccine" key="title" />
+
+  return <SWRConfig value={swrConfig}>
+    <Head>
+      <title>India Vaccine</title>
+      <link rel="icon" href="/favicon.ico" />
+      {/* <meta property="og:title" content="India Vaccine" key="title" />
       <meta name="Description" content="This is the home page for India Vaccine project" /> */}
-        <meta name="theme-color" content="#7373EC" />
-        <title>
-          IndiaVaccine — We’re Making it Easier to Find Vaccination Centers
-        </title>
-        <meta
-          name="title"
-          content="IndiaVaccine — We’re Making it Easier to Find Vaccination Centers"
-        />
-        <meta
-          name="description"
-          content="We're building out a verified list of Vaccination Centers across the country so that people can find those centers in a quick & easy manner and thus enabling as many people to get vaccinated as possible"
-        />
+      <meta name="theme-color" content="#7373EC" />
+      <title>IndiaVaccine — We’re Making it Easier to Find Vaccination Centers</title>
+      <meta name="title" content="IndiaVaccine — We’re Making it Easier to Find Vaccination Centers" />
+      <meta name="description" content="We're building out a verified list of Vaccination Centers across the country so that people can find those centers in a quick & easy manner and thus enabling as many people to get vaccinated as possible" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="http://www.indiavaccine.in" />
@@ -50,7 +45,7 @@ function MyApp({ Component, pageProps }) {
           content="https://i.imgur.com/b1MurNy.jpeg"
         />
 
-        {/* 
+      {/* 
       <link
         rel="preload"
         href="fonts/Gilroy/Gilroy-Regular.otf"
@@ -65,24 +60,26 @@ function MyApp({ Component, pageProps }) {
         as="font"
         crossOrigin=""
       /> */}
-        <link
-          rel="preload"
-          href="fonts/Poppins/Poppins-Regular.ttf"
-          as="font"
-          type="font"
-          crossOrigin=""
-        />
+      <link
+        rel="preload"
+        href="fonts/Poppins/Poppins-Regular.ttf"
+        as="font"
+        type="font"
+        crossOrigin=""
+      />
 
-        <link
-          rel="preload"
-          href="fonts/Poppins/Poppins-SemiBold.ttf"
-          as="font"
-          crossOrigin=""
-        />
-      </Head>
-      <Component {...pageProps} />
-    </>
-  );
+      <link
+        rel="preload"
+        href="fonts/Poppins/Poppins-SemiBold.ttf"
+        as="font"
+        crossOrigin=""
+      />
+    
+    </Head>
+    <Component {...pageProps} />
+    
+  </SWRConfig>
+  
 }
 
 export default MyApp;

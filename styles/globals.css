@@ -9,10 +9,32 @@ body {
   /* font-size: 17px; */
 
   scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.pad-20 {
+  padding: 20px;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 p {
@@ -27,6 +49,10 @@ p {
   html,
   body {
     font-size: 16px;
+  }
+
+  .mobileCol {
+    flex-direction: column;
   }
 }
 
@@ -85,11 +111,13 @@ This is the color system of the entire application
   --red-strong: #fd3c3b;
   --red-light: #fd3c3b40;
   --black: #1a1a1d;
-  --grey: #b1b1b1;
+  --grey: #7D7D97;
   --white-pure: #fff;
   --white-strong: #fefefe;
   --white-mild: #1b1b1b50;
   --white-light: #1d1d1d;
+  --dark-green: #04884A;
+
 
   --black-strong: #050101;
 
@@ -98,6 +126,16 @@ This is the color system of the entire application
 
   --purple-light: #c4cbf4;
 }
+
+input:focus {
+  outline: 0px !important;
+  border: 1px solid var(--blue-pure);
+  border-radius: 90px;
+}
+
+/* *:focus {
+  outline: 1px solid var(--blue-pure);
+} */
 
 a {
   color: inherit;

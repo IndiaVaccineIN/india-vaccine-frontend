@@ -10,7 +10,7 @@ export default function Home() {
       <Navbar />
       <div className={styles.container}>
         <Head>
-          <title>India Vaccine Project</title>
+          <title>India Vaccine - About</title>
           <link rel="icon" href="/favicon.ico" />
 
           {/* <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png" />
@@ -84,6 +84,7 @@ export default function Home() {
             <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
           </a>
         </footer> */}
+        
       </div>
     </div>
   );
