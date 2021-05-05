@@ -18,8 +18,8 @@ export const swrConfig: SWRConfiguration = {
  *
  * @reference https://swr.vercel.app/docs/data-fetching
  */
-//@ts-expect-error Ignore this error
 export const appSWRFetcher = (...args) =>
+  //@ts-expect-error Ignore this error
   fetch(...args).then((res) => res.json());
 
 /**
