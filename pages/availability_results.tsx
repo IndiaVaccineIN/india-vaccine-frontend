@@ -5,17 +5,47 @@ import { useRouter } from "next/router";
 import { useAPIRequest } from "../api";
 import { components } from "../api/interfaces";
 import { cleanObj, isEmpty } from "../helpers";
+import { isNum } from "../helpers";
 
 import CvcCard from "../components/cvc_card";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 
 import styles from "../styles/availability_results.module.css";
+import { useState } from "react";
+import { Districts } from "../api/district";
 
 export default function AvailabilityResults(context: NextPageContext) {
-  const { query } = useRouter();
+  const { query, push } = useRouter();
 
-  const searchBarContent = query?.pincode ?? query.district;
+  //for searching/editing new state/pincode *STARTS*
+  const [searchBarContent, setSearchBarContent] = useState<string>(query?.pincode?.toString() ?? query.district?.toString())
+  const showNewResults = () => {
+    if (!searchBarContent) {
+      return "Input is null";
+    }
+
+    if (searchBarContent.length === 0) {
+      return "Input is empty";
+    }
+
+    if (isNum(searchBarContent)) {
+      push({
+        pathname: "/availability_results",
+        query: {
+          pincode: searchBarContent,
+        },
+      });
+    } else {
+      push({
+        pathname: "/availability_results",
+        query: {
+          district: searchBarContent,
+        },
+      });
+    }
+  };
+  //for searching/editing new state/pincode *ENDS*
 
   let APIQuery = {
     pincode: Number(query?.pincode),
@@ -48,17 +78,28 @@ export default function AvailabilityResults(context: NextPageContext) {
           </h3>
           <div className="flex mobileCol center">
             <label className={styles.label}>
-              <input
-                disabled
-                type="text"
-                className={styles.searchBar}
-                placeholder="Enter your Pincode or Area"
-                value={searchBarContent}
-              />
+            <input
+              list="districts"
+              onChange={(e) => setSearchBarContent(e.target.value)}
+              type="text"
+              className={styles.searchBar}
+              placeholder="Enter your Pincode or District name"
+              value={searchBarContent}
+            />
+            <datalist id="districts">
+              {Districts.map((district) => {
+                return <option value={district.district_name} />;
+              })}
+            </datalist>
             </label>
-            <button type="submit" className={styles.searchButton}>
+
+            <button
+            onClick={showNewResults}
+            type="submit"
+            className={styles.searchButton}
+          >
             Find Centers
-            </button>
+          </button>
           </div>
         </main>
         {error && <div>Failed to Load</div>}
