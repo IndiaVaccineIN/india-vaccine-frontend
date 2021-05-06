@@ -109,7 +109,7 @@ export default function SearchDropdown(props: Props) {
                             className={`${styles.suggestion} ${styles.noSuggestion}`}
                             key="no-suggestions"
                         >
-                            No matches found
+                            No matching districts
                         </li>
                     )}
                 </ul>
