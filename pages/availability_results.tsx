@@ -7,7 +7,7 @@ import { components } from "../api/interfaces";
 import { cleanObj, isEmpty } from "../helpers";
 import { isNum } from "../helpers";
 
-import SearchDropdown from "../components/SearchDropdown";
+import SearchDropdown from "../components/search_dropdown";
 import CvcCard from "../components/cvc_card";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";

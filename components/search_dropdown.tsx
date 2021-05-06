@@ -1,7 +1,26 @@
-import styles from "../../styles/SearchDropdown/dropdown.module.css";
-import { useState, useRef, useEffect } from "react";
+import styles from "../styles/search_dropdown.module.css";
+import { useState, useRef, useEffect, Dispatch, SetStateAction } from "react";
 
-export default function SearchDropdown(props) {
+interface Props {
+    /**
+     * The items to be show in the autocomplete
+     */
+    listItems: Array<object>;
+    /**
+     * The current value of the textbox
+     */
+    search: string;
+    /**
+     * The hook function to set the state for the component
+     */
+    setSearch: Dispatch<SetStateAction<string>>;
+    /**
+     * The keyValue
+     */
+    keyValue: string;
+}
+
+export default function SearchDropdown(props: Props) {
     const { listItems, search, setSearch, keyValue } = props;
     const [suggestions, setSuggestions] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
@@ -23,7 +42,7 @@ export default function SearchDropdown(props) {
 
     useEffect(() => {
         if (listItems && listItems.length) {
-            setSuggestions(listItems)
+            setSuggestions(listItems);
         }
     }, [listItems]);
 
@@ -37,7 +56,7 @@ export default function SearchDropdown(props) {
 
     const handleSelectSuggestionClick = (event) => {
         handleSelectSuggestion(event.target.value);
-    }
+    };
 
     const handleSelectSuggestion = (suggestionIndex) => {
         if (suggestionIndex >= 0) {
@@ -45,7 +64,7 @@ export default function SearchDropdown(props) {
             inputRef.current.blur();
             setShowSuggestions(false);
         }
-    }
+    };
 
     const filterSuggestions = () => {
         let newSuggestions = [...listItems];
@@ -60,25 +79,39 @@ export default function SearchDropdown(props) {
             <input
                 onChange={(e) => setSearch(e.target.value)}
                 value={search}
-                type="text" className={styles.searchBar}
+                type="text"
+                className={styles.searchBar}
                 placeholder="Enter your Pincode or District name"
                 ref={inputRef}
                 onFocus={() => setShowSuggestions(true)}
             />
             {showSuggestions && (
-                <ul className={styles.suggestionsContainer} id="list-container"
+                <ul
+                    className={styles.suggestionsContainer}
+                    id="list-container"
                     ref={listContainerRef}
                     onClick={handleSelectSuggestionClick}
                 >
-                    {suggestions && suggestions.map((item, index) => {
-                        return (
-                            <li className={styles.suggestion}
-                                key={item[keyValue] + index}
-                                value={index}
-                            >{item[keyValue]}</li>
-                        )
-                    })}
-                    {suggestions.length === 0 && (<li className={`${styles.suggestion} ${styles.noSuggestion}`} key="no-suggestions">No matches found</li>)}
+                    {suggestions &&
+                        suggestions.map((item, index) => {
+                            return (
+                                <li
+                                    className={styles.suggestion}
+                                    key={item[keyValue] + index}
+                                    value={index}
+                                >
+                                    {item[keyValue]}
+                                </li>
+                            );
+                        })}
+                    {suggestions.length === 0 && (
+                        <li
+                            className={`${styles.suggestion} ${styles.noSuggestion}`}
+                            key="no-suggestions"
+                        >
+                            No matches found
+                        </li>
+                    )}
                 </ul>
             )}
         </div>
