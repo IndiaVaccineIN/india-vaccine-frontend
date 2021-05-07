@@ -4,6 +4,7 @@ import styles from "../styles/language_switcher.module.css";
 const localesMap = {
   "en-us": "English",
   "hi-in": "हिंदी",
+  "gu-in": "ગુજરાતી",
 };
 
 export default function LanguageSwitcher() {
