@@ -24,6 +24,7 @@ export default function SearchDropdown(props: Props) {
   const { listItems, search, setSearch, keyValue } = props;
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [currentItemIndex, setCurrentItemIndex] = useState(0);
   const dropdownRef = useRef(null);
   const inputRef = useRef(null);
   const listContainerRef = useRef(null);
@@ -31,6 +32,7 @@ export default function SearchDropdown(props: Props) {
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setCurrentItemIndex(0);
         setShowSuggestions(false);
       }
     }
@@ -54,14 +56,21 @@ export default function SearchDropdown(props: Props) {
     }
   }, [search]);
 
+  useEffect(() => {
+    if (suggestions && suggestions.length === 0) {
+      setCurrentItemIndex(0);
+    }
+  }, [suggestions]);
+
   const handleSelectSuggestionClick = (event) => {
     handleSelectSuggestion(event.target.value);
   };
 
   const handleSelectSuggestion = (suggestionIndex) => {
-    if (suggestionIndex >= 0) {
+    if (suggestionIndex >= 0 && suggestions.length) {
       setSearch(suggestions[suggestionIndex][keyValue]);
       inputRef.current.blur();
+      setCurrentItemIndex(0);
       setShowSuggestions(false);
     }
   };
@@ -74,6 +83,40 @@ export default function SearchDropdown(props: Props) {
     setSuggestions(newSuggestions);
   };
 
+  const handleKeyDown = (e) => {
+    if (e.keyCode === 13) {
+      handleSelectSuggestion(currentItemIndex);
+    } else {
+      if (listContainerRef.current) {
+        let element = listContainerRef.current;
+        let itemHeight =
+          listContainerRef.current.children[currentItemIndex].clientHeight;
+        var scrollTop = element.scrollTop;
+        var viewport = parseInt(scrollTop + element.clientHeight);
+        var elOffset = itemHeight * currentItemIndex;
+
+        if (e.keyCode === 38 && currentItemIndex > 0) {
+          if (elOffset - itemHeight <= viewport) {
+            element.scrollTop =
+              listContainerRef.current.children[currentItemIndex - 1]
+                .offsetTop -
+              itemHeight * (currentItemIndex % 6);
+          }
+          setCurrentItemIndex(currentItemIndex - 1);
+        } else if (
+          e.keyCode === 40 &&
+          currentItemIndex < suggestions.length - 1
+        ) {
+          if (elOffset + itemHeight >= viewport) {
+            element.scrollTop =
+              listContainerRef.current.children[currentItemIndex].offsetTop;
+          }
+          setCurrentItemIndex(currentItemIndex + 1);
+        }
+      }
+    }
+  };
+
   return (
     <div className={styles.searchContainer} ref={dropdownRef}>
       <input
@@ -84,6 +127,7 @@ export default function SearchDropdown(props: Props) {
         placeholder="Enter your Pincode or District name"
         ref={inputRef}
         onFocus={() => setShowSuggestions(true)}
+        onKeyDown={handleKeyDown}
       />
       {showSuggestions && (
         <ul
@@ -96,9 +140,12 @@ export default function SearchDropdown(props: Props) {
             suggestions.map((item, index) => {
               return (
                 <li
-                  className={styles.suggestion}
+                  className={`${styles.suggestion} ${
+                    currentItemIndex === index ? styles.activeSuggestion : ""
+                  }`}
                   key={item[keyValue] + index}
                   value={index}
+                  tabIndex={index}
                 >
                   {item[keyValue]}
                 </li>
