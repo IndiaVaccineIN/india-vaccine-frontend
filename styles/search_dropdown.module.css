@@ -19,7 +19,7 @@
   width: 100%;
   z-index: 99999;
   background-color: white;
-  max-height: 200px;
+  max-height: 216px;
   overflow-y: scroll;
   position: absolute;
   margin-top: 2px;
@@ -76,7 +76,13 @@
   background-color: #f2f5fd;
   outline: none;
 }
+
 .noSuggestion {
   pointer-events: none;
   opacity: 0.7;
+}
+
+.activeSuggestion {
+  background-color: #f2f5fd;
+  outline: none;
 }
