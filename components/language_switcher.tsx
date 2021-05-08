@@ -1,11 +1,6 @@
 import { useRouter } from "next/router";
+import { LocalesMap } from "../shared/LocalesMap";
 import styles from "../styles/language_switcher.module.css";
-
-const localesMap = {
-  "en-us": "English",
-  "hi-in": "हिंदी",
-  "gu-in": "ગુજરાતી",
-};
 
 export default function LanguageSwitcher() {
   const { locales, push } = useRouter();
@@ -28,7 +23,7 @@ export default function LanguageSwitcher() {
               key={`${e}_lang`}
               className={styles.language}
             >
-              {localesMap[e]}
+              {LocalesMap[e]}
             </span>
             {i === a.length - 1 ? null : <div className={styles.dot} />}
           </>
