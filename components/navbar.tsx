@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
+import Logo from "./logo";
 import LanguageSwitcher from "./language_switcher";
 import styles from "../styles/navbar.module.css";
 
@@ -34,10 +35,7 @@ export default function Navbar() {
           }`}
         >
           <div className={styles.logo_wrapper}>
-            <a href="https://www.indiavaccine.in">
-              {" "}
-              <Image src={"/assets/logo.svg"} height={50} width={200}></Image>
-            </a>
+            <Logo />
 
             {isMenuOpen && (
               <button className={styles.cross} onClick={() => setMenu(false)}>
