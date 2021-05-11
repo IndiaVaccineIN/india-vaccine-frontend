@@ -1,17 +1,15 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { isEnglishLocale } from "../../shared/LocalesMap";
 
 const LogoComponent = () => {
-  
   const { locale } = useRouter();
-  
-  const WEBSITE_URL = 'https://www.indiavaccine.in';  
-   
-  const logoUrl = `/assets/logo/${locale}.svg`;
-  
+
+  const logoSourceUrl = `/assets/logo/${locale}.svg`;
+
   return (
-    <a href={WEBSITE_URL}>
-      <Image src={logoUrl} height={50} width={200}></Image>
+    <a href={`/${!isEnglishLocale(locale) ? locale : ""}`}>
+      <Image src={logoSourceUrl} height={50} width={200} />
     </a>
   );
 };

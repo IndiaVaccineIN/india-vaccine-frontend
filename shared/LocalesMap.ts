@@ -3,3 +3,5 @@ export const LocalesMap = {
   "hi-in": "हिंदी",
   "gu-in": "ગુજરાતી",
 };
+
+export const isEnglishLocale = (locale: string) => locale === "en-us";
