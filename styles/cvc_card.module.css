@@ -90,5 +90,6 @@
 }
 
 .field {
-  font-size: 12px;
+  /* font-size: 15px; */
+  max-width: 100px;
 }
