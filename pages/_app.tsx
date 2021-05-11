@@ -1,10 +1,13 @@
 import Head from "next/head";
+import { SWRConfig } from "swr";
+
+import { swrConfig } from "../helpers";
 
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <SWRConfig value={swrConfig}>
       <Head>
         <title>India Vaccine</title>
         <link rel="icon" href="/favicon.ico" />
@@ -81,7 +84,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Component {...pageProps} />
-    </>
+    </SWRConfig>
   );
 }
 

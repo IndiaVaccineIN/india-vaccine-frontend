@@ -37,7 +37,11 @@ export default function Navbar() {
           }`}
         >
           <div className={styles.logo_wrapper}>
-            <Image src={"/assets/logo.svg"} height={200} width={200}></Image>
+            <a href="https://www.indiavaccine.in">
+              {" "}
+              <Image src={"/assets/logo.svg"} height={50} width={200}></Image>
+            </a>
+
             {isMenuOpen && (
               <button className={styles.cross} onClick={() => setMenu(false)}>
                 <div className={`${styles.cross_line} ${styles.cross_1}`}></div>
@@ -58,7 +62,8 @@ export default function Navbar() {
               isMenuOpen ? null : styles.routes_mobile
             }`}
           >
-            {activeLink("/", data?.about)}
+            {activeLink("/check_availability", "Check Availability")}
+            {activeLink("/", "About")}
             <a
               href={"https://forms.gle/HeH3xrvjP1VfFUzM7"}
               rel="noreferrer noopener"
