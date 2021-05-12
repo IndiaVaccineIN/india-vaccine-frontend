@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { components } from "../api/interfaces";
+import { useTranslation } from "../helpers";
 import styles from "../styles/cvc_card.module.css";
 import Button from "./button";
 
@@ -15,6 +16,10 @@ export default function CvcCard({ data }: Props) {
     cvc_name: data.name
   });
 
+
+  const { data: translationData } = useTranslation() 
+
+  // console.log(data)
   return (
     // <>
     <div key={data.cowin_center_id} className={styles.cvc_card}>
@@ -41,24 +46,21 @@ export default function CvcCard({ data }: Props) {
               fill="#000080"
             />
           </svg>
-          Get Directions
+          {translationData.cvc_card.directions}
         </a>
       </div>
       <div className={styles.cvcFlexEnd}>
         {/* <span>Ages: 18-45</span> */}
-        <span>
-          Ages: <span className={styles.field}>To be updated</span>
-        </span>
+        <span>{translationData.cvc_card.ages}: <span className={styles.field}>To be updated</span></span>
         {/* <div>Cost: ₹400</div> */}
-        <div>
-          Cost: <span className={styles.field}>To be updated</span>
-        </div>
+        <div>{translationData.cvc_card.cost}: <span className={styles.field}>To be updated</span></div>
         {/* <div>Covaxin</div> */}
       </div>
       <br />
       <div>
         Vaccine Type: <span className={styles.field}>To be updated</span>
       </div>
+      <div>{translationData.cvc_card.vaccine_type}: <span className={styles.field}>To be updated</span></div>
       <br />
       <div className={styles.subText}>
         <a
@@ -66,7 +68,7 @@ export default function CvcCard({ data }: Props) {
           rel="noreferrer noopener"
           target="_blank"
         >
-          <button className={styles.registerButton}>Book on Cowin</button>
+          <button className={styles.registerButton}>{translationData.cvc_card.book_on_cowin}</button>
         </a>
         {/* <div className={styles.lastUpdated}>Last Update: To be updated</div> */}
       </div>

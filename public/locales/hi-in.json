@@ -16,5 +16,23 @@
   "callteam": "यदि आपके पास प्रतिदिन 20 मिनट हैं, तो आप 5-6 टीकाकरण केंद्रों पर कॉल करने के लिए साइन-अप कर सकते हैं और विभिन्न लोगों की मदद कर सकते हैं जो एक सत्यापित जानकारी से लाभान्वित होंगे। अगर आपको लगता है कि कुछ ऐसा है जो हम बेहतर कर सकते हैं, तो आप हमें भेज सकते हैं। इंस्टाग्राम, ट्विटर पर एक डीएम और वह भी एक बड़ी मदद होगी!",
   "disclaimer": "हम एक स्वयंसेवक संचालित संगठन हैं जो जानकारी को सही ढंग से प्रस्तुत करने की कोशिश करते हैं लेकिन जानकारी की सटीकता के लिए कोई कानूनी गारंटी नहीं देते हैं। हम चिकित्सकीय सलाह प्रदान नहीं करते हैं।",
   "volunteer": "स्वयंसेवक",
-  "about": "बारे में"
+  "about": "बारे में",
+  "check_availability": {
+    "heading": "Find a COVID-19 vaccine for yourself or a loved one",
+    "text_field_placeholder": "Enter your Pincode or District name",
+    "find_vaccine_button": "Find Vaccine",
+    "description": "Everyone over 18 is now eligible for free, safe, and reliable COVID-19 vaccines in India. But it can be difficult to find out where and how to get a shot. Enter your zip code or area to find confirmed vaccination locations near you, and learn how to make an appointment."
+  },
+  "availability_results": {
+    "showing": "Showing",
+    "vaccination_centers": "Vaccination Centers",
+    "find_centers_button": "Find Centers"
+  },
+  "cvc_card": {
+    "ages": "Ages",
+    "cost": "Cost",
+    "vaccine_type": "Vaccine Type",
+    "book_on_cowin": "Book on Cowin",
+    "directions": "Directions"
+  }
 }

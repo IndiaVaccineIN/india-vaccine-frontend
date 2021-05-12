@@ -17,5 +17,23 @@
   "callteam": "If you have 20 mins everyday, you can sign-up to call 5-6 vaccination centers everyday and help 1000s of people who would be benefit from a verified information If you think there is something we could be doing better, you can absolutely send us a DM on instagram, twitter and that would be a great help as well! ",
   "disclaimer": "We are a volunteer driven organisation that tries to present information accurately but does not make any legal guarantees as to the accuracy of the information. We do not provide medical advice.",
   "volunteer": "Volunteer",
-  "about": "About"
+  "about": "About",
+  "check_availability": {
+    "heading": "Find a COVID-19 vaccine for yourself or a loved one",
+    "text_field_placeholder": "Enter your Pincode or District name",
+    "find_vaccine_button": "Find Vaccine",
+    "description": "Everyone over 18 is now eligible for free, safe, and reliable COVID-19 vaccines in India. But it can be difficult to find out where and how to get a shot. Enter your zip code or area to find confirmed vaccination locations near you, and learn how to make an appointment."
+  },
+  "availability_results": {
+    "showing": "Showing",
+    "vaccination_centers": "Vaccination Centers",
+    "find_centers_button": "Find Centers"
+  },
+  "cvc_card": {
+    "ages": "Ages",
+    "cost": "Cost",
+    "vaccine_type": "Vaccine Type",
+    "book_on_cowin": "Book on Cowin",
+    "directions": "Directions"
+  }
 }

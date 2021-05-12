@@ -5,7 +5,7 @@ import { useState } from "react";
 import SearchDropdown from "../components/search_dropdown";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import { isNum } from "../helpers";
+import { isNum, useTranslation } from "../helpers";
 
 import styles from "../styles/check_availability.module.css";
 import { Districts } from "../api/district";
@@ -14,6 +14,8 @@ export default function CheckAvailability() {
   const { push } = useRouter();
 
   const [search, setSearch] = useState("");
+
+  const { data } = useTranslation()
 
   const showResults = () => {
     if (!search) {
@@ -50,7 +52,7 @@ export default function CheckAvailability() {
       <div className={styles.container}>
         <main className={styles.main}></main>
         <h1 className="textCenter">
-          Find a COVID-19 vaccine for yourself or a loved one
+          {data.check_availability.heading}
         </h1>
         <div className="flex mobileCol center">
           <SearchDropdown
@@ -64,7 +66,7 @@ export default function CheckAvailability() {
             type="submit"
             className={styles.searchButton}
           >
-            Find Vaccine
+            {data.check_availability.find_vaccine_button}
           </button>
         </div>
         <div className="flex mobileCol center max-w-4xl">
@@ -76,11 +78,7 @@ export default function CheckAvailability() {
             alt="Illustration"
           ></img>
           <p className={"pad-20"}>
-            Everyone over 18 is now eligible for free, safe, and reliable
-            COVID-19 vaccines in India. But it can be difficult to find out
-            where and how to get a shot. Enter your zip code or area to find
-            confirmed vaccination locations near you, and learn how to make an
-            appointment.
+            {data.check_availability.description}
           </p>
         </div>
       </div>

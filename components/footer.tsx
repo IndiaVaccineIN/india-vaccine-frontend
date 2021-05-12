@@ -1,15 +1,11 @@
 import Image from "next/image";
-import { useRouter } from "next/router";
-import useSWR from "swr";
 
 import styles from "../styles/footer.module.css";
 
-import { appSWRFetcher } from "../helpers";
+import { useTranslation } from "../helpers";
 
 export default function Footer() {
-  const router = useRouter();
-  const locale = router.locale;
-  const { data, error } = useSWR(`/locales/${locale}.json`, appSWRFetcher);
+  const { data } = useTranslation()
 
   return (
     <footer className={styles.footer_wrapper}>

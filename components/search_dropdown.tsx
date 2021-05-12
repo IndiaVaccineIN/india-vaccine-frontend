@@ -1,5 +1,6 @@
 import styles from "../styles/search_dropdown.module.css";
 import { useState, useRef, useEffect, Dispatch, SetStateAction } from "react";
+import { useTranslation } from "../helpers";
 
 interface Props {
   /**
@@ -28,6 +29,8 @@ export default function SearchDropdown(props: Props) {
   const dropdownRef = useRef(null);
   const inputRef = useRef(null);
   const listContainerRef = useRef(null);
+
+  const { data } = useTranslation()
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -124,7 +127,7 @@ export default function SearchDropdown(props: Props) {
         value={search}
         type="text"
         className={styles.searchBar}
-        placeholder="Enter your Pincode or District name"
+        placeholder={data.check_availability.text_field_placeholder}
         ref={inputRef}
         onFocus={() => setShowSuggestions(true)}
         onKeyDown={handleKeyDown}

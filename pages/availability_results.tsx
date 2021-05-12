@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import { useAPIRequest } from "../api";
 import { components } from "../api/interfaces";
-import { cleanObj, isEmpty } from "../helpers";
+import { cleanObj, isEmpty, useTranslation } from "../helpers";
 import { isNum } from "../helpers";
 
 import SearchDropdown from "../components/search_dropdown";
@@ -23,6 +23,9 @@ export default function AvailabilityResults(context: NextPageContext) {
   const [searchBarContent, setSearchBarContent] = useState<string>(
     query?.pincode?.toString() ?? query.district?.toString()
   );
+
+  const { data: translationData } = useTranslation()
+
   const showNewResults = () => {
     if (!searchBarContent) {
       return "Input is null";
@@ -75,9 +78,9 @@ export default function AvailabilityResults(context: NextPageContext) {
         <main className={styles.main}>
           <h3 className="textCenter">
             {" "}
-            Showing {error && <span>0</span>}
+            {translationData.availability_results.showing} {error && <span>0</span>}
             {!data && <span>Unknown</span>}
-            {data && data.results.length} Vaccination Centers
+            {data && data.results.length} {translationData.availability_results.vaccination_centers}
           </h3>
           <div className="flex mobileCol center">
             <SearchDropdown
@@ -91,7 +94,7 @@ export default function AvailabilityResults(context: NextPageContext) {
               type="submit"
               className={styles.searchButton}
             >
-              Find Centers
+              {translationData.availability_results.find_centers_button}
             </button>
           </div>
         </main>
