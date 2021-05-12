@@ -14,6 +14,11 @@ Join our group on Discord to engage with the developers and contributors working
 
 ### Getting the application running
 
+setup your env file 
+
+* rename .env.default file to .env.local  
+
+
 The frontend application is built with [NextJS](https://nextjs.org) and can be locally spun up using the following command
 
 ```bash
