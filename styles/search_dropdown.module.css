@@ -86,3 +86,36 @@
   background-color: #f2f5fd;
   outline: none;
 }
+
+/* Search bar media queries */
+
+@media (max-width: 450px) {
+  .searchBar {
+    font-size: 14px;
+    min-width: 250px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 390px) {
+  .searchBar {
+    font-size: 12px;
+    min-width: 250px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 335px) {
+  .searchBar {
+    font-size: 11px;
+    width: 275px;
+  }
+}
+
+@media (max-width: 300px) {
+  .searchBar {
+    font-size: 10px;
+    width: 250px;
+  }
+}
+
