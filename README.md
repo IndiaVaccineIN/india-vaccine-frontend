@@ -35,8 +35,7 @@ We have [continuous deployment](https://vercel.com/docs/git/vercel-for-github) e
 
 
 <a className={styles.center} href="https://vercel.com/?utm_source=IndiaVaccine&utm_campaign=oss " target="_blank"> 
-                     <img src="/assets/vercel.svg"
+                     <img src="public/assets/vercel.svg"
                             width="180px"
                             height="100px"
-                            alt="vercel logo" ></img>
-                        </a> 
+                            alt="vercel logo" ></img></a> 
