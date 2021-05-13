@@ -4,8 +4,10 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 
 import Logo from "./logo";
+import useSWR from "swr";
 import LanguageSwitcher from "./language_switcher";
 import styles from "../styles/navbar.module.css";
+import { appSWRFetcher } from "../helpers";
 
 export default function Navbar() {
   /**
@@ -13,6 +15,8 @@ export default function Navbar() {
    */
   const [isMenuOpen, setMenu] = useState(false);
   const router = useRouter();
+  const locale = router.locale;
+  const { data, error } = useSWR(`/locales/${locale}.json`, appSWRFetcher);
   const activeLink = (
     path,
     content,
@@ -64,7 +68,7 @@ export default function Navbar() {
               rel="noreferrer noopener"
               target="_blank"
             >
-              Volunteer
+              {data?.volunteer}
             </a>
             {/* {activeLink('/volunteer', 'Volunteer')} */}
           </div>
