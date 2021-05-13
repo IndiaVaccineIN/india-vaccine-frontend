@@ -5,7 +5,7 @@ import { SWRConfig } from "swr";
 
 import { swrConfig } from "../helpers";
 
-import * as gtag from "../lib/gtag";
+import * as gtag from "../shared/gtag";
 
 import "../styles/globals.css";
 
