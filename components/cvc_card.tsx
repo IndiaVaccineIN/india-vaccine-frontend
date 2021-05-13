@@ -40,14 +40,19 @@ export default function CvcCard({ data }: Props) {
       </div>
       <div className={styles.cvcFlexEnd}>
         {/* <span>Ages: 18-45</span> */}
-        <span>Ages: <span className={styles.field}>To be updated</span></span>
+        <span>
+          Ages: <span className={styles.field}>To be updated</span>
+        </span>
         {/* <div>Cost: ₹400</div> */}
-        <div>Cost: <span className={styles.field}>To be updated</span></div>
+        <div>
+          Cost: <span className={styles.field}>To be updated</span>
+        </div>
         {/* <div>Covaxin</div> */}
-        
       </div>
       <br />
-      <div>Vaccine Type: <span className={styles.field}>To be updated</span></div>
+      <div>
+        Vaccine Type: <span className={styles.field}>To be updated</span>
+      </div>
       <br />
       <div className={styles.subText}>
         <a
