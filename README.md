@@ -32,3 +32,11 @@ npm run dev
 We have [continuous deployment](https://vercel.com/docs/git/vercel-for-github) enabled for the project with preview URLs generated for each Pull Request
 
 <img width="945" alt="image" src="https://user-images.githubusercontent.com/27439197/116805110-adadbb00-ab41-11eb-9950-747c31a7d57b.png">
+
+
+<a className={styles.center} href="https://vercel.com/?utm_source=IndiaVaccine&utm_campaign=oss " target="_blank"> 
+                     <img src="/assets/vercel.svg"
+                            width="180px"
+                            height="100px"
+                            alt="vercel logo" ></img>
+                        </a> 
