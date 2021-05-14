@@ -3,12 +3,18 @@ import { components } from "../api/interfaces";
 import styles from "../styles/cvc_card.module.css";
 import Button from "./button";
 
+import { stringify } from "query-string"
+
 interface Props {
   data: components["schemas"]["CVCResponseData"];
 }
 
 export default function CvcCard({ data }: Props) {
-  // console.log(data)
+  const aidQueryString = stringify({
+    cvc_id: data.id,
+    cvc_name: data.name
+  });
+
   return (
     // <>
     <div key={data.cowin_center_id} className={styles.cvc_card}>
@@ -66,13 +72,7 @@ export default function CvcCard({ data }: Props) {
       </div>
       {/* <br /> */}
       <div className={styles.endRow}>
-        <span className={styles.add_info_cta}><Link href={{
-          pathname: "/aid",
-          query: {
-            cvc_id: data.id,
-            cvc_name: data.name
-          }
-        }}>Add Info</Link></span>
+        <a target="_blank" href={`/aid?${aidQueryString}`} className={styles.add_info_cta}>Add Info</a>
       </div>
       {/* <div>Operation Timings: {data.operation_timings.start_time}-{data.operation_timings.end_time}</div> */}
     </div>
