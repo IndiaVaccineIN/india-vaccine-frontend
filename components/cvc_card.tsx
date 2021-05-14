@@ -35,7 +35,7 @@ export default function CvcCard({ data }: Props) {
               fill="#000080"
             />
           </svg>
-          Directions
+          Get Directions
         </a>
       </div>
       <div className={styles.cvcFlexEnd}>
@@ -63,6 +63,10 @@ export default function CvcCard({ data }: Props) {
           <button className={styles.registerButton}>Book on Cowin</button>
         </a>
         {/* <div className={styles.lastUpdated}>Last Update: To be updated</div> */}
+      </div>
+      {/* <br /> */}
+      <div className={styles.endRow}>
+        <span className={styles.add_info_cta}><Link href="/aid">Add Info</Link></span>
       </div>
       {/* <div>Operation Timings: {data.operation_timings.start_time}-{data.operation_timings.end_time}</div> */}
     </div>

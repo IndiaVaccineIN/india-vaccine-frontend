@@ -42,6 +42,7 @@
 .directions {
   color: var(--blue-pure);
   font-size: 0.8rem;
+  font-weight: 600;
   /* position: absolute; */
   right: 1rem;
   top: 1rem;
@@ -92,4 +93,17 @@
 .field {
   /* font-size: 15px; */
   max-width: 100px;
+}
+
+.endRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add_info_cta {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000080;
+;
 }
