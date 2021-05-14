@@ -39,9 +39,19 @@ export default function CvcCard({ data }: Props) {
         </a>
       </div>
       <div className={styles.cvcFlexEnd}>
-        <span>Ages: 18-45</span>
-        <div>Cost: ₹400</div>
-        <div>Covaxin</div>
+        {/* <span>Ages: 18-45</span> */}
+        <span>
+          Ages: <span className={styles.field}>To be updated</span>
+        </span>
+        {/* <div>Cost: ₹400</div> */}
+        <div>
+          Cost: <span className={styles.field}>To be updated</span>
+        </div>
+        {/* <div>Covaxin</div> */}
+      </div>
+      <br />
+      <div>
+        Vaccine Type: <span className={styles.field}>To be updated</span>
       </div>
       <br />
       <div className={styles.subText}>
@@ -52,7 +62,7 @@ export default function CvcCard({ data }: Props) {
         >
           <button className={styles.registerButton}>Book on Cowin</button>
         </a>
-        <div className={styles.lastUpdated}>Updated 30 Apr 4:30pm</div>
+        {/* <div className={styles.lastUpdated}>Last Update: To be updated</div> */}
       </div>
       {/* <div>Operation Timings: {data.operation_timings.start_time}-{data.operation_timings.end_time}</div> */}
     </div>

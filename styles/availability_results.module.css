@@ -7,7 +7,11 @@
   align-items: center;
   /* padding: 4rem 8rem; */
   padding: 0rem 8rem;
-  background: #f3f5fd;
+  /*
+    We may need to change this
+  */
+  /* background: #f3f5fd; */
+  background-color: #ffffff;
 }
 
 .main {
