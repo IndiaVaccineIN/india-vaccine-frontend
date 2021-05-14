@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import styles from  "../styles/aid.module.css";
+import styles from "../styles/aid.module.css";
 
 export default function Aid() {
   const myHtml = `
@@ -29,12 +29,10 @@ export default function Aid() {
       <Navbar />
       <div >
         <Head>
-          <title>India Vaccine Project | Volunteer Pledge</title>
+          <title>India Vaccine Project | Volunteer Aid</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <main  className={styles.aidContainer}>
-        <div dangerouslySetInnerHTML={{__html: myHtml}} />
-        </main>
+        <div className={styles.container} dangerouslySetInnerHTML={{ __html: myHtml }}/>
         <Footer />
       </div>
     </div>

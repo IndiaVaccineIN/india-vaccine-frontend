@@ -66,7 +66,13 @@ export default function CvcCard({ data }: Props) {
       </div>
       {/* <br /> */}
       <div className={styles.endRow}>
-        <span className={styles.add_info_cta}><Link href="/aid">Add Info</Link></span>
+        <span className={styles.add_info_cta}><Link href={{
+          pathname: "/aid",
+          query: {
+            cvc_id: data.id,
+            cvc_name: data.name
+          }
+        }}>Add Info</Link></span>
       </div>
       {/* <div>Operation Timings: {data.operation_timings.start_time}-{data.operation_timings.end_time}</div> */}
     </div>
