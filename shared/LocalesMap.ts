@@ -4,5 +4,6 @@ export const LocalesMap = {
   "gu-in": "ગુજરાતી",
   "ml-in":"മലയാളം",
   "kn-in":"ಕನ್ನಡ",
-  "pa-in":"ਪੰਜਾਬੀ"
+  "pa-in":"ਪੰਜਾਬੀ",
+  "te-in": "తెలుగు",
 };
