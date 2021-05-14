@@ -6,4 +6,7 @@ export const LocalesMap = {
   "kn-in":"ಕನ್ನಡ",
   "pa-in":"ਪੰਜਾਬੀ",
   "te-in": "తెలుగు",
+  "bn-in": "বাংলা",
+  "ta-in": "தமிழ்",
+  "mr-in": "मराठी"
 };
