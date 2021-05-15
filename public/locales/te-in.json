@@ -16,5 +16,28 @@
   "callteam": "మీకు ప్రతి రోజు 20 నిమిషాలు ఉంటే, రోజూ 5-6 వ్యాక్సినేషన్ కేంద్రాలకు కాల్ చేయడం కోసం సైన్-అప్ అయి, ధ్రువీకరించిన సమాచారంతో లబ్ధి పొందే వేలాది మందికి సహాయపడవచ్చు. ఒకవేళ మేము ఇంతకన్నా బాగా చేయాల్సింది ఏదైనా ఉందని మీకు అనిపిస్తే, ఇన్​స్టాగ్రామ్, ట్విట్టర్​లలో మాకు DM చేయండి మరియు అది కూడా గొప్ప సహాయమే అవుతుంది! ",
   "disclaimer": "మాది వాలంటీర్లతో నడుపబడుతున్న స్వచ్ఛంద సంస్థ, ఇది కచ్చితమైన సమాచారాన్ని అందించడానికి ప్రయత్నిస్తుంది కానీ, సమాచారం యొక్క కచ్చితత్వం గురించి ఎటువంటి చట్టపరమైన హామీలు ఇవ్వదు. మేము వైద్య సలహాను అందించము.",
   "volunteer": "వాలంటీర్",
-  "about": "గురించి"
+  "about": "గురించి",
+  "check_availability": {
+    "heading": "Find a COVID-19 vaccine for yourself or a loved one",
+    "text_field_placeholder": "Enter your Pincode or District name",
+    "find_vaccine_button": "Find Vaccine",
+    "description": "Everyone over 18 is now eligible for free, safe, and reliable COVID-19 vaccines in India. But it can be difficult to find out where and how to get a shot. Enter your zip code or area to find confirmed vaccination locations near you, and learn how to make an appointment."
+  },
+  "availability_results": {
+    "showing": "Showing",
+    "vaccination_centers": "Vaccination Centers",
+    "find_centers_button": "Find Centers"
+  },
+  "cvc_card": {
+    "ages": "Ages",
+    "cost": "Cost",
+    "vaccine_type": "Vaccine Type",
+    "book_on_cowin": "Book on Cowin",
+    "directions": "Get Directions"
+  },
+  "navbar": {
+    "check_availability": "లభ్యతను తనిఖీలు చేయండి",
+    "about": "గురించి",
+    "volunteer": "వాలంటీర్"
+  }
 }
