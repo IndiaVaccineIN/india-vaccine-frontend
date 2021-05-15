@@ -14,5 +14,23 @@
   "techteam": "தினமும் 2-3 மணி நேரங்கள் உங்களால் ஒதுக்க முடியுமென்றால், உங்களுக்கு React JS அல்லது Mongo திறன்கள் சிறப்பாக இருந்தால், நீங்கள் எங்களுடைய தொழில்நுட்ப பிரிவுக் குழுவுடன் சேர்ந்து தன்னார்வலராக உதவி புரியலாம்.",
   "calling": "கால் சென்டர்கள்",
   "callteam": "தினமும் 20 நிமிடங்கள் உங்களால் ஒதுக்க முடியுமென்றால், 5-6 வேக்ஸினேஷன் மையங்களை தினந்தோறும் தொடர்பு கொண்டு பேசுவதற்கு நீங்கள் பதிவு செய்து கொள்ளலாம். இவ்வாறு சரிபார்க்கப்பட்ட தகவல்களின் மூலமாக ஆயிரக்கணக்கான மக்கள் பயனடைவார்கள். நீங்கள் எங்களுடன் இணைந்து உதவி புரிய விரும்பினால், இன்ஸ்டாகிராம், டிவிட்டரில் கூட எங்களுக்கு தனிப்பட்ட முறையில் செய்தி அனுப்பலாம்! ",
-  "disclaimer": "நாங்கள் ஒரு தன்னார்வ தொண்டு நிறுவனமாகும். நாங்கள் இயன்ற வரை துல்லியமான தகவல்களை வழங்கிட முயற்சி செய்கிறோம், ஆயினும் தகவல்களின் துல்லியத்தன்மைக்கு எந்தவொரு சட்டபூர்வமான உத்தரவாதமும் தர இயலாது. நாங்கள் மருத்துவ ஆலோசனைகளை வழங்குவதில்லை."
+  "disclaimer": "நாங்கள் ஒரு தன்னார்வ தொண்டு நிறுவனமாகும். நாங்கள் இயன்ற வரை துல்லியமான தகவல்களை வழங்கிட முயற்சி செய்கிறோம், ஆயினும் தகவல்களின் துல்லியத்தன்மைக்கு எந்தவொரு சட்டபூர்வமான உத்தரவாதமும் தர இயலாது. நாங்கள் மருத்துவ ஆலோசனைகளை வழங்குவதில்லை.",
+  "check_availability": {
+    "heading": "Find a COVID-19 vaccine for yourself or a loved one",
+    "text_field_placeholder": "Enter your Pincode or District name",
+    "find_vaccine_button": "Find Vaccine",
+    "description": "Everyone over 18 is now eligible for free, safe, and reliable COVID-19 vaccines in India. But it can be difficult to find out where and how to get a shot. Enter your zip code or area to find confirmed vaccination locations near you, and learn how to make an appointment."
+  },
+  "availability_results": {
+    "showing": "Showing",
+    "vaccination_centers": "Vaccination Centers",
+    "find_centers_button": "Find Centers"
+  },
+  "cvc_card": {
+    "ages": "Ages",
+    "cost": "Cost",
+    "vaccine_type": "Vaccine Type",
+    "book_on_cowin": "Book on Cowin",
+    "directions": "Directions"
+  }
 }

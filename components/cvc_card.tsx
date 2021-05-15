@@ -57,9 +57,6 @@ export default function CvcCard({ data }: Props) {
         {/* <div>Covaxin</div> */}
       </div>
       <br />
-      <div>
-        Vaccine Type: <span className={styles.field}>To be updated</span>
-      </div>
       <div>{translationData.cvc_card.vaccine_type}: <span className={styles.field}>To be updated</span></div>
       <br />
       <div className={styles.subText}>

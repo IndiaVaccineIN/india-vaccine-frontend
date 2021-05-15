@@ -17,5 +17,23 @@
     "callteam": "ਜੇ ਤੁਹਾਡੇ ਕੋਲ ਹਰ ਰੋਜ਼ 20 ਮਿੰਟ ਹੁੰਦੇ ਹਨ, ਤਾਂ ਤੁਸੀਂ ਹਰ ਰੋਜ਼ 5-6 ਵੈਕਸੀਨੇਸ਼ਨ ਕੇਂਦਰਾਂ ਨੂੰ ਕਾਲ ਕਰਨ ਲਈ ਸਾਈਨ-ਅੱਪ ਕਰ ਸਕਦੇ ਹੋ ਅਤੇ ਹਜ਼ਾਰਾਂ ਲੋਕਾਂ ਦੀ ਮਦਦ ਕਰ ਸਕਦੇ ਹੋ ਜਿੰਨ੍ਹਾਂ ਨੂੰ ਤਸਦੀਕ ਕੀਤੀ ਜਾਣਕਾਰੀ ਤੋਂ ਲਾਭ ਹੋਵੇਗਾ ਜੇ ਤੁਸੀਂ ਸੋਚਦੇ ਹੋ ਕਿ ਕੁਝ ਅਜਿਹਾ ਹੈ ਜੋ ਅਸੀਂ ਬਿਹਤਰ ਕਰ ਸਕਦੇ ਹਾਂ, ਤਾਂ ਤੁਸੀਂ ਸਾਨੂੰ ਇੰਸਟਾਗ੍ਰਾਮ, ਟਵਿੱਟਰ 'ਤੇ ਬਿਲਕੁਲ ਇੱਕ ਡੀਐਮ ਭੇਜ ਸਕਦੇ ਹੋ ਅਤੇ ਇਹ ਵੀ ਇੱਕ ਬਹੁਤ ਵੱਡੀ ਮਦਦ ਹੋਵੇਗੀ!",
     "disclaimer": "ਅਸੀਂ ਇੱਕ ਸਵੈਸੇਵੀ ਸੰਚਾਲਿਤ ਸੰਸਥਾ ਹਾਂ ਜੋ ਜਾਣਕਾਰੀ ਨੂੰ ਸਹੀ ਢੰਗ ਨਾਲ ਪੇਸ਼ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰਦੀ ਹੈ ਪਰ ਜਾਣਕਾਰੀ ਦੀ ਸਟੀਕਤਾ ਬਾਰੇ ਕੋਈ ਕਾਨੂੰਨੀ ਗਾਰੰਟੀ ਨਹੀਂ ਦਿੰਦੀ। ਅਸੀਂ ਡਾਕਟਰੀ ਸਲਾਹ ਪ੍ਰਦਾਨ ਨਹੀਂ ਕਰਦੇ।",
     "volunteer": "ਸਵੈਸੇਵੀ ਬਣੋ",
-    "about": "ਸਾਡੇ ਬਾਰੇ"
+    "about": "ਸਾਡੇ ਬਾਰੇ",
+    "check_availability": {
+        "heading": "Find a COVID-19 vaccine for yourself or a loved one",
+        "text_field_placeholder": "Enter your Pincode or District name",
+        "find_vaccine_button": "Find Vaccine",
+        "description": "Everyone over 18 is now eligible for free, safe, and reliable COVID-19 vaccines in India. But it can be difficult to find out where and how to get a shot. Enter your zip code or area to find confirmed vaccination locations near you, and learn how to make an appointment."
+    },
+    "availability_results": {
+        "showing": "Showing",
+        "vaccination_centers": "Vaccination Centers",
+        "find_centers_button": "Find Centers"
+    },
+    "cvc_card": {
+        "ages": "Ages",
+        "cost": "Cost",
+        "vaccine_type": "Vaccine Type",
+        "book_on_cowin": "Book on Cowin",
+        "directions": "Directions"
+    }
 }

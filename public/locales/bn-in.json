@@ -14,6 +14,24 @@
     "techteam": "যদি আপনি প্রতিদিন 2-3 ঘণ্টা সময় দিতে পারেন এবং আপনি React JS বা Mongo স্কিলে দক্ষ, তাহলে আপনি আমাদের টেক টিমের সঙ্গে স্বেচ্ছাসেবী হিসেবে যোগ দিতে পারেন।",
     "calling": "কলিং সেন্টার",
     "callteam": "যদি আপনার কাছে প্রতিদিন 20 মিনিট সময় থাকে, তাহলে আপনি প্রতিদিন 5-6 টি ভ্যাকসিনেশন কেন্দ্রে কল করার জন্য সাইন-আপ করতে পারেন এবং প্রায় হাজারেরও বেশি মানুষদের যাচাই করা তথ্য দিয়ে সাহায্য করতে পারেন। আপনি যদি মনে করেন আমরা আরও ভালো কিছু করতে পারি, তাহলে আপনি অবশ্যই আমাদেরকে Instagram এবং Twitter-এ DM করতে পারেন, তাতে আমাদের খুবই সাহায্য হবে। ",
-    "disclaimer": "আমরা স্বেচ্ছাসেবী-দ্বারা চালিত একটি সংস্থা এবং যদিও আমরা সঠিক তথ্য দেওয়ার চেষ্টা করি, কিন্তু আমরা তথ্যের নির্ভুলতার জন্য কোনও আইনি প্রতিশ্রুতি দিই না। আমরা কোনও স্বাস্থ্য সম্পর্কিত পরামর্শ দিই না।"
+    "disclaimer": "আমরা স্বেচ্ছাসেবী-দ্বারা চালিত একটি সংস্থা এবং যদিও আমরা সঠিক তথ্য দেওয়ার চেষ্টা করি, কিন্তু আমরা তথ্যের নির্ভুলতার জন্য কোনও আইনি প্রতিশ্রুতি দিই না। আমরা কোনও স্বাস্থ্য সম্পর্কিত পরামর্শ দিই না।",
+    "check_availability": {
+      "heading": "Find a COVID-19 vaccine for yourself or a loved one",
+      "text_field_placeholder": "Enter your Pincode or District name",
+      "find_vaccine_button": "Find Vaccine",
+      "description": "Everyone over 18 is now eligible for free, safe, and reliable COVID-19 vaccines in India. But it can be difficult to find out where and how to get a shot. Enter your zip code or area to find confirmed vaccination locations near you, and learn how to make an appointment."
+    },
+    "availability_results": {
+      "showing": "Showing",
+      "vaccination_centers": "Vaccination Centers",
+      "find_centers_button": "Find Centers"
+    },
+    "cvc_card": {
+      "ages": "Ages",
+      "cost": "Cost",
+      "vaccine_type": "Vaccine Type",
+      "book_on_cowin": "Book on Cowin",
+      "directions": "Directions"
+    }
   }
   

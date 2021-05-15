@@ -15,5 +15,23 @@
     "techteam": "ನೀ ವು ಪ್ರ ತಿದಿನ 2-3 ಗಂ ಟೆಗಳ ಸಮಯ ತೆಗೆದು ಕೊ ಳ್ಳ ಬಹು ದು ಮತ್ತು ಅದ್ಭು ತವಾ ದ React JS ಅಥವಾ Mongo ಕೌ ಶಲ್ಯ ಗಳನ್ನು ಹೊಂ ದಿದ್ದ ರೆ, ನೀ ವು ನಮ್ಮ ಟೆಕ್ ತಂ ಡದೊಂ ದಿಗೆ ಸ್ವ ಯಂ ಸೇ ವಕರಾ ಗಬಹು ದು .",
     "calling": "ಕಾ ಲಿಂ ಗ್ ಸೆಂ ಟರ್ :",
     "callteam": "ನೀ ವು ಪ್ರ ತಿದಿನ 20 ನಿಮಿಷಗಳನ್ನು ಹೊಂ ದಿದ್ದ ರೆ, ನೀ ವು 5-6 ವ್ಯಾ ಕ್ಸಿ ನೇ ಷನ್ ಕೇಂ ದ್ರ ಗಳಿಗೆ ಕರೆ ಮಾ ಡಲು ಸೈ ನ್ ಅಪ್ ಮಾ ಡಬಹು ದು ಮತ್ತು ಪರಿಶೀ ಲಿಸಿದ ಮಾ ಹಿತಿಯಿಂ ದ ಪ್ರ ಯೋ ಜನ ಪಡೆಯು ವ 1000 ಜನರಿಗೆ ಸಹಾ ಯ ಮಾ ಡಬಹು ದು . ನಾ ವು ಇನ್ನೂ ಏನಾ ದರೂ ಉತ್ತ ಮವಾ ಗಿ ಕಾ ರ್ಯ ನಿರ್ವ ಹಿಸಬಹು ದೆಂ ದು ನೀ ವು ಭಾ ವಿಸಿದರೆ, ನೀ ವು ನಮಗೆ ಇನ್‌ಸ್ಟಾ ಗ್ರಾ ಮ್, ಟ್ವಿ ಟರ್‌ನಲ್ಲಿ ಡಿಎಂ ಕಳು ಹಿಸಬಹು ದು . ಅದು ನಮಗೆ ಮಹತ್ತ ರ ಸಹಾ ಯವಾ ಗು ತ್ತ ದೆ!",
-    "disclaimer": "ನಾ ವು ಸ್ವ ಯಂ ಸೇ ವಕ-ಚಾ ಲಿತ ಸಂ ಸ್ಥೆ ಯಾ ಗಿದ್ದು , ಮಾ ಹಿತಿಯನ್ನು ನಿಖರವಾ ಗಿ ಪ್ರ ಸ್ತು ತಪಡಿಸಲು ಪ್ರ ಯತ್ನಿ ಸು ತ್ತೇ ವೆ. ಆದರೆ ಮಾ ಹಿತಿಯ ನಿಖರತೆಗೆ ಯಾ ವು ದೇ ಕಾ ನೂ ನು ಖಾ ತರಿ ನೀ ಡು ವು ದಿಲ್ಲ . ನಾ ವು ವೈ ದ್ಯ ಕೀ ಯ ಸಲಹೆಯನ್ನು ನೀ ಡು ವು ದಿಲ್ಲ ."
+    "disclaimer": "ನಾ ವು ಸ್ವ ಯಂ ಸೇ ವಕ-ಚಾ ಲಿತ ಸಂ ಸ್ಥೆ ಯಾ ಗಿದ್ದು , ಮಾ ಹಿತಿಯನ್ನು ನಿಖರವಾ ಗಿ ಪ್ರ ಸ್ತು ತಪಡಿಸಲು ಪ್ರ ಯತ್ನಿ ಸು ತ್ತೇ ವೆ. ಆದರೆ ಮಾ ಹಿತಿಯ ನಿಖರತೆಗೆ ಯಾ ವು ದೇ ಕಾ ನೂ ನು ಖಾ ತರಿ ನೀ ಡು ವು ದಿಲ್ಲ . ನಾ ವು ವೈ ದ್ಯ ಕೀ ಯ ಸಲಹೆಯನ್ನು ನೀ ಡು ವು ದಿಲ್ಲ .",
+    "check_availability": {
+      "heading": "Find a COVID-19 vaccine for yourself or a loved one",
+      "text_field_placeholder": "Enter your Pincode or District name",
+      "find_vaccine_button": "Find Vaccine",
+      "description": "Everyone over 18 is now eligible for free, safe, and reliable COVID-19 vaccines in India. But it can be difficult to find out where and how to get a shot. Enter your zip code or area to find confirmed vaccination locations near you, and learn how to make an appointment."
+    },
+    "availability_results": {
+      "showing": "Showing",
+      "vaccination_centers": "Vaccination Centers",
+      "find_centers_button": "Find Centers"
+    },
+    "cvc_card": {
+      "ages": "Ages",
+      "cost": "Cost",
+      "vaccine_type": "Vaccine Type",
+      "book_on_cowin": "Book on Cowin",
+      "directions": "Directions"
+    }
   }
