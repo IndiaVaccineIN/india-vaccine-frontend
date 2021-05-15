@@ -32,6 +32,11 @@
       "vaccine_type": "Vaccine Type",
       "book_on_cowin": "Book on Cowin",
       "directions": "Directions"
+    },
+    "navbar": {
+      "check_availability": "প্রাপ্যতা যাচাই করুন",
+      "about": "সম্পর্কিত",
+      "volunteer": "স্বেচ্ছাসেবক"
     }
   }
   

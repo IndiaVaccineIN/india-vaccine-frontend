@@ -33,5 +33,10 @@
       "vaccine_type": "Vaccine Type",
       "book_on_cowin": "Book on Cowin",
       "directions": "Directions"
+    },
+    "navbar": {
+      "check_availability": "ലഭ്യത ഉറപ്പു വരുത്തുക",
+      "about": "കുറിച്ച്",
+      "volunteer": "സദ്ധന്നസേവിക"
     }
   }

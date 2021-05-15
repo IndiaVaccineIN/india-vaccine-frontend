@@ -82,6 +82,11 @@ export interface LocaleSchema {
   calling: string;
   callteam: string;
   disclaimer: string;
+  navbar: {
+    check_availability: string;
+    about: string;
+    volunteer: string;
+  },
   check_availability: {
     heading: string;
     text_field_placeholder: string;

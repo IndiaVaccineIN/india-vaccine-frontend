@@ -35,5 +35,10 @@
     "vaccine_type": "Vaccine Type",
     "book_on_cowin": "Book on Cowin",
     "directions": "Directions"
+  },
+  "navbar": {
+    "check_availability": "Check Availability",
+    "about": "About",
+    "volunteer": "Volunteer"
   }
 }
