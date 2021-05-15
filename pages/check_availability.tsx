@@ -40,7 +40,7 @@ export default function CheckAvailability() {
       });
     }
   };
-//==============================================================================
+//==================================================================================
 // function for getting user district and displaying CVCs
 function getUserLocation() {
   const success= async(pos)=>{
@@ -49,12 +49,12 @@ function getUserLocation() {
     try {
       const result = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${process.env.NEXT_PUBLIC_GEOCODING_API_KEY}`);
       const resultJSON = await result.json();
-      const district= resultJSON.results[0].components.county;
-      setSearch(district);  
+      const pincode= resultJSON.results[0].components.postcode;
+      setSearch(pincode);  
       push({
         pathname: "/availability_results",
         query: {
-          district: district,
+          pincode: pincode,
         },
       });
       
