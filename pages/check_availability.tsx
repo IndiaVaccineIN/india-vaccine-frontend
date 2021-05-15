@@ -40,7 +40,7 @@ export default function CheckAvailability() {
       });
     }
   };
-//==================================================================================
+//===============================================================================
 // function for getting user district and displaying CVCs
 function getUserLocation() {
   const success= async(pos)=>{
