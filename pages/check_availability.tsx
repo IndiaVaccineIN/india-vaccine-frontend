@@ -43,12 +43,11 @@ export default function CheckAvailability() {
 //==============================================================================
 // function for getting user district and displaying CVCs
 function getUserLocation() {
-  const API_KEY='643c1e6973c7427092debb04555cc381';
   const success= async(pos)=>{
     const latitude = pos.coords.latitude;
     const longitude = pos.coords.longitude;
     try {
-      const result = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${API_KEY}`);
+      const result = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${process.env.NEXT_PUBLIC_GEOCODING_API_KEY}`);
       const resultJSON = await result.json();
       const district= resultJSON.results[0].components.county;
       setSearch(district);  
