@@ -5,7 +5,7 @@ import styles from "../styles/footer.module.css";
 import { useTranslation } from "../helpers";
 
 export default function Footer() {
-  const { data } = useTranslation()
+  const { data } = useTranslation();
 
   return (
     <footer className={styles.footer_wrapper}>

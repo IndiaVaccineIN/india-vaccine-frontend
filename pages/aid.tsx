@@ -23,16 +23,19 @@ export default function Aid() {
       onSubmit: tripetto.onSubmit
   });
   </script>
-  `
+  `;
   return (
     <div>
       <Navbar />
-      <div >
+      <div>
         <Head>
           <title>India Vaccine Project | Volunteer Aid</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className={styles.container} dangerouslySetInnerHTML={{ __html: myHtml }}/>
+        <div
+          className={styles.container}
+          dangerouslySetInnerHTML={{ __html: myHtml }}
+        />
         <Footer />
       </div>
     </div>

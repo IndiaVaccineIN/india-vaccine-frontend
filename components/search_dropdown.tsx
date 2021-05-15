@@ -30,7 +30,7 @@ export default function SearchDropdown(props: Props) {
   const inputRef = useRef(null);
   const listContainerRef = useRef(null);
 
-  const { data } = useTranslation()
+  const { data } = useTranslation();
 
   useEffect(() => {
     function handleClickOutside(event) {

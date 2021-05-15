@@ -24,7 +24,7 @@ export default function AvailabilityResults(context: NextPageContext) {
     query?.pincode?.toString() ?? query.district?.toString()
   );
 
-  const { data: translationData } = useTranslation()
+  const { data: translationData } = useTranslation();
 
   const showNewResults = () => {
     if (!searchBarContent) {
@@ -78,9 +78,11 @@ export default function AvailabilityResults(context: NextPageContext) {
         <main className={styles.main}>
           <h3 className="textCenter">
             {" "}
-            {translationData.availability_results.showing} {error && <span>0</span>}
+            {translationData.availability_results.showing}{" "}
+            {error && <span>0</span>}
             {!data && <span>Unknown</span>}
-            {data && data.results.length} {translationData.availability_results.vaccination_centers}
+            {data && data.results.length}{" "}
+            {translationData.availability_results.vaccination_centers}
           </h3>
           <div className="flex mobileCol center">
             <SearchDropdown

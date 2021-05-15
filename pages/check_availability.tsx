@@ -15,7 +15,7 @@ export default function CheckAvailability() {
 
   const [search, setSearch] = useState("");
 
-  const { data } = useTranslation()
+  const { data } = useTranslation();
 
   const showResults = () => {
     if (!search) {
@@ -51,9 +51,7 @@ export default function CheckAvailability() {
       <Navbar />
       <div className={styles.container}>
         <main className={styles.main}></main>
-        <h1 className="textCenter">
-          {data.check_availability.heading}
-        </h1>
+        <h1 className="textCenter">{data.check_availability.heading}</h1>
         <div className="flex mobileCol center">
           <SearchDropdown
             search={search}
@@ -77,9 +75,7 @@ export default function CheckAvailability() {
             width={303}
             alt="Illustration"
           ></img>
-          <p className={"pad-20"}>
-            {data.check_availability.description}
-          </p>
+          <p className={"pad-20"}>{data.check_availability.description}</p>
         </div>
       </div>
       <Footer />

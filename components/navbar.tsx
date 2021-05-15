@@ -12,7 +12,7 @@ export default function Navbar() {
    */
   const [isMenuOpen, setMenu] = useState(false);
   const router = useRouter();
-  const { data } = useTranslation()
+  const { data } = useTranslation();
   const activeLink = (
     path,
     content,

@@ -9,17 +9,17 @@ export default function LanguageSwitcher() {
     return push(
       {
         pathname,
-        query
+        query,
       },
       {
         pathname,
-        query
+        query,
       },
       {
         locale: e,
       }
-    )
-  }
+    );
+  };
 
   return (
     <div className={styles.language_wrapper}>

@@ -49,24 +49,24 @@ export const cleanObj = (obj: Object) =>
  * The interface for the response of the `useTranslation` hook
  */
 interface IUseTranslationResponse {
-  data: LocaleSchema
+  data: LocaleSchema;
 }
 
 /**
  * Hook used to get the translation data
- * 
+ *
  * @returns Interface with translation data in it
  */
-export const useTranslation = () : IUseTranslationResponse => {
+export const useTranslation = (): IUseTranslationResponse => {
   const { locale } = useRouter();
 
   const { data } = useSWR(`/locales/${locale}.json`, {
     //@ts-expect-error locale does not expect the correct types
     initialData: mapLocaleToJSON(locale),
-    fetcher: appSWRFetcher
-  })
+    fetcher: appSWRFetcher,
+  });
 
   return {
     data: data,
-  }
-}
+  };
+};
