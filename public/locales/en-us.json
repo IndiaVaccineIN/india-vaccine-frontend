@@ -34,7 +34,7 @@
     "cost": "Cost",
     "vaccine_type": "Vaccine Type",
     "book_on_cowin": "Book on Cowin",
-    "directions": "Directions"
+    "directions": "Get Directions"
   },
   "navbar": {
     "check_availability": "Check Availability",
