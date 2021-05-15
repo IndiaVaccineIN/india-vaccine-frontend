@@ -3,7 +3,23 @@ import { LocalesMap } from "../shared/LocalesMap";
 import styles from "../styles/language_switcher.module.css";
 
 export default function LanguageSwitcher() {
-  const { locales, push } = useRouter();
+  const { locales, push, pathname, query } = useRouter();
+
+  const changeLocale = (e: string) => {
+    return push(
+      {
+        pathname,
+        query
+      },
+      {
+        pathname,
+        query
+      },
+      {
+        locale: e,
+      }
+    )
+  }
 
   return (
     <div className={styles.language_wrapper}>
@@ -11,15 +27,7 @@ export default function LanguageSwitcher() {
         return (
           <>
             <span
-              onClick={() =>
-                push(
-                  "",
-                  {},
-                  {
-                    locale: e,
-                  }
-                )
-              }
+              onClick={() => changeLocale(e)}
               key={`${e}_lang`}
               className={styles.language}
             >
