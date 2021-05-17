@@ -1,4 +1,4 @@
-import { GetServerSideProps, NextPageContext } from "next";
+import { GetServerSideProps } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -14,7 +14,7 @@ import AidCvcCard from "./aid_cvc_card";
 import styles from "../../styles/availability_results.module.css";
 import { Districts } from "../../api/district";
 
-export default function AvailabilityResults(context: NextPageContext) {
+export default function AidCvcResults() {
   const { query, push } = useRouter();
 
   //for searching/editing new state/pincode *STARTS*
