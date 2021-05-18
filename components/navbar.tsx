@@ -12,7 +12,9 @@ export default function Navbar() {
    */
   const [isMenuOpen, setMenu] = useState(false);
   const router = useRouter();
+
   const { data } = useTranslation();
+
   const activeLink = (
     path,
     content,
@@ -62,14 +64,7 @@ export default function Navbar() {
           >
             {activeLink("/check_availability", data.navbar.check_availability)}
             {activeLink("/", data.navbar.about)}
-            <a
-              href={"https://forms.gle/HeH3xrvjP1VfFUzM7"}
-              rel="noreferrer noopener"
-              target="_blank"
-            >
-              {data.navbar.volunteer}
-            </a>
-            {/* {activeLink('/volunteer', 'Volunteer')} */}
+            {activeLink("/aid", data.navbar.volunteer)}
           </div>
         </div>
       </nav>

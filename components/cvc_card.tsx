@@ -18,7 +18,6 @@ export default function CvcCard({ data }: Props) {
 
   const { data: translationData } = useTranslation();
 
-  // console.log(data)
   return (
     // <>
     <div key={data.cowin_center_id} className={styles.cvc_card}>
@@ -83,7 +82,7 @@ export default function CvcCard({ data }: Props) {
       <div className={styles.endRow}>
         <a
           target="_blank"
-          href={`/aid?${aidQueryString}`}
+          href={`/submit_data?${aidQueryString}`}
           className={styles.add_info_cta}
         >
           Add Info
