@@ -31,7 +31,8 @@
     "cost": "ખર્ચ",
     "vaccine_type": "રસીનો પ્રકાર",
     "book_on_cowin": "કોવિન પર બુક કરો",
-    "directions": "નિર્દેશો"
+    "directions": "નિર્દેશો",
+    "add_info": "માહિતી ઉમેરો"
   },
   "navbar": {
     "check_availability": "ઉપલબ્ધતા તપાસો",

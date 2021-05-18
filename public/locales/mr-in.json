@@ -31,7 +31,8 @@
     "cost": "किंमत",
     "vaccine_type": "लसीचा प्रकार",
     "book_on_cowin": "कोविनवर बुकिंग करा",
-    "directions": "मार्गदर्शक सूचना"
+    "directions": "मार्गदर्शक सूचना",
+    "add_info": "माहितीची भर करा"
   },
   "navbar": {
     "check_availability": "उपलब्धता तपासा",

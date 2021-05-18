@@ -85,7 +85,7 @@ export default function CvcCard({ data }: Props) {
           href={`/submit_data?${aidQueryString}`}
           className={styles.add_info_cta}
         >
-          Add Info
+          {translationData.cvc_card.add_info}
         </a>
       </div>
       {/* <div>Operation Timings: {data.operation_timings.start_time}-{data.operation_timings.end_time}</div> */}

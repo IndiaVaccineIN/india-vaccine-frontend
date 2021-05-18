@@ -31,7 +31,8 @@
     "cost": "ব্যয়",
     "vaccine_type": "ভ্যাকসিনের প্রকার",
     "book_on_cowin": "CoWIN-এ বুক করা হয়েছে",
-    "directions": "দিক নির্দেশ"
+    "directions": "দিক নির্দেশ",
+    "add_info": "তথ্য যুক্ত করুন"
   },
   "navbar": {
     "check_availability": "প্রাপ্যতা যাচাই করুন",

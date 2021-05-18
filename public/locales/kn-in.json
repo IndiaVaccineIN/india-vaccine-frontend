@@ -32,7 +32,8 @@
     "cost": "ವೆಚ್ಚ",
     "vaccine_type": "ಲಸಿಕೆಯ ವಿಧ",
     "book_on_cowin": "ಕೋವಿನ್ ಮೇಲೆ ಬುಕ್ ಮಾಡಿ",
-    "directions": "ತೋರುದಾರಿಗಳು"
+    "directions": "ತೋರುದಾರಿಗಳು",
+    "add_info": "ಮಾಹಿತಿ ಸೇರಿಸು"
   },
   "navbar": {
     "check_availability": "ಲಭ್ಯವಿದೆಯೇ",
