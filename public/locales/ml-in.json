@@ -17,22 +17,22 @@
   "callteam": "നിങ്ങൾക്ക് ദിവസവും 20 മിനിറ്റ് ഉണ്ടെങ്കിൽ, ദിവസവും 5-6 വാക്സിനേഷൻ സെന്ററുകളിലേക്ക് വിളിക്കുന്നതിന് സൈൻ അപ്പ് ചെയ്യാവുന്നതാണ്. ഇതുവഴി പരിശോധിച്ചുറപ്പിച്ചിട്ടുള്ള  വിവരങ്ങളിൽ നിന്ന് പ്രയോജനം നേടുന്ന ആയിരക്കണക്കിന് ആളുകളെ സഹായിക്കാം. ഞങ്ങൾക്ക് ഇതിലും മികച്ചതായി എന്തെങ്കിലും ചെയ്യാനാകുമെന്ന് നിങ്ങൾ കരുതുന്നുവെങ്കിൽ, ഞങ്ങളുടെ  ഇൻസ്റ്റാഗ്രാമിലും ട്വിറ്ററിലും DM ചെയ്യുക, അതും ഒരു വലിയ സഹായമായിരിക്കും! ",
   "disclaimer": "ഞങ്ങൾ‌ ഒരു സന്നദ്ധസേവനം നടത്തുന്ന സ്ഥാപനമാണ്, വിവരങ്ങൾ കൃത്യതയോടുകൂടി നൽകാൻ ഞങ്ങൾ ശ്രമിക്കുന്നു, പക്ഷേ വിവരങ്ങളുടെ കൃത്യതയെക്കുറിച്ച് നിയമപരമായ ഒരു ഗ്യാരണ്ടിയും നൽകുന്നില്ല.  ഞങ്ങൾ മെഡിക്കൽ ഉപദേശം നൽകുന്നില്ല.",
   "check_availability": {
-    "heading": "Find a COVID-19 vaccine for yourself or a loved one",
-    "text_field_placeholder": "Enter your Pincode or District name",
-    "find_vaccine_button": "Find Vaccine",
-    "description": "Everyone over 18 is now eligible for free, safe, and reliable COVID-19 vaccines in India. But it can be difficult to find out where and how to get a shot. Enter your zip code or area to find confirmed vaccination locations near you, and learn how to make an appointment."
+    "heading": "നിങ്ങൾക്കോ നിങ്ങളുടെ പ്രിയപ്പെട്ട ആർക്കെങ്കിലുമോ കോവിഡ്-19 വാക്സിൻ കണ്ടെത്തൂ",
+    "text_field_placeholder": "നിങ്ങളുടെ പിൻ കോഡോ ജില്ലയുടെ പേരോ നൽകുക",
+    "find_vaccine_button": "വാക്സിൻ കണ്ടെത്തൂ",
+    "description": "18 വയസ്സിനു മുകളിലുള്ള എല്ലാ ഇന്ത്യക്കാരും ഇപ്പോൾ സുരക്ഷിതവും വിശ്വസനീയവുമായ COVID-19 വാക്സിനുകൾക്ക് അർഹരാണ്. CoWIN-ൽ ഒരു അപ്പോയിൻമെന്‍റ് എടുക്കാൻ നിങ്ങളുടെ പിൻ-കോഡോ ജില്ലയുടെ പേരോനൽകി നിങ്ങളുടെ സമീപമുള്ള പരിശോധിച്ചുറപ്പിച്ച വാക്സിനേഷൻ ലൊക്കേഷനുകൾ കണ്ടെത്തുക."
   },
   "availability_results": {
-    "showing": "Showing",
-    "vaccination_centers": "Vaccination Centers",
-    "find_centers_button": "Find Centers"
+    "showing": "",
+    "vaccination_centers": "വാക്സിനേഷൻ കേന്ദ്രങ്ങൾ കാണിക്കുന്നു",
+    "find_centers_button": "കേന്ദ്രങ്ങൾ കണ്ടെത്തൂ"
   },
   "cvc_card": {
-    "ages": "Ages",
-    "cost": "Cost",
-    "vaccine_type": "Vaccine Type",
-    "book_on_cowin": "Book on Cowin",
-    "directions": "Get Directions"
+    "ages": "പ്രായം",
+    "cost": "ചെലവ്",
+    "vaccine_type": "വാക്‌സിൻ തരം",
+    "book_on_cowin": "CoWIN-ൽ ബുക്ക് ചെയ്യുക",
+    "directions": "ദിശകൾ"
   },
   "navbar": {
     "check_availability": "ലഭ്യത ഉറപ്പു വരുത്തുക",
