@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { components } from "../api/interfaces";
+import { useTranslation } from "../helpers";
 import styles from "../styles/cvc_card.module.css";
 import Button from "./button";
 
-import { stringify } from "query-string"
+import { stringify } from "query-string";
 
 interface Props {
   data: components["schemas"]["CVCResponseData"];
@@ -12,8 +13,10 @@ interface Props {
 export default function CvcCard({ data }: Props) {
   const aidQueryString = stringify({
     cvc_id: data.id,
-    cvc_name: data.name
+    cvc_name: data.name,
   });
+
+  const { data: translationData } = useTranslation();
 
   return (
     // <>
@@ -41,23 +44,26 @@ export default function CvcCard({ data }: Props) {
               fill="#000080"
             />
           </svg>
-          Get Directions
+          {translationData.cvc_card.directions}
         </a>
       </div>
       <div className={styles.cvcFlexEnd}>
         {/* <span>Ages: 18-45</span> */}
         <span>
-          Ages: <span className={styles.field}>To be updated</span>
+          {translationData.cvc_card.ages}:{" "}
+          <span className={styles.field}>{translationData.cvc_card.to_be_updated}</span>
         </span>
         {/* <div>Cost: ₹400</div> */}
         <div>
-          Cost: <span className={styles.field}>To be updated</span>
+          {translationData.cvc_card.cost}:{" "}
+          <span className={styles.field}>{translationData.cvc_card.to_be_updated}</span>
         </div>
         {/* <div>Covaxin</div> */}
       </div>
       <br />
       <div>
-        Vaccine Type: <span className={styles.field}>To be updated</span>
+        {translationData.cvc_card.vaccine_type}:{" "}
+        <span className={styles.field}>{translationData.cvc_card.to_be_updated}</span>
       </div>
       <br />
       <div className={styles.subText}>
@@ -66,13 +72,21 @@ export default function CvcCard({ data }: Props) {
           rel="noreferrer noopener"
           target="_blank"
         >
-          <button className={styles.registerButton}>Book on Cowin</button>
+          <button className={styles.registerButton}>
+            {translationData.cvc_card.book_on_cowin}
+          </button>
         </a>
         {/* <div className={styles.lastUpdated}>Last Update: To be updated</div> */}
       </div>
       {/* <br /> */}
       <div className={styles.endRow}>
-        <a target="_blank" href={`/aid?${aidQueryString}`} className={styles.add_info_cta}>Add Info</a>
+        <a
+          target="_blank"
+          href={`/submit_data?${aidQueryString}`}
+          className={styles.add_info_cta}
+        >
+          {translationData.cvc_card.add_info}
+        </a>
       </div>
       {/* <div>Operation Timings: {data.operation_timings.start_time}-{data.operation_timings.end_time}</div> */}
     </div>

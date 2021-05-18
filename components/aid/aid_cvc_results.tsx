@@ -1,31 +1,26 @@
-import { GetServerSideProps, NextPageContext } from "next";
+import { GetServerSideProps } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
-
-import { useAPIRequest } from "../api";
-import { components } from "../api/interfaces";
-import { cleanObj, isEmpty, useTranslation } from "../helpers";
-import { isNum } from "../helpers";
-
-import SearchDropdown from "../components/search_dropdown";
-import CvcCard from "../components/cvc_card";
-import Footer from "../components/footer";
-import Navbar from "../components/navbar";
-
-import styles from "../styles/availability_results.module.css";
 import { useState } from "react";
-import { Districts } from "../api/district";
 
-export default function AvailabilityResults(context: NextPageContext) {
+import { useAPIRequest } from "../../api";
+import { components } from "../../api/interfaces";
+import { cleanObj, isEmpty } from "../../helpers";
+import { isNum } from "../../helpers";
+
+import SearchDropdown from "../../components/search_dropdown";
+import AidCvcCard from "./aid_cvc_card";
+
+import styles from "../../styles/availability_results.module.css";
+import { Districts } from "../../api/district";
+
+export default function AidCvcResults() {
   const { query, push } = useRouter();
 
   //for searching/editing new state/pincode *STARTS*
   const [searchBarContent, setSearchBarContent] = useState<string>(
     query?.pincode?.toString() ?? query.district?.toString()
   );
-
-  const { data: translationData } = useTranslation();
-
   const showNewResults = () => {
     if (!searchBarContent) {
       return "Input is null";
@@ -37,14 +32,14 @@ export default function AvailabilityResults(context: NextPageContext) {
 
     if (isNum(searchBarContent)) {
       push({
-        pathname: "/availability_results",
+        pathname: "/aid",
         query: {
           pincode: searchBarContent,
         },
       });
     } else {
       push({
-        pathname: "/availability_results",
+        pathname: "/aid",
         query: {
           district: searchBarContent,
         },
@@ -73,16 +68,13 @@ export default function AvailabilityResults(context: NextPageContext) {
       <Head>
         <title>India Vaccine - Results</title>
       </Head>
-      <Navbar />
       <div className={styles.container}>
         <main className={styles.main}>
           <h3 className="textCenter">
             {" "}
-            {translationData.availability_results.showing}{" "}
-            {error && <span>0</span>}
+            Showing {error && <span>0</span>}
             {!data && <span>Unknown</span>}
-            {data && data.results.length}{" "}
-            {translationData.availability_results.vaccination_centers}
+            {data && data.results.length} Vaccination Centers
           </h3>
           <div className="flex mobileCol center">
             <SearchDropdown
@@ -96,7 +88,7 @@ export default function AvailabilityResults(context: NextPageContext) {
               type="submit"
               className={styles.searchButton}
             >
-              {translationData.availability_results.find_centers_button}
+              Find Centers
             </button>
           </div>
         </main>
@@ -109,12 +101,11 @@ export default function AvailabilityResults(context: NextPageContext) {
         ) : (
           <div className={styles.results}>
             {data.results.map((e) => (
-              <CvcCard key={e.cowin_center_id} data={e} />
+              <AidCvcCard key={e.cowin_center_id} data={e} />
             ))}
           </div>
         )}
       </div>
-      <Footer />
     </div>
   );
 }
@@ -129,7 +120,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   if (isEmpty(query)) {
     return {
       redirect: {
-        destination: "/check_availability",
+        destination: "/aid",
         permanent: true,
       },
     };
