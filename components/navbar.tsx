@@ -2,10 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import useSWR from "swr";
 import LanguageSwitcher from "./language_switcher";
 import styles from "../styles/navbar.module.css";
-import { appSWRFetcher } from "../helpers";
+import { useTranslation } from "../helpers";
 
 export default function Navbar() {
   /**
@@ -13,8 +12,9 @@ export default function Navbar() {
    */
   const [isMenuOpen, setMenu] = useState(false);
   const router = useRouter();
-  const locale = router.locale;
-  const { data, error } = useSWR(`/locales/${locale}.json`, appSWRFetcher);
+
+  const { data } = useTranslation();
+
   const activeLink = (
     path,
     content,
@@ -62,9 +62,9 @@ export default function Navbar() {
               isMenuOpen ? null : styles.routes_mobile
             }`}
           >
-            {activeLink("/check_availability", "Check Availability")}
-            {activeLink("/", "About")}
-            {activeLink("/aid", data?.volunteer)}
+            {activeLink("/check_availability", data.navbar.check_availability)}
+            {activeLink("/", data.navbar.about)}
+            {activeLink("/aid", data.navbar.volunteer)}
           </div>
         </div>
       </nav>
