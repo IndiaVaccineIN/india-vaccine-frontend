@@ -32,7 +32,8 @@
     "vaccine_type": "लसीचा प्रकार",
     "book_on_cowin": "कोविनवर बुकिंग करा",
     "directions": "मार्गदर्शक सूचना",
-    "add_info": "माहितीची भर करा"
+    "add_info": "माहितीची भर करा",
+    "to_be_updated": "अद्ययावत करण्‍यात येईल"
   },
   "navbar": {
     "check_availability": "उपलब्धता तपासा",

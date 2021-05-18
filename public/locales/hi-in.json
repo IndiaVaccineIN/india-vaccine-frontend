@@ -34,7 +34,8 @@
     "vaccine_type": "वैक्‍सीन का प्रकार",
     "book_on_cowin": "कोविन पर बुक करें",
     "directions": "निर्देश",
-    "add_info": "जानकारी जोड़ें"
+    "add_info": "जानकारी जोड़ें",
+    "to_be_updated": "अपडेट किया जायेगा"
   },
   "navbar": {
     "check_availability": "उपलब्धता जांचें",

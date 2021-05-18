@@ -32,7 +32,8 @@
     "vaccine_type": "રસીનો પ્રકાર",
     "book_on_cowin": "કોવિન પર બુક કરો",
     "directions": "નિર્દેશો",
-    "add_info": "માહિતી ઉમેરો"
+    "add_info": "માહિતી ઉમેરો",
+    "to_be_updated": "અપડેટ કરવાનું છે"
   },
   "navbar": {
     "check_availability": "ઉપલબ્ધતા તપાસો",

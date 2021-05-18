@@ -32,7 +32,8 @@
     "vaccine_type": "ভ্যাকসিনের প্রকার",
     "book_on_cowin": "CoWIN-এ বুক করা হয়েছে",
     "directions": "দিক নির্দেশ",
-    "add_info": "তথ্য যুক্ত করুন"
+    "add_info": "তথ্য যুক্ত করুন",
+    "to_be_updated": "আপডেট করা হবে"
   },
   "navbar": {
     "check_availability": "প্রাপ্যতা যাচাই করুন",

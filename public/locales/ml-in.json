@@ -33,7 +33,8 @@
     "vaccine_type": "വാക്‌സിൻ തരം",
     "book_on_cowin": "CoWIN-ൽ ബുക്ക് ചെയ്യുക",
     "directions": "ദിശകൾ",
-    "add_info": "വിവരങ്ങൾ ചേർക്കൂ"
+    "add_info": "വിവരങ്ങൾ ചേർക്കൂ",
+    "to_be_updated": "അപ്ഡേറ്റ് ചെയ്യേണ്ടതാണ്"
   },
   "navbar": {
     "check_availability": "ലഭ്യത ഉറപ്പു വരുത്തുക",
