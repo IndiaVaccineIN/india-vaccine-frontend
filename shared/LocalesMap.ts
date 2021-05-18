@@ -106,5 +106,7 @@ export interface LocaleSchema {
     vaccine_type: string;
     book_on_cowin: string;
     directions: string;
+    add_info: string;
+    to_be_updated: string;
   };
 }

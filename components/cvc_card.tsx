@@ -51,19 +51,19 @@ export default function CvcCard({ data }: Props) {
         {/* <span>Ages: 18-45</span> */}
         <span>
           {translationData.cvc_card.ages}:{" "}
-          <span className={styles.field}>To be updated</span>
+          <span className={styles.field}>{translationData.cvc_card.to_be_updated}</span>
         </span>
         {/* <div>Cost: ₹400</div> */}
         <div>
           {translationData.cvc_card.cost}:{" "}
-          <span className={styles.field}>To be updated</span>
+          <span className={styles.field}>{translationData.cvc_card.to_be_updated}</span>
         </div>
         {/* <div>Covaxin</div> */}
       </div>
       <br />
       <div>
         {translationData.cvc_card.vaccine_type}:{" "}
-        <span className={styles.field}>To be updated</span>
+        <span className={styles.field}>{translationData.cvc_card.to_be_updated}</span>
       </div>
       <br />
       <div className={styles.subText}>
@@ -85,7 +85,7 @@ export default function CvcCard({ data }: Props) {
           href={`/submit_data?${aidQueryString}`}
           className={styles.add_info_cta}
         >
-          Add Info
+          {translationData.cvc_card.add_info}
         </a>
       </div>
       {/* <div>Operation Timings: {data.operation_timings.start_time}-{data.operation_timings.end_time}</div> */}

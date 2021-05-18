@@ -18,22 +18,24 @@
   "volunteer": "स्वयंसेवक",
   "about": "बारे में",
   "check_availability": {
-    "heading": "Find a COVID-19 vaccine for yourself or a loved one",
-    "text_field_placeholder": "Enter your Pincode or District name",
-    "find_vaccine_button": "Find Vaccine",
-    "description": "Everyone over 18 is now eligible for free, safe, and reliable COVID-19 vaccines in India. But it can be difficult to find out where and how to get a shot. Enter your zip code or area to find confirmed vaccination locations near you, and learn how to make an appointment."
+    "heading": "अपने और अपने प्रियजनों के लिये कोविड-19 वैक्‍सीन का पता लगायें",
+    "text_field_placeholder": "अपना पिन कोड या जिले का नाम डालें",
+    "find_vaccine_button": "टीका ढूंढें",
+    "description": "भारत में 18 वर्ष से ज्‍यादा आयु के सभी लोग अब कोविड-19 के सुरक्षित और भरोसेमंद टीके लगवा सकते हैं। अपना पिन-कोड या जिले का नाम डालें और कोविन के साथ अपॉइंटमेंट के लिये अपने सत्‍यापित नजदीकी लोकेशंस को जानें, जहां टीकाकरण हो रहा है।"
   },
   "availability_results": {
-    "showing": "Showing",
-    "vaccination_centers": "Vaccination Centers",
-    "find_centers_button": "Find Centers"
+    "showing": "",
+    "vaccination_centers": "वैक्‍सीनेशन सेंटर्स दिखा रहा है",
+    "find_centers_button": "सेंटर्स ढुंढें"
   },
   "cvc_card": {
-    "ages": "Ages",
-    "cost": "Cost",
-    "vaccine_type": "Vaccine Type",
-    "book_on_cowin": "Book on Cowin",
-    "directions": "Get Directions"
+    "ages": "उम्र",
+    "cost": "कीमत",
+    "vaccine_type": "वैक्‍सीन का प्रकार",
+    "book_on_cowin": "कोविन पर बुक करें",
+    "directions": "निर्देश",
+    "add_info": "जानकारी जोड़ें",
+    "to_be_updated": "अपडेट किया जायेगा"
   },
   "navbar": {
     "check_availability": "उपलब्धता जांचें",
