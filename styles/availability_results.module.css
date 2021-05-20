@@ -98,3 +98,13 @@
   justify-content: center;
   align-items: center;
 }
+
+.disclaimer {
+  margin: 0 0 1em 0;
+  font-size: 1em;
+  text-align: center;
+}
+
+.disclaimer a {
+  text-decoration: underline;
+}

@@ -13,6 +13,12 @@ export interface paths {
   "/api/v1/cvc": {
     post: operations["Search"];
   };
+  "/api/v1/meta/states": {
+    get: operations["States"];
+  };
+  "/api/v1/meta/states/{state_id}": {
+    get: operations["Districts"];
+  };
   "/api/v1/volunteer/call_request": {
     post: operations["CallRequest"];
   };
@@ -49,6 +55,15 @@ export interface components {
       count: number;
       cost: number;
     };
+    CowinSession: {
+      session_id: string;
+      date: string;
+      available_capacity: number;
+      min_age_limit: number;
+      vaccine: string;
+      /** Array of slot names */
+      slots: string[];
+    };
     CVCResponseData: {
       id: string;
       name: string;
@@ -64,8 +79,10 @@ export interface components {
       next_stock_refresh_on?: string;
       google_maps_url: string;
       vaccines: components["schemas"]["Vaccine"][];
+      sessions: components["schemas"]["CowinSession"][];
     };
     PaginatedCVCData: {
+      /** Total number of pages */
       total: number;
       page_number: number;
       page_size: number;
@@ -97,6 +114,28 @@ export interface components {
         radius?: number;
         vaccines?: components["schemas"]["VaccineTypeEnum"][];
       };
+    };
+    /**
+     * If you've taken up the task to update this schema, follow these steps:
+     * - Get the link to the latest swagger/openapi definition file
+     * - Current: https://apisetu.gov.in/public/api/cowin
+     * - Yaml: https://apisetu.gov.in/api_specification_v10/cowin-public-v2.yaml
+     * - Then run  npx openapi-typescript https://apisetu.gov.in/api_specification_v10/cowin-public-v2.yaml --output temp.ts
+     * - You'll probably need to make minor edits in code of that package to make it work (content-type header was missing)
+     * - Copy paste relevant schema from temp.ts and make edits
+     *
+     * It's not completely automated way to do things, but it beats copy pasta the schema by hand
+     * Note: There's a good chance that data in mongo looks a lot like this schema.
+     * Make sure you migrate old data over to this format.
+     */
+    State: {
+      state_id: number;
+      state_name: string;
+    };
+    District: {
+      state_id: number;
+      district_id: number;
+      district_name: string;
     };
     CallRequest: {
       pincode?: number;
@@ -137,6 +176,32 @@ export interface operations {
     requestBody: {
       content: {
         "application/json": components["schemas"]["CVCRequest"];
+      };
+    };
+  };
+  States: {
+    parameters: {};
+    responses: {
+      /** Ok */
+      200: {
+        content: {
+          "application/json": components["schemas"]["State"][];
+        };
+      };
+    };
+  };
+  Districts: {
+    parameters: {
+      path: {
+        state_id: string;
+      };
+    };
+    responses: {
+      /** Ok */
+      200: {
+        content: {
+          "application/json": components["schemas"]["District"][];
+        };
       };
     };
   };
