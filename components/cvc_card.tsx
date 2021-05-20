@@ -39,18 +39,15 @@ export default function CvcCard({ data }: Props) {
 
   /**
    * The vaccines available
-   * 
+   *
    * If the length of the array is 0 and the vaccine information is available
    * in session use that
    */
-  const vaccines = data.vaccines.map((e) => e.name);
+  let vaccines = data.vaccines.map((e) => e.name);
 
   if (vaccines.length === 0 && data.sessions[0]?.vaccine) {
     vaccines.push(data.sessions[0]?.vaccine);
   }
-
-  vaccines.map((e) => e.toUpperCase())
-
 
   return (
     // <>
@@ -96,7 +93,7 @@ export default function CvcCard({ data }: Props) {
       <div>
         {translationData.cvc_card.vaccine_type}:{" "}
         <span className={styles.field}>
-          {vaccines.join(",")}
+          {vaccines.map((e) => e.toUpperCase()).join(",")}
         </span>
       </div>
       <br />
