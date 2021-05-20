@@ -88,7 +88,7 @@ export default function CvcCard({ data }: Props) {
       <div>
         {translationData.cvc_card.vaccine_type}:{" "}
         <span className={styles.field}>
-          {vaccines.map((e) => e.toUpperCase()).join(",")}
+          {vaccines.map((e) => e.toUpperCase()).join(", ")}
         </span>
       </div>
       <br />
