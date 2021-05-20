@@ -60,13 +60,29 @@ export default function AvailabilityResults(context: NextPageContext) {
 
   // console.log(APIQuery)
 
-  const { data, error } = useAPIRequest<
+  let { data, error } = useAPIRequest<
     components["schemas"]["PaginatedCVCData"]
   >({
     url: "v1/cvc",
     method: "post",
     data: APIQuery,
   });
+
+  if(data) {
+  data.results = data.results.map((e) => {
+    
+    const sessions = e.sessions.filter((e) => e.available_capacity > 0);
+
+    if(sessions.length > 0) {
+      return {
+        ...e,
+        sessions,
+      }
+    }
+
+    return null;
+  }).filter(x => !!x);
+}
 
   return (
     <div>
