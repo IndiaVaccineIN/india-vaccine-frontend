@@ -38,16 +38,11 @@ export default function CvcCard({ data }: Props) {
     translationData.cvc_card.to_be_updated;
 
   /**
-   * The vaccines available
-   *
-   * If the length of the array is 0 and the vaccine information is available
-   * in session use that
+   * Map through the sessions and show only unique values
    */
-  let vaccines = data.vaccines.map((e) => e.name);
-
-  if (vaccines.length === 0 && data.sessions[0]?.vaccine) {
-    vaccines.push(data.sessions[0]?.vaccine);
-  }
+  let vaccines = data.sessions.map((e) => e.vaccine);
+  //@ts-expect-error Ignore the error
+  vaccines = [...new Set(vaccines)];
 
   return (
     // <>

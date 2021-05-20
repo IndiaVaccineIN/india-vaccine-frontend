@@ -68,21 +68,22 @@ export default function AvailabilityResults(context: NextPageContext) {
     data: APIQuery,
   });
 
-  if(data) {
-  data.results = data.results.map((e) => {
-    
-    const sessions = e.sessions.filter((e) => e.available_capacity > 0);
+  if (data) {
+    data.results = data.results
+      .map((e) => {
+        const sessions = e.sessions.filter((e) => e.available_capacity > 0);
 
-    if(sessions.length > 0) {
-      return {
-        ...e,
-        sessions,
-      }
-    }
+        if (sessions.length > 0) {
+          return {
+            ...e,
+            sessions,
+          };
+        }
 
-    return null;
-  }).filter(x => !!x);
-}
+        return null;
+      })
+      .filter((x) => !!x);
+  }
 
   return (
     <div>
