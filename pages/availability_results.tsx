@@ -67,7 +67,7 @@ export default function AvailabilityResults(context: NextPageContext) {
     method: "post",
     data: APIQuery,
   });
-  
+
   return (
     <div>
       <Head>
