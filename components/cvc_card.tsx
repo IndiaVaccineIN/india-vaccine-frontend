@@ -19,16 +19,14 @@ export default function CvcCard({ data }: Props) {
   const { data: translationData } = useTranslation();
 
   /**
-   * If the vaccine_cost if coming from the API, add a Rupee symbol (₹)
-   * in front of it, if the vaccine_cost is not coming from the api
-   * return "Free"
+   * If the vaccine_cost if coming from the API, store it here
    */
   let vaccine_cost: string | number = data.vaccines[0]?.cost;
-  if (vaccine_cost) {
-    vaccine_cost = `₹${vaccine_cost}`;
-  } else {
-    vaccine_cost = "Free";
-  }
+
+  /**
+   * The type of the cost
+   */
+  let vaccine_cost_type: "Free" | "Paid" = vaccine_cost ? "Paid" : "Free";
 
   /**
    * Add the age_limit
@@ -38,11 +36,37 @@ export default function CvcCard({ data }: Props) {
     translationData.cvc_card.to_be_updated;
 
   /**
-   * Map through the sessions and show only unique values
+   * Empty array of the vaccines
    */
-  let vaccines = data.sessions.map((e) => e.vaccine);
-  //@ts-expect-error Ignore the error
-  vaccines = [...new Set(vaccines)];
+  let vaccines: Array<{
+    name: string;
+    cost?: number;
+  }> = [];
+
+  /**
+   * If the type is free
+   * load the data from sessions
+   * 
+   * If the type is Paid get it from the vaccines object
+   */
+  if (vaccine_cost_type === "Free") {
+    const temp_vaccines = data.sessions.map((e) => {
+      return {
+        name: e.vaccine,
+      };
+    });
+    //@ts-expect-error Ignore the error
+    vaccines = [...new Set(temp_vaccines)];
+  } else {
+    vaccines = data.vaccines.map((e) => {
+      return {
+        name: e.type,
+        cost: e.cost,
+      };
+    });
+  }
+
+  console.log(vaccines);
 
   return (
     // <>
@@ -81,14 +105,22 @@ export default function CvcCard({ data }: Props) {
         </span>
         <div>
           {translationData.cvc_card.cost}:{" "}
-          <span className={styles.field}>{vaccine_cost}</span>
+          <span className={styles.field}>{vaccine_cost_type}</span>
         </div>
       </div>
       <br />
       <div>
         {translationData.cvc_card.vaccine_type}:{" "}
         <span className={styles.field}>
-          {vaccines.map((e) => e.toUpperCase()).join(", ")}
+          {vaccines
+            .map((e) => {
+              if (e.cost) {
+                return `${e.name} (₹${e.cost})`;
+              } else {
+                return e.name;
+              }
+            })
+            .join(", ")}
         </span>
       </div>
       <br />
