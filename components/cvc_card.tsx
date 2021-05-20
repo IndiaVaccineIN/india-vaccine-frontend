@@ -29,11 +29,12 @@ export default function CvcCard({ data }: Props) {
   let vaccine_cost_type: "Free" | "Paid" = vaccine_cost ? "Paid" : "Free";
 
   /**
-   * Add the age_limit
+   * Add the age_limits
    */
-  const age_limit =
-    `${data.sessions[0]?.min_age_limit}+` ??
-    translationData.cvc_card.to_be_updated;
+  let age_limits: Array<string | number> = data.sessions.map((e) => e.min_age_limit);
+  //@ts-expect-error Ignore this error
+  age_limits = [...new Set(age_limits)];
+  age_limits = age_limits.map((e) => `${e}+`)
 
   /**
    * Empty array of the vaccines
@@ -71,8 +72,6 @@ export default function CvcCard({ data }: Props) {
 
   const address = [data.name, data.address.pincode].filter((x) => !!x);
 
-  console.log(vaccines);
-
   return (
     // <>
     <div key={data.cowin_center_id} className={styles.cvc_card}>
@@ -106,7 +105,7 @@ export default function CvcCard({ data }: Props) {
         {/* <span>Ages: 18-45</span> */}
         <span>
           {translationData.cvc_card.ages}:{" "}
-          <span className={styles.field}>{age_limit}</span>
+          <span className={styles.field}>{age_limits.join(", ")}</span>
         </span>
         <div>
           {translationData.cvc_card.cost}:{" "}
