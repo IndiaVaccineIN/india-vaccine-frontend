@@ -69,6 +69,13 @@ export default function CvcCard({ data }: Props) {
     });
   }
 
+  const address = [
+    data.name,
+    data.address.city,
+    data.address.state,
+    data.address.pincode,
+  ].filter((x) => !!x);
+
   console.log(vaccines);
 
   return (
@@ -83,7 +90,7 @@ export default function CvcCard({ data }: Props) {
         <a
           className={styles.directions}
           target="_blank"
-          href={"https://www.google.com/maps/search/?api=1&query=" + data.name}
+          href={"https://www.google.com/maps/search/?api=1&query=" + address}
         >
           <svg
             width="20"
