@@ -46,17 +46,20 @@ export default function CvcCard({ data }: Props) {
   /**
    * If the type is free
    * load the data from sessions
-   * 
+   *
    * If the type is Paid get it from the vaccines object
    */
   if (vaccine_cost_type === "Free") {
-    const temp_vaccines = data.sessions.map((e) => {
+    let temp_vaccines = data.sessions.map((e) => e.vaccine);
+
+    //@ts-expect-error Ignore the error
+    temp_vaccines = [...new Set(temp_vaccines)];
+
+    vaccines = temp_vaccines.map((e) => {
       return {
-        name: e.vaccine,
+        name: e,
       };
     });
-    //@ts-expect-error Ignore the error
-    vaccines = [...new Set(temp_vaccines)];
   } else {
     vaccines = data.vaccines.map((e) => {
       return {
