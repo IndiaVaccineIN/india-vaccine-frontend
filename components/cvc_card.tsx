@@ -69,12 +69,7 @@ export default function CvcCard({ data }: Props) {
     });
   }
 
-  const address = [
-    data.name,
-    data.address.city,
-    data.address.state,
-    data.address.pincode,
-  ].filter((x) => !!x);
+  const address = [data.name, data.address.pincode].filter((x) => !!x);
 
   console.log(vaccines);
 

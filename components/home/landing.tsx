@@ -18,17 +18,17 @@ export default function Landing() {
           </h1>
           <p> {data?.description}</p>
           <div className={styles.button_wrapper}>
+            <a href={"/check_availability"}>
+              <Button type={"solid"}>{"Find Vaccination centers"}</Button>
+            </a>
             <a
-              href={"https://forms.gle/HeH3xrvjP1VfFUzM7"}
+              href={"http://bit.ly/IV-Result-Link"}
               rel="noreferrer noopener"
               target="_blank"
             >
-              <Button type={"solid"}>{data?.join}</Button>
-            </a>
-            <a href="#how">
               <Button type={"outline"}>
                 {" "}
-                <div>{data?.learn} </div>
+                <div>{data?.join} </div>
               </Button>
             </a>
           </div>
