@@ -18,6 +18,40 @@ export default function CvcCard({ data }: Props) {
 
   const { data: translationData } = useTranslation();
 
+  /**
+   * If the vaccine_cost if coming from the API, add a Rupee symbol (₹)
+   * in front of it, if the vaccine_cost is not coming from the api
+   * return "Free"
+   */
+  let vaccine_cost: string | number = data.vaccines[0]?.cost;
+  if (vaccine_cost) {
+    vaccine_cost = `₹${vaccine_cost}`;
+  } else {
+    vaccine_cost = "Free";
+  }
+
+  /**
+   * Add the age_limit
+   */
+  const age_limit =
+    `${data.sessions[0]?.min_age_limit}+` ??
+    translationData.cvc_card.to_be_updated;
+
+  /**
+   * The vaccines available
+   * 
+   * If the length of the array is 0 and the vaccine information is available
+   * in session use that
+   */
+  const vaccines = data.vaccines.map((e) => e.name);
+
+  if (vaccines.length === 0 && data.sessions[0]?.vaccine) {
+    vaccines.push(data.sessions[0]?.vaccine);
+  }
+
+  vaccines.map((e) => e.toUpperCase())
+
+
   return (
     // <>
     <div key={data.cowin_center_id} className={styles.cvc_card}>
@@ -51,24 +85,18 @@ export default function CvcCard({ data }: Props) {
         {/* <span>Ages: 18-45</span> */}
         <span>
           {translationData.cvc_card.ages}:{" "}
-          <span className={styles.field}>
-            {translationData.cvc_card.to_be_updated}
-          </span>
+          <span className={styles.field}>{age_limit}</span>
         </span>
-        {/* <div>Cost: ₹400</div> */}
         <div>
           {translationData.cvc_card.cost}:{" "}
-          <span className={styles.field}>
-            {translationData.cvc_card.to_be_updated}
-          </span>
+          <span className={styles.field}>{vaccine_cost}</span>
         </div>
-        {/* <div>Covaxin</div> */}
       </div>
       <br />
       <div>
         {translationData.cvc_card.vaccine_type}:{" "}
         <span className={styles.field}>
-          {translationData.cvc_card.to_be_updated}
+          {vaccines.join(",")}
         </span>
       </div>
       <br />
