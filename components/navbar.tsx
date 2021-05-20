@@ -7,7 +7,7 @@ import Logo from "./logo";
 import useSWR from "swr";
 import LanguageSwitcher from "./language_switcher";
 import styles from "../styles/navbar.module.css";
-import { appSWRFetcher } from "../helpers";
+import { useTranslation } from "../helpers";
 
 export default function Navbar() {
   /**
@@ -15,8 +15,9 @@ export default function Navbar() {
    */
   const [isMenuOpen, setMenu] = useState(false);
   const router = useRouter();
-  const locale = router.locale;
-  const { data, error } = useSWR(`/locales/${locale}.json`, appSWRFetcher);
+
+  const { data } = useTranslation();
+
   const activeLink = (
     path,
     content,
@@ -61,16 +62,9 @@ export default function Navbar() {
               isMenuOpen ? null : styles.routes_mobile
             }`}
           >
-            {activeLink("/check_availability", "Check Availability")}
-            {activeLink("/", "About")}
-            <a
-              href={"https://forms.gle/HeH3xrvjP1VfFUzM7"}
-              rel="noreferrer noopener"
-              target="_blank"
-            >
-              {data?.volunteer}
-            </a>
-            {/* {activeLink('/volunteer', 'Volunteer')} */}
+            {activeLink("/check_availability", data.navbar.check_availability)}
+            {activeLink("/", data.navbar.about)}
+            {activeLink("/aid", data.navbar.volunteer)}
           </div>
         </div>
       </nav>

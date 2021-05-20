@@ -16,6 +16,7 @@ Join our group on Discord to engage with the developers and contributors working
 
 ### Getting the application running
 
+
 setup your env file 
 
 1. create a new file `.env.local`
@@ -23,7 +24,6 @@ setup your env file
 
 Note: Do not delete `.env.default` file from main branch. 
   
-
 
 The frontend application is built with [NextJS](https://nextjs.org) and can be locally spun up using the following command
 
