@@ -3,9 +3,9 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { isNum } from "../../helpers";
 
-import checkAvailabilityStyles from '../../styles/check_availability.module.css';
-import SearchDropdown from '../search_dropdown';
-import { Districts } from '../../api/district';
+import checkAvailabilityStyles from "../../styles/check_availability.module.css";
+import SearchDropdown from "../search_dropdown";
+import { Districts } from "../../api/district";
 
 export default function Aid() {
   const router = useRouter();
@@ -40,12 +40,11 @@ export default function Aid() {
 
   useEffect(() => {
     console.log("component did mount --->", router.query);
-  }, [])
+  }, []);
 
   useEffect(() => {
-
-    console.log("sssss---", router.query)
-  }, [router.query])
+    console.log("sssss---", router.query);
+  }, [router.query]);
 
   return (
     <div>
@@ -58,7 +57,7 @@ export default function Aid() {
           <main className={checkAvailabilityStyles.main}></main>
           <h1 className="textCenter">
             Share information. Save someone's life.
-        </h1>
+          </h1>
           <div className="flex mobileCol center">
             <SearchDropdown
               search={search}
@@ -72,7 +71,7 @@ export default function Aid() {
               className={checkAvailabilityStyles.searchButton}
             >
               Show Centers
-          </button>
+            </button>
           </div>
           <div className="flex mobileCol center max-w-4xl">
             <img
@@ -83,11 +82,18 @@ export default function Aid() {
               alt="Illustration"
             ></img>
             <p className={"pad-20"}>
-              Did you recently get vaccinated? Do you want to take 1 min of your time to help another person get vaccinated? Then you are at the right spot. <br />
-
-              We know getting verified vaccination information like "Weather there is crowding at the center" "Are they turning people away who walk-in" can be difficult to obtain without an in-person visit to the center. So, do use the information that you learnt during your visit to the vaccination center to help others get that information! <br />
-              Thank you so much for taking the time to help India get vaccinated, one verified information at a time.
-          </p>
+              Did you recently get vaccinated? Do you want to take 1 min of your
+              time to help another person get vaccinated? Then you are at the
+              right spot. <br />
+              We know getting verified vaccination information like "Weather
+              there is crowding at the center" "Are they turning people away who
+              walk-in" can be difficult to obtain without an in-person visit to
+              the center. So, do use the information that you learnt during your
+              visit to the vaccination center to help others get that
+              information! <br />
+              Thank you so much for taking the time to help India get
+              vaccinated, one verified information at a time.
+            </p>
           </div>
         </div>
         {/* <div className={styles.container} dangerouslySetInnerHTML={{ __html: tripettoHtml }}/> */}

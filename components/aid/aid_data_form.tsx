@@ -20,7 +20,7 @@ TripettoAutoscroll.run({
     onSubmit: tripetto.onSubmit
 });
 </script>
-  `
+  `;
 
 export default function AidDataForm() {
   return (
@@ -31,7 +31,7 @@ export default function AidDataForm() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <div className={styles.container} id="tripetto"></div>
-        <div  dangerouslySetInnerHTML={{ __html: myHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: myHtml }} />
       </div>
     </div>
   );

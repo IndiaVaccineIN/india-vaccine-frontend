@@ -91,3 +91,10 @@
   flex-direction: column;
   margin-bottom: 1rem;
 }
+
+.loading_wrapper {
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
