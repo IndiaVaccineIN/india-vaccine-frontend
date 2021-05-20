@@ -93,9 +93,9 @@ export default function SearchDropdown(props: Props) {
       if (listContainerRef.current) {
         let element = listContainerRef.current;
         let itemHeight =
-          listContainerRef.current.children[currentItemIndex].clientHeight;
+          listContainerRef.current.children[currentItemIndex]?.clientHeight;
         var scrollTop = element.scrollTop;
-        var viewport = parseInt(scrollTop + element.clientHeight);
+        var viewport = parseInt(scrollTop + element?.clientHeight);
         var elOffset = itemHeight * currentItemIndex;
 
         if (e.keyCode === 38 && currentItemIndex > 0) {
@@ -154,14 +154,17 @@ export default function SearchDropdown(props: Props) {
                 </li>
               );
             })}
-          {suggestions.length === 0 && (
-            <li
-              className={`${styles.suggestion} ${styles.noSuggestion}`}
-              key="no-suggestions"
-            >
-              No matching districts
-            </li>
-          )}
+          {
+            //@ts-expect-error Using isNaN to check if it a pincode
+            suggestions.length === 0 && isNaN(search) && (
+              <li
+                className={`${styles.suggestion} ${styles.noSuggestion}`}
+                key="no-suggestions"
+              >
+                No matching districts
+              </li>
+            )
+          }
         </ul>
       )}
     </div>
