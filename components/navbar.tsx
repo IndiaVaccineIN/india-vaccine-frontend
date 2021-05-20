@@ -63,7 +63,7 @@ export default function Navbar() {
             }`}
           >
             {activeLink("/check_availability", data.navbar.check_availability)}
-            {activeLink("/", data.navbar.about)}
+            {activeLink("/about", data.navbar.about)}
             {activeLink("/aid", data.navbar.volunteer)}
           </div>
         </div>

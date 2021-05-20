@@ -67,7 +67,7 @@ export default function AvailabilityResults(context: NextPageContext) {
     method: "post",
     data: APIQuery,
   });
-  console.log(data);
+  
   return (
     <div>
       <Head>
@@ -101,9 +101,9 @@ export default function AvailabilityResults(context: NextPageContext) {
           </div>
         </main>
         {error ? (
-          <div>Failed to Load</div>
+          <div className={styles.loading_wrapper}>Failed to Load</div>
         ) : !data ? (
-          <div>Loading Data...</div>
+          <div className={styles.loading_wrapper}>Loading Data...</div>
         ) : data.results.length == 0 ? (
           <span style={{ marginTop: "1.5rem" }}>No results available</span>
         ) : (

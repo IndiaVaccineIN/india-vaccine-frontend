@@ -15,4 +15,21 @@ module.exports = {
     ],
     defaultLocale: "en-us",
   },
+  async rewrites() {
+    return [
+      {
+        source: '/about',
+        destination: '/',
+      }
+    ]
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/check_availability',
+        permanent: true,
+      },
+    ]
+  },
 };
