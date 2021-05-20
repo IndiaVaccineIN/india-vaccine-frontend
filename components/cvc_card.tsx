@@ -18,6 +18,61 @@ export default function CvcCard({ data }: Props) {
 
   const { data: translationData } = useTranslation();
 
+  /**
+   * If the vaccine_cost if coming from the API, store it here
+   */
+  let vaccine_cost: string | number = data.vaccines[0]?.cost;
+
+  /**
+   * The type of the cost
+   */
+  let vaccine_cost_type: "Free" | "Paid" = vaccine_cost ? "Paid" : "Free";
+
+  /**
+   * Add the age_limit
+   */
+  const age_limit =
+    `${data.sessions[0]?.min_age_limit}+` ??
+    translationData.cvc_card.to_be_updated;
+
+  /**
+   * Empty array of the vaccines
+   */
+  let vaccines: Array<{
+    name: string;
+    cost?: number;
+  }> = [];
+
+  /**
+   * If the type is free
+   * load the data from sessions
+   *
+   * If the type is Paid get it from the vaccines object
+   */
+  if (vaccine_cost_type === "Free") {
+    let temp_vaccines = data.sessions.map((e) => e.vaccine);
+
+    //@ts-expect-error Ignore the error
+    temp_vaccines = [...new Set(temp_vaccines)];
+
+    vaccines = temp_vaccines.map((e) => {
+      return {
+        name: e,
+      };
+    });
+  } else {
+    vaccines = data.vaccines.map((e) => {
+      return {
+        name: e.type,
+        cost: e.cost,
+      };
+    });
+  }
+
+  const address = [data.name, data.address.pincode].filter((x) => !!x);
+
+  console.log(vaccines);
+
   return (
     // <>
     <div key={data.cowin_center_id} className={styles.cvc_card}>
@@ -30,7 +85,7 @@ export default function CvcCard({ data }: Props) {
         <a
           className={styles.directions}
           target="_blank"
-          href={"https://www.google.com/maps/search/?api=1&query=" + data.name}
+          href={"https://www.google.com/maps/search/?api=1&query=" + address}
         >
           <svg
             width="20"
@@ -51,24 +106,26 @@ export default function CvcCard({ data }: Props) {
         {/* <span>Ages: 18-45</span> */}
         <span>
           {translationData.cvc_card.ages}:{" "}
-          <span className={styles.field}>
-            {translationData.cvc_card.to_be_updated}
-          </span>
+          <span className={styles.field}>{age_limit}</span>
         </span>
-        {/* <div>Cost: ₹400</div> */}
         <div>
           {translationData.cvc_card.cost}:{" "}
-          <span className={styles.field}>
-            {translationData.cvc_card.to_be_updated}
-          </span>
+          <span className={styles.field}>{vaccine_cost_type}</span>
         </div>
-        {/* <div>Covaxin</div> */}
       </div>
       <br />
       <div>
         {translationData.cvc_card.vaccine_type}:{" "}
         <span className={styles.field}>
-          {translationData.cvc_card.to_be_updated}
+          {vaccines
+            .map((e) => {
+              if (e.cost) {
+                return `${e.name} (₹${e.cost})`;
+              } else {
+                return e.name;
+              }
+            })
+            .join(", ")}
         </span>
       </div>
       <br />

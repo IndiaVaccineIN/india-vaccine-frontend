@@ -14,5 +14,5 @@ module.exports = {
       "mr-in",
     ],
     defaultLocale: "en-us",
-  }
+  },
 };
