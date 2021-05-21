@@ -74,10 +74,7 @@ export default function AvailabilityResults(context: NextPageContext) {
         const sessions = e.sessions.filter((e) => e.available_capacity > 0);
 
         if (sessions.length > 0) {
-          return {
-            ...e,
-            sessions,
-          };
+          return e;
         }
 
         return null;
@@ -103,8 +100,14 @@ export default function AvailabilityResults(context: NextPageContext) {
           </h3>
           <div className={styles.disclaimer}>
             This information may be slightly old. We are working to make this
-            better. <a href={"http://bit.ly/IV-Result-Link"} rel="noreferrer noopener"
-              target="_blank">Please consider helping us!</a>
+            better.{" "}
+            <a
+              href={"http://bit.ly/IV-Result-Link"}
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              Please consider helping us!
+            </a>
           </div>
           <div className="flex mobileCol center">
             <SearchDropdown
