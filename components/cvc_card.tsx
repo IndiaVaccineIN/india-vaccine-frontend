@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { components } from "../api/interfaces";
-import { useTranslation } from "../helpers";
+import { getDay, useTranslation } from "../helpers";
 import styles from "../styles/cvc_card.module.css";
 import Button from "./button";
+
+import { parse } from "date-fns";
 
 import { stringify } from "query-string";
 
@@ -31,10 +33,12 @@ export default function CvcCard({ data }: Props) {
   /**
    * Add the age_limits
    */
-  let age_limits: Array<string | number> = data.sessions.map((e) => e.min_age_limit);
+  let age_limits: Array<string | number> = data.sessions.map(
+    (e) => e.min_age_limit
+  );
   //@ts-expect-error Ignore this error
   age_limits = [...new Set(age_limits)];
-  age_limits = age_limits.map((e) => `${e}+`)
+  age_limits = age_limits.map((e) => `${e}+`);
 
   /**
    * Empty array of the vaccines
@@ -112,22 +116,18 @@ export default function CvcCard({ data }: Props) {
           <span className={styles.field}>{vaccine_cost_type}</span>
         </div>
       </div>
-      <br />
-      <div>
-        {translationData.cvc_card.vaccine_type}:{" "}
-        <span className={styles.field}>
-          {vaccines
-            .map((e) => {
-              if (e.cost) {
-                return `${e.name} (₹${e.cost})`;
-              } else {
-                return e.name;
-              }
-            })
-            .join(", ")}
-        </span>
-      </div>
-      <br />
+      {vaccines.map((e) => {
+        const text = e.cost ? `${e.name} (₹${e.cost})` : e.name;
+
+        return (
+          <div>
+            <span>Vaccine: {text}</span>
+            <SessionsComponent
+              data={data.sessions.filter((i) => i.vaccine === e.name)}
+            />
+          </div>
+        );
+      })}
       <div className={styles.subText}>
         <a
           href={"https://selfregistration.cowin.gov.in/"}
@@ -155,4 +155,46 @@ export default function CvcCard({ data }: Props) {
     // </>
   );
 }
-// Work in progress
+
+interface SessionsProps {
+  data: components["schemas"]["CVCResponseData"]["sessions"];
+}
+
+function SessionsComponent({ data }: SessionsProps) {
+  return (
+    <div className={styles.sessions_wrapper}>
+      {data.map((session) => {
+        const newDate = new Date();
+        const date = parse(session.date, "dd-MM-yyyy",newDate);
+
+        let dateString = getDay(date);
+
+        if(date.getDate() === newDate.getDate()) {
+          dateString = "Today"
+        } else if (date.getDate() === newDate.getDate() + 1) {
+          dateString = "Tomm"
+        }
+        
+        const classNames = [
+          styles.session,
+          session.available_capacity > 0
+            ? styles.session_active
+            : styles.session_inactive,
+        ]
+          .filter((x) => !!x)
+          .reduce((a, b) => a + " " + b);
+
+        return (
+          <div className={classNames}>
+            <div className={styles.session_date}>
+               {dateString} {date.getDate()}
+            </div>
+            <div className={styles.session_availability}>
+              {session.available_capacity}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}

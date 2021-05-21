@@ -106,3 +106,55 @@
   line-height: 20px;
   color: #000080;
 }
+
+.sessions_wrapper {
+  display: flex;
+  flex-direction: row;
+
+  overflow: scroll;
+
+  margin: 10px 0;
+}
+
+.session {
+  color: white;
+
+  margin: 2px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 4px 8px;
+
+  white-space: nowrap;
+}
+
+.session_date {
+  font-size: 14px;
+
+  font-weight: 400;
+}
+
+.session_date_string {
+  font-weight: 600;
+}
+
+.session_availability {
+  font-size: 18px;
+
+  font-weight: 600;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.session_active {
+  background-color: #04884a;
+}
+
+.session_inactive {
+  background-color: #ffffff;
+  color: #7d7d97;
+}
