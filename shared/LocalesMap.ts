@@ -22,6 +22,8 @@ export const LocalesMap = {
   "mr-in": "मराठी",
 };
 
+export const isEnglishLocale = (locale: string): boolean => locale === "en-us";
+
 /**
  *
  * @param locale The locale whose data is to be fetched
