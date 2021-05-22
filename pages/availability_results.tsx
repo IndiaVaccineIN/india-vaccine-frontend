@@ -15,6 +15,7 @@ import Navbar from "../components/navbar";
 import styles from "../styles/availability_results.module.css";
 import { useState } from "react";
 import { Districts } from "../api/district";
+import { mockData } from "../components/aid/mockData";
 
 export default function AvailabilityResults(context: NextPageContext) {
   const { query, push } = useRouter();
@@ -133,8 +134,11 @@ export default function AvailabilityResults(context: NextPageContext) {
           <span style={{ marginTop: "1.5rem" }}>No results available</span>
         ) : (
           <div className={styles.results}>
-            {data.results.map((e) => (
-              <CvcCard key={e.cowin_center_id} data={e} />
+            {data.results.map((cvcCardDatum, index) => (
+              <CvcCard
+                key={`${cvcCardDatum.cowin_center_id}-index`}
+                data={{ ...cvcCardDatum, ...mockData }} // TODO: mockdata should be removed when data is available from api
+              /> 
             ))}
           </div>
         )}

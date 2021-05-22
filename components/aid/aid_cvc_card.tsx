@@ -17,7 +17,7 @@ export default function AidCvcCard({ data, localeTranslation }: Props) {
   const {
     address: { block, district, pincode },
     crowded,
-   confidence,
+    confidence,
   } = data;
 
 
