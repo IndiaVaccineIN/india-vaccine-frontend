@@ -105,23 +105,24 @@ export default function CvcCard({ data }: Props) {
           {translationData.cvc_card.directions}
         </a>
       </div>
-      <div className={styles.cvcFlexEnd}>
-        {/* <span>Ages: 18-45</span> */}
-        {/* <span>
+      <br/>
+      {/* <div className={styles.cvcFlexEnd}>
+        <span>Ages: 18-45</span>
+        <span>
           {translationData.cvc_card.ages}:{" "}
           <span className={styles.field}>{age_limits.map((e) => `${e}+`).join(", ")}</span>
-        </span> */}
+        </span>
         <div>
           {translationData.cvc_card.cost}:{" "}
           <span className={styles.field}>{vaccine_cost_type}</span>
         </div>
-      </div>
+      </div> */}
       {vaccines.map((e) => {
-        const text = e.cost ? `${e.name} (₹${e.cost})` : e.name;
+        const text = e.cost ? `${e.name} (₹${e.cost})` : `${e.name} (Free)`;
 
         return (
           <div>
-            <span>Vaccine: {text}</span>
+            <span className={styles.vaccine_names}>Vaccine: {text}</span>
             {
             //   age_limits.length === 1 ? <SessionsComponent
             //   data={data.sessions.filter((i) => (i.vaccine === e.name))}
