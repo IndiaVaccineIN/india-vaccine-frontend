@@ -22,7 +22,7 @@ export const LocalesMap = {
   "mr-in": "मराठी",
 };
 
-export const isEnglishLocale = (locale: string) => locale === "en-us";
+export const isEnglishLocale = (locale: string): boolean => locale === "en-us";
 
 /**
  *
