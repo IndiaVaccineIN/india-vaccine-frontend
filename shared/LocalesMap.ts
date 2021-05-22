@@ -108,5 +108,16 @@ export interface LocaleSchema {
     directions: string;
     add_info: string;
     to_be_updated: string;
+    crowded: {
+      no_rush: string,
+      moderate_rush: string,
+      heavy_rush: string,
+
+    };
+    confidence: {
+      low: string,
+      medium: string,
+      high: string,
+    };
   };
 }

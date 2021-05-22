@@ -80,6 +80,8 @@ export interface components {
       google_maps_url: string;
       vaccines: components["schemas"]["Vaccine"][];
       sessions: components["schemas"]["CowinSession"][];
+      crowded:  string;
+      confidence: string;
     };
     PaginatedCVCData: {
       /** Total number of pages */

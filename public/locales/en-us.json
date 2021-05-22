@@ -1,46 +1,56 @@
 {
-  "welcome": "English",
-  "we": "We’re",
-  "making": "Making it Easier",
-  "locate": "to Locate Vaccination Centers",
-  "description": "We're building out a verified list of Vaccination Centers across the country so that you can get reliable information for getting a vaccine for you or your loved ones in a quick & easy manner.",
-  "join": "Join the Team",
-  "learn": "Learn More",
-  "how": "How are we doing this?",
-  "with": "With COVID-19 vaccination opening up for all individuals over 18 years there will be additional rush at public health facilities all over the country. We want to help you get near real-time information on stocks at vaccination centers and crowding.",
-  "our": "Our 100+ volunteers are contributing information to keep this list up to date. We would love for you to join the effort so that individuals don't have to call these centers but can instead rely on this information to find the safest, closest vaccination center.",
-  "help": "How can you help?",
-  "glad": "Glad you asked! We are completely community and volunteer driven. We have several areas where we are looking for volunteers and here are couple of ways you can help us:-",
-  "tech": "Tech:",
-  "techteam": "If you have 2-3 hrs to spare everyday and have amazing React JS or Mongo skills, you can volunteer with our tech team.",
-  "calling": "Calling Centers",
-  "callteam": "If you have 20 mins everyday, you can sign-up to call 5-6 vaccination centers everyday and help 1000s of people who would be benefit from a verified information If you think there is something we could be doing better, you can absolutely send us a DM on instagram, twitter and that would be a great help as well! ",
-  "disclaimer": "IndiaVaccine is an effort by a group of volunteers to crowdsource information about vaccination centers. We use the Public CoWIN APIs to display the results. We’re doing our best, but can’t make any guarantees! Some information may be inaccurate.",
-  "volunteer": "Volunteer",
-  "about": "About",
-  "check_availability": {
-    "heading": "Find a COVID-19 vaccine for yourself or a loved one",
-    "text_field_placeholder": "Enter your Pincode or District name",
-    "find_vaccine_button": "Find Vaccine",
-    "description": "Everyone over 18 is now eligible for free, safe, and reliable COVID-19 vaccines in India. But it can be difficult to find out where and how to get a shot. Enter your zip code or area to find confirmed vaccination locations near you, and learn how to make an appointment."
-  },
-  "availability_results": {
-    "showing": "Showing",
-    "vaccination_centers": "Vaccination Centers",
-    "find_centers_button": "Find Centers"
-  },
-  "cvc_card": {
-    "ages": "Ages",
-    "cost": "Cost",
-    "vaccine_type": "Vaccine Type",
-    "book_on_cowin": "Book on Cowin",
-    "directions": "Get Directions",
-    "add_info": "Add info",
-    "to_be_updated": "To be updated"
-  },
-  "navbar": {
-    "check_availability": "Check Availability",
+    "welcome": "English",
+    "we": "We’re",
+    "making": "Making it Easier",
+    "locate": "to Locate Vaccination Centers",
+    "description": "We're building out a verified list of Vaccination Centers across the country so that you can get reliable information for getting a vaccine for you or your loved ones in a quick & easy manner.",
+    "join": "Join the Team",
+    "learn": "Learn More",
+    "how": "How are we doing this?",
+    "with": "With COVID-19 vaccination opening up for all individuals over 18 years there will be additional rush at public health facilities all over the country. We want to help you get near real-time information on stocks at vaccination centers and crowding.",
+    "our": "Our 100+ volunteers are contributing information to keep this list up to date. We would love for you to join the effort so that individuals don't have to call these centers but can instead rely on this information to find the safest, closest vaccination center.",
+    "help": "How can you help?",
+    "glad": "Glad you asked! We are completely community and volunteer driven. We have several areas where we are looking for volunteers and here are couple of ways you can help us:-",
+    "tech": "Tech:",
+    "techteam": "If you have 2-3 hrs to spare everyday and have amazing React JS or Mongo skills, you can volunteer with our tech team.",
+    "calling": "Calling Centers",
+    "callteam": "If you have 20 mins everyday, you can sign-up to call 5-6 vaccination centers everyday and help 1000s of people who would be benefit from a verified information If you think there is something we could be doing better, you can absolutely send us a DM on instagram, twitter and that would be a great help as well! ",
+    "disclaimer": "IndiaVaccine is an effort by a group of volunteers to crowdsource information about vaccination centers. We use the Public CoWIN APIs to display the results. We’re doing our best, but can’t make any guarantees! Some information may be inaccurate.",
+    "volunteer": "Volunteer",
     "about": "About",
-    "volunteer": "Volunteer"
-  }
+    "check_availability": {
+        "heading": "Find a COVID-19 vaccine for yourself or a loved one",
+        "text_field_placeholder": "Enter your Pincode or District name",
+        "find_vaccine_button": "Find Vaccine",
+        "description": "Everyone over 18 is now eligible for free, safe, and reliable COVID-19 vaccines in India. But it can be difficult to find out where and how to get a shot. Enter your zip code or area to find confirmed vaccination locations near you, and learn how to make an appointment."
+    },
+    "availability_results": {
+        "showing": "Showing",
+        "vaccination_centers": "Vaccination Centers",
+        "find_centers_button": "Find Centers"
+    },
+    "cvc_card": {
+        "ages": "Ages",
+        "cost": "Cost",
+        "vaccine_type": "Vaccine Type",
+        "book_on_cowin": "Book on Cowin",
+        "directions": "Get Directions",
+        "add_info": "Add info",
+        "to_be_updated": "To be updated",
+        "crowded": {
+            "no_rush": "No or Less Rush",
+            "moderate_rush": "Moderate Rush",
+            "heavy_rush": "Heavy Rush"
+        },
+        "confidence": {
+            "low": "Not very sure of the information",
+            "medium": "Reasonably sure of the information",
+            "high": "Very sure of the information"
+        }
+    },
+    "navbar": {
+        "check_availability": "Check Availability",
+        "about": "About",
+        "volunteer": "Volunteer"
+    }
 }

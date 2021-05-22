@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import { useAPIRequest } from "../../api";
 import { components } from "../../api/interfaces";
-import { cleanObj, isEmpty } from "../../helpers";
+import { cleanObj, isEmpty, useTranslation } from "../../helpers";
 import { isNum } from "../../helpers";
 
 import SearchDropdown from "../../components/search_dropdown";
@@ -13,14 +13,17 @@ import AidCvcCard from "./aid_cvc_card";
 
 import styles from "../../styles/availability_results.module.css";
 import { Districts } from "../../api/district";
+import { mockData } from "./mockData"; // TODO: remove when crowded and confidence data is available
 
 export default function AidCvcResults() {
   const { query, push } = useRouter();
+  const { data: localeTranslation } = useTranslation();
 
   //for searching/editing new state/pincode *STARTS*
   const [searchBarContent, setSearchBarContent] = useState<string>(
     query?.pincode?.toString() ?? query.district?.toString()
   );
+
   const showNewResults = () => {
     if (!searchBarContent) {
       return "Input is null";
@@ -71,7 +74,6 @@ export default function AidCvcResults() {
       <div className={styles.container}>
         <main className={styles.main}>
           <h3 className="textCenter">
-            {" "}
             Showing {error && <span>0</span>}
             {!data && <span>Unknown</span>}
             {data && data.results.length} Vaccination Centers
@@ -100,8 +102,12 @@ export default function AidCvcResults() {
           <span style={{ marginTop: "1.5rem" }}>No results available</span>
         ) : (
           <div className={styles.results}>
-            {data.results.map((e) => (
-              <AidCvcCard key={e.cowin_center_id} data={e} />
+            {data.results.map((e, index) => (
+              <AidCvcCard
+                key={`${e.cowin_center_id}-${index}`}
+                data={{ ...e, ...mockData }} // TODO: should remove when data is available from api
+                localeTranslation={localeTranslation.cvc_card}
+              />
             ))}
           </div>
         )}
