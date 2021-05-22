@@ -38,7 +38,7 @@ export default function CvcCard({ data }: Props) {
   );
   //@ts-expect-error Ignore this error
   age_limits = [...new Set(age_limits)];
-  age_limits = age_limits.map((e) => `${e}+`);
+  // age_limits = age_limits.map((e) => `${e}+`);
 
   /**
    * Empty array of the vaccines
@@ -109,7 +109,7 @@ export default function CvcCard({ data }: Props) {
         {/* <span>Ages: 18-45</span> */}
         <span>
           {translationData.cvc_card.ages}:{" "}
-          <span className={styles.field}>{age_limits.join(", ")}</span>
+          <span className={styles.field}>{age_limits.map((e) => `${e}+`).join(", ")}</span>
         </span>
         <div>
           {translationData.cvc_card.cost}:{" "}
@@ -122,9 +122,36 @@ export default function CvcCard({ data }: Props) {
         return (
           <div>
             <span>Vaccine: {text}</span>
-            <SessionsComponent
-              data={data.sessions.filter((i) => i.vaccine === e.name)}
+            {
+              age_limits.length === 1 ? <SessionsComponent
+              data={data.sessions.filter((i) => (i.vaccine === e.name))}
+            /> :
+              age_limits.map((age) => {
+                const sessions = data.sessions.filter((i) => (i.vaccine === e.name) && (i.min_age_limit === age));
+                console.log("AGE", age)
+                if(sessions.length === 0) {
+                  return null;
+                }
+
+                // if(sessions.filter((session) => session.available_capacity > 0).length === 0) {
+                //   return null
+                // }
+
+                // if(sessions.f)
+                return (
+                <div className={styles.sessions_age_wrapper}>
+                <span className={styles.sessions_age}>
+                {`Age: ${age}+`}
+                </span>
+                <SessionsComponent
+              data={sessions}
             />
+                </div>
+              )})
+            }
+            {/* <SessionsComponent
+              data={data.sessions.filter((i) => i.vaccine === e.name)}
+            /> */}
           </div>
         );
       })}

@@ -107,6 +107,16 @@
   color: #000080;
 }
 
+.sessions_age_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sessions_age {
+  margin: 0 5px;
+}
+
 .sessions_wrapper {
   display: flex;
   flex-direction: row;
