@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { components } from "../api/interfaces";
-import { getDay, useTranslation } from "../helpers";
+import { getDay, getMonth, useTranslation } from "../helpers";
 import styles from "../styles/cvc_card.module.css";
 import Button from "./button";
 
@@ -185,6 +185,7 @@ function SessionsComponent({ data }: SessionsProps) {
         const date = parse(session.date, "dd-MM-yyyy", newDate);
 
         let dateString = getDay(date);
+        const monthString = getMonth(date);
 
         if (date.getDate() === newDate.getDate()) {
           dateString = "Today";
@@ -204,8 +205,9 @@ function SessionsComponent({ data }: SessionsProps) {
         return (
           <div className={classNames}>
             <div className={styles.session_date}>
-              {dateString} {date.getDate()}
+              {date.getDate()} {monthString}
             </div>
+            <div className={styles.session_day}>{dateString}</div>
             <div className={styles.session_availability}>
               {session.available_capacity}
             </div>

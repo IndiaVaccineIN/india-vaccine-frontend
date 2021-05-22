@@ -149,6 +149,10 @@
   font-weight: 400;
 }
 
+.session_day {
+  font-size: 13px;
+}
+
 .session_date_string {
   font-weight: 600;
 }

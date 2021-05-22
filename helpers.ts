@@ -83,3 +83,28 @@ export const getDay = (date: Date) => {
 
   return days[date.getDay()];
 };
+
+/**
+ * Get the month from the date
+ *
+ * @param date The date object
+ *
+ * @returns The month
+ */
+export const getMonth = (date: Date) => {
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  return months[date.getMonth()];
+};
