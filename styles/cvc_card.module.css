@@ -12,17 +12,6 @@
   position: relative;
 }
 
-/* .cvcFlexEnd {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  margin-top: 0.5rem;
-} */
-
-/* .cvcFlexEnd div {
-  margin: 0 20px;
-} */
-
 .cvcName {
   font-size: 1.1rem;
 }

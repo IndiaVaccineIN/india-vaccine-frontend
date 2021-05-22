@@ -31,14 +31,13 @@ export default function CvcCard({ data }: Props) {
   let vaccine_cost_type: "Free" | "Paid" = vaccine_cost ? "Paid" : "Free";
 
   /**
-   * Add the age_limits
+   * Add the age_limits, and select only the unique values
    */
   let age_limits: Array<string | number> = data.sessions.map(
     (e) => e.min_age_limit
   );
   //@ts-expect-error Ignore this error
   age_limits = [...new Set(age_limits)];
-  // age_limits = age_limits.map((e) => `${e}+`);
 
   /**
    * Empty array of the vaccines
@@ -106,17 +105,6 @@ export default function CvcCard({ data }: Props) {
         </a>
       </div>
       <br />
-      {/* <div className={styles.cvcFlexEnd}>
-        <span>Ages: 18-45</span>
-        <span>
-          {translationData.cvc_card.ages}:{" "}
-          <span className={styles.field}>{age_limits.map((e) => `${e}+`).join(", ")}</span>
-        </span>
-        <div>
-          {translationData.cvc_card.cost}:{" "}
-          <span className={styles.field}>{vaccine_cost_type}</span>
-        </div>
-      </div> */}
       {vaccines.map((e) => {
         const text = e.cost ? `${e.name} (₹${e.cost})` : `${e.name} (Free)`;
 
