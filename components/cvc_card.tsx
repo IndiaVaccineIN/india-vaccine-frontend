@@ -123,37 +123,22 @@ export default function CvcCard({ data }: Props) {
         return (
           <div>
             <span className={styles.vaccine_names}>Vaccine: {text}</span>
-            {
-              //   age_limits.length === 1 ? <SessionsComponent
-              //   data={data.sessions.filter((i) => (i.vaccine === e.name))}
-              // /> :
-              age_limits.map((age) => {
-                const sessions = data.sessions.filter(
-                  (i) => i.vaccine === e.name && i.min_age_limit === age
-                );
-                console.log("AGE", age);
-                if (sessions.length === 0) {
-                  return null;
-                }
+            {age_limits.map((age) => {
+              const sessions = data.sessions.filter(
+                (i) => i.vaccine === e.name && i.min_age_limit === age
+              );
+              console.log("AGE", age);
+              if (sessions.length === 0) {
+                return null;
+              }
 
-                // if(sessions.filter((session) => session.available_capacity > 0).length === 0) {
-                //   return null
-                // }
-
-                // if(sessions.f)
-                return (
-                  <div className={styles.sessions_age_wrapper}>
-                    <span className={styles.sessions_age}>
-                      {`Age: ${age}+`}
-                    </span>
-                    <SessionsComponent data={sessions} />
-                  </div>
-                );
-              })
-            }
-            {/* <SessionsComponent
-              data={data.sessions.filter((i) => i.vaccine === e.name)}
-            /> */}
+              return (
+                <div className={styles.sessions_age_wrapper}>
+                  <span className={styles.sessions_age}>{`Age: ${age}+`}</span>
+                  <SessionsComponent data={sessions} />
+                </div>
+              );
+            })}
           </div>
         );
       })}
@@ -167,7 +152,6 @@ export default function CvcCard({ data }: Props) {
             {translationData.cvc_card.book_on_cowin}
           </button>
         </a>
-        {/* <div className={styles.lastUpdated}>Last Update: To be updated</div> */}
       </div>
       {/* <br /> */}
       <div className={styles.endRow}>

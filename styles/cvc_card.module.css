@@ -12,13 +12,12 @@
   position: relative;
 }
 
-.cvcFlexEnd {
+/* .cvcFlexEnd {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  /* justify-content: center; */
   margin-top: 0.5rem;
-}
+} */
 
 /* .cvcFlexEnd div {
   margin: 0 20px;
