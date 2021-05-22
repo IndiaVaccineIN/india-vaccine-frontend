@@ -59,8 +59,6 @@ export default function AvailabilityResults(context: NextPageContext) {
     district: query?.district,
   };
 
-  // console.log(APIQuery)
-
   let { data, error } = useAPIRequest<
     components["schemas"]["PaginatedCVCData"]
   >({
@@ -138,7 +136,7 @@ export default function AvailabilityResults(context: NextPageContext) {
               <CvcCard
                 key={`${cvcCardDatum.cowin_center_id}-index`}
                 data={{ ...cvcCardDatum, ...mockData }} // TODO: mockdata should be removed when data is available from api
-              /> 
+              />
             ))}
           </div>
         )}

@@ -185,7 +185,7 @@
 .sessions_wrapper {
     display: flex;
     flex-direction: row;
-    overflow: scroll;
+    overflow-x: auto;
     margin: 10px 0;
 }
 
