@@ -127,7 +127,7 @@ export default function CvcCard({ data }: Props) {
               const sessions = data.sessions.filter(
                 (i) => i.vaccine === e.name && i.min_age_limit === age
               );
-              console.log("AGE", age);
+              
               if (sessions.length === 0) {
                 return null;
               }
