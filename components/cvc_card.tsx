@@ -105,7 +105,7 @@ export default function CvcCard({ data }: Props) {
           {translationData.cvc_card.directions}
         </a>
       </div>
-      <br/>
+      <br />
       {/* <div className={styles.cvcFlexEnd}>
         <span>Ages: 18-45</span>
         <span>
@@ -124,13 +124,15 @@ export default function CvcCard({ data }: Props) {
           <div>
             <span className={styles.vaccine_names}>Vaccine: {text}</span>
             {
-            //   age_limits.length === 1 ? <SessionsComponent
-            //   data={data.sessions.filter((i) => (i.vaccine === e.name))}
-            // /> :
+              //   age_limits.length === 1 ? <SessionsComponent
+              //   data={data.sessions.filter((i) => (i.vaccine === e.name))}
+              // /> :
               age_limits.map((age) => {
-                const sessions = data.sessions.filter((i) => (i.vaccine === e.name) && (i.min_age_limit === age));
-                console.log("AGE", age)
-                if(sessions.length === 0) {
+                const sessions = data.sessions.filter(
+                  (i) => i.vaccine === e.name && i.min_age_limit === age
+                );
+                console.log("AGE", age);
+                if (sessions.length === 0) {
                   return null;
                 }
 
@@ -140,15 +142,14 @@ export default function CvcCard({ data }: Props) {
 
                 // if(sessions.f)
                 return (
-                <div className={styles.sessions_age_wrapper}>
-                <span className={styles.sessions_age}>
-                {`Age: ${age}+`}
-                </span>
-                <SessionsComponent
-              data={sessions}
-            />
-                </div>
-              )})
+                  <div className={styles.sessions_age_wrapper}>
+                    <span className={styles.sessions_age}>
+                      {`Age: ${age}+`}
+                    </span>
+                    <SessionsComponent data={sessions} />
+                  </div>
+                );
+              })
             }
             {/* <SessionsComponent
               data={data.sessions.filter((i) => i.vaccine === e.name)}
@@ -193,16 +194,16 @@ function SessionsComponent({ data }: SessionsProps) {
     <div className={styles.sessions_wrapper}>
       {data.map((session) => {
         const newDate = new Date();
-        const date = parse(session.date, "dd-MM-yyyy",newDate);
+        const date = parse(session.date, "dd-MM-yyyy", newDate);
 
         let dateString = getDay(date);
 
-        if(date.getDate() === newDate.getDate()) {
-          dateString = "Today"
+        if (date.getDate() === newDate.getDate()) {
+          dateString = "Today";
         } else if (date.getDate() === newDate.getDate() + 1) {
-          dateString = "Tomm"
+          dateString = "Tomm";
         }
-        
+
         const classNames = [
           styles.session,
           session.available_capacity > 0
@@ -215,7 +216,7 @@ function SessionsComponent({ data }: SessionsProps) {
         return (
           <div className={classNames}>
             <div className={styles.session_date}>
-               {dateString} {date.getDate()}
+              {dateString} {date.getDate()}
             </div>
             <div className={styles.session_availability}>
               {session.available_capacity}

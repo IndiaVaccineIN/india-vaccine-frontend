@@ -73,9 +73,9 @@ export const useTranslation = (): IUseTranslationResponse => {
 
 /**
  * Get the day from the date
- * 
+ *
  * @param date The date object
- * 
+ *
  * @returns The day
  */
 export const getDay = (date: Date) => {
