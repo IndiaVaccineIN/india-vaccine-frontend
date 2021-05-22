@@ -12,18 +12,6 @@
   position: relative;
 }
 
-.cvcFlexEnd {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  /* justify-content: center; */
-  margin-top: 0.5rem;
-}
-
-.cvcFlexEnd div {
-  margin: 0 20px;
-}
-
 .cvcName {
   font-size: 1.1rem;
 }
@@ -55,6 +43,10 @@
 .lastUpdated {
   font-size: 0.8rem;
   color: var(--grey);
+}
+
+.vaccine_names {
+  font-weight: 600;
 }
 
 .searchButton {
@@ -105,4 +97,69 @@
   font-size: 14px;
   line-height: 20px;
   color: #000080;
+}
+
+.sessions_age_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sessions_age {
+  margin: 0 5px;
+}
+
+.sessions_wrapper {
+  display: flex;
+  flex-direction: row;
+
+  overflow: scroll;
+
+  margin: 10px 0;
+}
+
+.session {
+  color: white;
+
+  margin: 2px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 4px 8px;
+
+  white-space: nowrap;
+}
+
+.session_date {
+  font-size: 14px;
+
+  font-weight: 400;
+}
+
+.session_day {
+  font-size: 13px;
+}
+
+.session_date_string {
+  font-weight: 600;
+}
+
+.session_availability {
+  font-size: 18px;
+
+  font-weight: 600;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.session_active {
+  background-color: #04884a;
+}
+
+.session_inactive {
+  background-color: #ffffff;
+  color: #7d7d97;
 }
