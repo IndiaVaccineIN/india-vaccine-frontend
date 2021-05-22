@@ -30,7 +30,7 @@
         "find_centers_button": "Find Centers"
     },
     "cvc_card": {
-        "ages": "Ages",
+        "ages": "Age",
         "cost": "Cost",
         "vaccine_type": "Vaccine Type",
         "book_on_cowin": "Book on Cowin",
@@ -39,7 +39,7 @@
         "to_be_updated": "To be updated",
         "crowded": {
             "no_rush": "No or Less Rush",
-            "moderate_rush": "Moderate Rate",
+            "moderate_rush": "Moderate Rush",
             "heavy_rush": "Heavy Rush"
         },
         "confidence": {

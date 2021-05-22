@@ -70,3 +70,41 @@ export const useTranslation = (): IUseTranslationResponse => {
     data: data,
   };
 };
+
+/**
+ * Get the day from the date
+ *
+ * @param date The date object
+ *
+ * @returns The day
+ */
+export const getDay = (date: Date) => {
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+};
+
+/**
+ * Get the month from the date
+ *
+ * @param date The date object
+ *
+ * @returns The month
+ */
+export const getMonth = (date: Date) => {
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  return months[date.getMonth()];
+};

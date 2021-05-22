@@ -56,8 +56,6 @@ export default function AidCvcResults() {
     district: query?.district,
   };
 
-  // console.log(APIQuery)
-
   const { data, error } = useAPIRequest<
     components["schemas"]["PaginatedCVCData"]
   >({
@@ -65,7 +63,7 @@ export default function AidCvcResults() {
     method: "post",
     data: APIQuery,
   });
-  console.log(data);
+
   return (
     <div>
       <Head>
