@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { isEnglishLocale } from "../../shared/LocalesMap";
 
 const LogoComponent = () => {
   const { locale } = useRouter();
@@ -8,7 +7,7 @@ const LogoComponent = () => {
   const logoSourceUrl = `/assets/logo/${locale}.svg`;
 
   return (
-    <a href={`/${!isEnglishLocale(locale) ? locale : ""}`}>
+    <a href={"https://indiavaccine.in"}>
       <Image src={logoSourceUrl} height={50} width={200} />
     </a>
   );
