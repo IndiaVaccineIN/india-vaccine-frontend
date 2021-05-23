@@ -53,7 +53,20 @@
 
   .searchButton {
     width: 200px;
+    /* margin-top: 1rem; */
+    margin-left: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .searchButton {
     margin-top: 1rem;
-    margin-left: 0;
+  }
+}
+
+@media (max-width: 460px) {
+  .searchButton {
+    height: 50px;
+    max-width: 160px;
   }
 }
