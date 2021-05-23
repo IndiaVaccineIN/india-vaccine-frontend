@@ -62,8 +62,8 @@ export default function Navbar() {
               isMenuOpen ? null : styles.routes_mobile
             }`}
           >
-            {activeLink("/check_availability", data.navbar.check_availability)}
-            {activeLink("/", data.navbar.about)}
+            {activeLink("/", data.navbar.check_availability)}
+            <Link href={"https://indiavaccine.in"}>{data.navbar.about}</Link>
             {activeLink("/aid", data.navbar.volunteer)}
           </div>
         </div>
