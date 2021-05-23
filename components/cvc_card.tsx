@@ -110,7 +110,6 @@ export default function CvcCard({ data }: Props) {
           {translationData.cvc_card.confidence[confidence]}
         </div>
       </div>
-  
       {vaccines.map(({ cost, name }) => {
         const text = cost ? `${name} (₹${cost})` : `${name} (Free)`;
 

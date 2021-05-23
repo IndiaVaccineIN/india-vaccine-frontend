@@ -20,7 +20,6 @@ export default function AidCvcCard({ data, localeTranslation }: Props) {
     confidence,
   } = data;
 
-
   const crowdedStyle = {
     no_rush: styles.cvcCrowdedNoRush,
     moderate_rush: styles.cvcCrowdedMediumRush,
@@ -46,7 +45,7 @@ export default function AidCvcCard({ data, localeTranslation }: Props) {
           {localeTranslation.crowded[crowded]}
         </div>
         <div className={confidenceStyle[confidence]}>
-         {localeTranslation.confidence[confidence]}
+          {localeTranslation.confidence[confidence]}
         </div>
       </div>
       <div className={styles.subText}>
