@@ -33,7 +33,17 @@
     "book_on_cowin": "कोविनवर बुकिंग करा",
     "directions": "मार्गदर्शक सूचना",
     "add_info": "माहितीची भर करा",
-    "to_be_updated": "अद्ययावत करण्‍यात येईल"
+    "to_be_updated": "अद्ययावत करण्‍यात येईल",
+    "crowded": {
+      "no_rush": "No or Less Rush",
+      "moderate_rush": "Moderate Rate",
+      "heavy_rush": "Heavy Rush"
+    },
+    "confidence": {
+      "low": "Not very sure of the information",
+      "medium": "Reasonably sure of the information",
+      "high": "Very sure of the information"
+    }
   },
   "navbar": {
     "check_availability": "उपलब्धता तपासा",

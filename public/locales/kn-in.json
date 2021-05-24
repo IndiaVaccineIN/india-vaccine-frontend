@@ -34,7 +34,17 @@
     "book_on_cowin": "ಕೋವಿನ್ ಮೇಲೆ ಬುಕ್ ಮಾಡಿ",
     "directions": "ತೋರುದಾರಿಗಳು",
     "add_info": "ಮಾಹಿತಿ ಸೇರಿಸು",
-    "to_be_updated": "ಅಪ್ ಡೇಟ್ ಮಾಡಲಾಗುತ್ತದೆ"
+    "to_be_updated": "ಅಪ್ ಡೇಟ್ ಮಾಡಲಾಗುತ್ತದೆ",
+    "crowded": {
+      "no_rush": "No or Less Rush",
+      "moderate_rush": "Moderate Rate",
+      "heavy_rush": "Heavy Rush"
+    },
+    "confidence": {
+      "low": "Not very sure of the information",
+      "medium": "Reasonably sure of the information",
+      "high": "Very sure of the information"
+    }
   },
   "navbar": {
     "check_availability": "ಲಭ್ಯವಿದೆಯೇ",

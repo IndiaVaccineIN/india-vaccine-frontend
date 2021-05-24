@@ -33,7 +33,17 @@
     "book_on_cowin": "કોવિન પર બુક કરો",
     "directions": "નિર્દેશો",
     "add_info": "માહિતી ઉમેરો",
-    "to_be_updated": "અપડેટ કરવાનું છે"
+    "to_be_updated": "અપડેટ કરવાનું છે",
+    "crowded": {
+      "no_rush": "No or Less Rush",
+      "moderate_rush": "Moderate Rate",
+      "heavy_rush": "Heavy Rush"
+    },
+    "confidence": {
+      "low": "Not very sure of the information",
+      "medium": "Reasonably sure of the information",
+      "high": "Very sure of the information"
+    }
   },
   "navbar": {
     "check_availability": "ઉપલબ્ધતા તપાસો",

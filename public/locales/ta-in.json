@@ -33,7 +33,17 @@
     "book_on_cowin": "CoWIN முன்பதிவு செய்க",
     "directions": "வழிகாட்டுதல்கள்",
     "add_info": "விபரங்களை சேர்க்கவும்",
-    "to_be_updated": "புதுப்பிக்கப்பட வேண்டும்"
+    "to_be_updated": "புதுப்பிக்கப்பட வேண்டும்",
+    "crowded": {
+      "no_rush": "No or Less Rush",
+      "moderate_rush": "Moderate Rate",
+      "heavy_rush": "Heavy Rush"
+    },
+    "confidence": {
+      "low": "Not very sure of the information",
+      "medium": "Reasonably sure of the information",
+      "high": "Very sure of the information"
+    }
   },
   "navbar": {
     "check_availability": "கிடைப்பதை சரிபார்க்கவும்",

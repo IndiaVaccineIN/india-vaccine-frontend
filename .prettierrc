@@ -3,5 +3,6 @@
   "useTabs": false,
   "[javascript]": {
     "editor.formatOnSave": true
-  }
+  },
+  "endOfLine": "auto"
 }

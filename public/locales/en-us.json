@@ -36,7 +36,17 @@
     "book_on_cowin": "Book on Cowin",
     "directions": "Get Directions",
     "add_info": "Add info",
-    "to_be_updated": "To be updated"
+    "to_be_updated": "To be updated",
+    "crowded": {
+      "no_rush": "No or Less Rush",
+      "moderate_rush": "Moderate Rush",
+      "heavy_rush": "Heavy Rush"
+    },
+    "confidence": {
+      "low": "Not very sure of the information",
+      "medium": "Reasonably sure of the information",
+      "high": "Very sure of the information"
+    }
   },
   "navbar": {
     "check_availability": "Check Availability",

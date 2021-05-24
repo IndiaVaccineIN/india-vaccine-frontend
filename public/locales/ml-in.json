@@ -34,7 +34,17 @@
     "book_on_cowin": "CoWIN-ൽ ബുക്ക് ചെയ്യുക",
     "directions": "ദിശകൾ",
     "add_info": "വിവരങ്ങൾ ചേർക്കൂ",
-    "to_be_updated": "അപ്ഡേറ്റ് ചെയ്യേണ്ടതാണ്"
+    "to_be_updated": "അപ്ഡേറ്റ് ചെയ്യേണ്ടതാണ്",
+    "crowded": {
+      "no_rush": "No or Less Rush",
+      "moderate_rush": "Moderate Rate",
+      "heavy_rush": "Heavy Rush"
+    },
+    "confidence": {
+      "low": "Not very sure of the information",
+      "medium": "Reasonably sure of the information",
+      "high": "Very sure of the information"
+    }
   },
   "navbar": {
     "check_availability": "ലഭ്യത ഉറപ്പു വരുത്തുക",
