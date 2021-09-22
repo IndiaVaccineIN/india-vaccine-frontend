@@ -9,7 +9,7 @@
     "prettify": "prettier --write ."
   },
   "dependencies": {
-    "axios": "0.21.1",
+    "axios": "0.21.2",
     "date-fns": "2.21.3",
     "next": "10.2.2",
     "query-string": "7.0.0",
